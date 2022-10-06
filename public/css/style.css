@@ -96,13 +96,467 @@ nav .right a:link{
 .place{
   background-color: var(--biruu);
   padding: 25px 25px;
+  margin: 25px 0px;
 }
 .place .title{
   margin-bottom: 25px;
 }
 .place .col-25{
-  width: 25%;
+  width: 24%;
+  height: 150px;
+  border-radius: 10px;
+  margin: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.place a{
+  color: black;
+  font-size: 16px;
+  font-weight: 800;
+  position: relative;
+  top: 30%;
+  left: 30%;
+  text-shadow: 4px 4px 6px #ffffff;
+}
+.place a:link{
+  text-decoration:none;
+  color: black;
+}
+.place .caption a{
+  font-size: 14px;
+  font-weight: 700;
+  position: unset;
+  top: 0px;
+  left: 0px;
+  text-shadow: none;
 }
 /*--------------------------------
 ----------  PLACE END ------------
 --------------------------------*/
+/*--------------------------------
+------------  FITUR --------------
+--------------------------------*/
+.fitur{
+  margin: 25px 0px;
+}
+.fitur .col-30{
+  width: 32%;
+  height: 350px;
+  margin: 5px 7px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fitur a{
+  font-size: 12px;
+  color: #14A807;
+  padding: 10px 30px;
+  position: relative;
+  top: 85%;
+  left: 30%;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+/*--------------------------------
+----------  FITUR END ------------
+--------------------------------*/
+/*--------------------------------
+-----------  BERITA --------------
+--------------------------------*/
+.berita{
+  background-color: #FDFFE1;
+  padding: 15px 50px;
+  margin: 25px 0pxs;
+}
+.berita h3{
+  font-size: 25px;
+  font-weight: 600;
+}
+.berita .col-30{
+  width: 31%;
+  height: 300px;
+  margin: 5px 12px;
+}
+.berita img{
+  width: 95%;
+}
+.berita h4{
+  font-size: 16px;
+  font-weight: 700;
+}
+.berita h5{
+  font-size: 14px;
+  font-weight: 500;
+}
+.berita a{
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+.berita a:link{
+  text-decoration: none;
+}
+/*--------------------------------
+----------  BERITA END -----------
+--------------------------------*/
+/*--------------------------------
+-----------  KENAPA --------------
+--------------------------------*/
+.kenapa {
+  background-color: #FDFFE1;
+  margin: 25px 0px;
+  padding: 10px 50px;
+}
+.kenapa h3{
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+.kenapa .col-70{
+  background-color: #14A807;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 25px 8px;
+}
+.kenapa .text{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  color: #ffffff;
+  top: 35%;
+  left: 15%;
+  font-size: 16px;
+  font-weight: 700;
+}
+.kenapa p{
+  text-align: center;
+}
+/*--------------------------------
+----------  KENAPA END -----------
+--------------------------------*/
+/*--------------------------------
+------------  CARA ---------------
+--------------------------------*/
+.cara {
+  margin: 25px 0px;
+  background-color: #FDFFE1;
+}
+.cara h3{
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+.cara .center{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cara .col-30{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 25px 5px;
+}
+.cara .text{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  color: #ffffff;
+  top: 35%;
+  left: 15%;
+  font-size: 12px;
+  font-weight: 700;
+}
+.cara p{
+  text-align: center;
+}
+/*--------------------------------
+-----------  CARA END ------------
+--------------------------------*/
+/*--------------------------------
+----------  TESTIMONI ------------
+--------------------------------*/
+.testimoni {
+  margin: 25px 0px;
+}
+.testimoni h3{
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+.testimoni .col-30{
+  width: 30%;
+  margin: 0px 15px;
+}
+.testimoni .col-40{
+  width: 40%;
+}
+.testimoni .col-60{
+  width: 60%;
+  padding: 15px 0px;
+}
+.testimoni img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.testimoni h4{
+  font-size: 18px;
+  font-weight: 700;
+}
+.testimoni h5{
+  font-size: 14px;
+  font-weight: 400;
+}
+/*--------------------------------
+--------  TESTIMONI END ----------
+--------------------------------*/
+/*--------------------------------
+------------  FOOTER -------------
+--------------------------------*/
+.footer{
+  background-color: #14A807;
+  width: 100%;
+  padding: 100px 150px 25px 150px;
+  color: #ffffff;
+}
+.footer .col-25{
+  width: 20%;
+}
+.footer .copyright{
+  margin: 70px 0px 50px 0px;
+  text-align: center;
+}
+.footer h3{
+  font-weight: 500;
+}
+.footer h5{
+  font-weight: 400;
+}
+.copyright h4{
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer img{
+  height: 30px;
+  width: auto;
+}
+/*--------------------------------
+----------  FOOTER END -----------
+--------------------------------*/
+/*--------------------------------
+----------  PROPERTI -------------
+--------------------------------*/
+.properti{
+  margin: 25px 0px;
+}
+.properti .title{
+  text-align: center;
+}
+.properti h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+.properti .col-12{
+  max-width: 12.5%;
+  margin: 15px 0px;
+  text-align: center;
+}
+.properti img{
+  width: 80%;
+  height: auto;
+}
+.properti .active{
+  color: #14A807;
+}
+/*--------------------------------
+--------  PROPERTI END -----------
+--------------------------------*/
+/*--------------------------------
+------------  CARI ---------------
+--------------------------------*/
+.cari{
+  margin: 25px 0px;
+  padding: 0px 100px;
+}
+.cari .title{
+  text-align: center;
+}
+.cari h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+.cari .col-15{
+  width: 15%;
+  margin: 15px 5px;
+}
+.cari button{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 0px;
+  width: 100%;
+  background-color: transparent;
+}
+.cari .active, button:hover{
+  color: #ffffff;
+  background-color: #14A807 !important;
+}
+/*--------------------------------
+----------  CARI END -------------
+--------------------------------*/
+/*--------------------------------
+-----------  HUNIAN --------------
+--------------------------------*/
+.hunian {
+  background-color: #14A807;
+  margin: 25px 0px;
+  padding: 15px 50px;
+  color: #ffffff;
+}
+.hunian .title{
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.hunian .col-30{
+  width: 30%;
+  margin: 10px 25px;
+}
+.hunian img{
+  width: 100%;
+  height: 250px;
+  border-radius: 25px;
+}
+.hunian .caption{
+  padding: 10px 20px;
+}
+.hunian h5{
+  font-size: 14px;
+}
+.hunian h6{
+  font-size: 12px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------  PAGE DIJUAL ---------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------
+-----------  LEFTBAR -------------
+--------------------------------*/
+.leftbar{
+  max-width: 30%;
+  padding: 25px 50px;
+}
+.leftbar h3{
+  margin: 10px 25px;
+  font-size: 18px;
+}
+.leftbar .col-50{
+  width: 45%;
+  margin: 0px 10px;
+  padding: 5px 15px;
+}
+.leftbar .col-20{
+  width: 20%;
+  padding: 0px 10px;
+}
+.leftbar button{
+  border: 1px solid black;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px 0px;
+  width: 100%;
+  background-color: transparent;
+}
+.leftbar .active, button:hover{
+  background-color: #14A807 !important;
+  color: #ffffff;
+}
+/*--------------------------------
+---------  LEFTBAR END -----------
+--------------------------------*/
+/*--------------------------------
+-----------  RIGHTBAR ------------
+--------------------------------*/
+.content{
+  max-width: 100%;
+  /* display: flex; */
+}
+.rightbar{
+  width: 65%;
+  padding: 25px 25px;
+}
+.rightbar h3{
+  margin: 10px 25px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.rightbar .col-40{
+  width: 40%;
+  padding: 10px 15px;
+}
+.rightbar .col-20{
+  width: 20%;
+  padding: 10px 5px;
+}
+.rightbar .col-80{
+  width: 80%;
+  padding: 10px 15px;
+}
+.rightbar .col-40 img{
+  width: 100%;
+}
+.rightbar .col-60{
+  width: 60%;
+  padding: 10px 25px;
+}
+.rightbar .col-60 img{
+  height: 25px;
+}
+.rightbar h2{
+  color: #14A807;
+  font-size: 24px;
+  font-weight: 700
+}
+.rightbar p{
+  font-size: 12px;
+  font-weight: 700;
+}
+.rightbar h4{
+  font-size: 14px;
+  font-weight: 700;
+}
+.rightbar h5{
+  font-size: 12px;
+  font-weight: 500;
+}
+.rightbar button{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #14A807;
+  color: #ffffff;
+}
+.paginationn{
+  margin: 10px 15px;
+  border-top: 2px solid black;
+  width: 90%;
+}
+.paginationn .right{
+  float: right;
+  text-align: right;
+}
+.paginationn a{
+  color: black;
+  font-size: 12px;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.paginationn .active, a:hover{
+  background-color: #14A807;
+  color: #ffffff !important;
+}

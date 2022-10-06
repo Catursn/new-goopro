@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('front.home');
 });
+Route::view('/dijual','front.dijual');
