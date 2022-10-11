@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('front.home');
 });
 Route::view('/dijual','front.dijual');
+Route::view('/detail','front.detail');
+Route::view('/about','front.about');

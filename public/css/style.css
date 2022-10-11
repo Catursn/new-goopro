@@ -44,6 +44,11 @@ nav .right a:link{
   font-family:'monstserrat', !important; 
   font-weight:bold;
   border-radius: 10px;
+  padding: 0px 0px;
+  width: 100%;
+}
+.wadah{
+  margin: 0px 150px !important;
 }
 /*--------------------------------
 ----------  NAVBAR END -----------
@@ -447,7 +452,7 @@ nav .right a:link{
 --------------------------------*/
 .leftbar{
   max-width: 30%;
-  padding: 25px 50px;
+  padding: 25px 20px;
 }
 .leftbar h3{
   margin: 10px 25px;
@@ -480,16 +485,17 @@ nav .right a:link{
 /*--------------------------------
 -----------  RIGHTBAR ------------
 --------------------------------*/
-.content{
+.contentt{
   max-width: 100%;
+  padding: 0px 20px;
   /* display: flex; */
 }
 .rightbar{
   width: 65%;
-  padding: 25px 25px;
+  padding: 25px 10px;
 }
 .rightbar h3{
-  margin: 10px 25px;
+  margin: 10px 0px;
   font-size: 22px;
   font-weight: 700;
 }
@@ -540,6 +546,22 @@ nav .right a:link{
   background-color: #14A807;
   color: #ffffff;
 }
+.rightbar .icon{
+  position: relative;
+  top: 30px;
+  left: 10px;
+}
+.rightbar .icon img{
+  width: 20px;
+}
+.rightbar .icon a{
+  color: black;
+}
+.rightbar .icon a:hover{
+  background-color: #ffffff;
+  color: black !important;
+  text-decoration: none;
+}
 .paginationn{
   margin: 10px 15px;
   border-top: 2px solid black;
@@ -559,4 +581,206 @@ nav .right a:link{
 .paginationn .active, a:hover{
   background-color: #14A807;
   color: #ffffff !important;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------  PAGE DETAIL ---------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------
+----------  BREADCRUMB -----------
+--------------------------------*/
+.breadcrumb {
+  margin: 25px 10px;
+  background-color: transparent !important;
+}
+.breadcrumb a{
+  color: #14A807;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 0px 5px;
+}
+.breadcrumb a:hover{
+  text-decoration: none;
+  background-color: transparent;
+  color: black !important;
+}
+/*--------------------------------
+-------  BREADCRUMB END ----------
+--------------------------------*/
+/*--------------------------------
+-------------  BIGIMG ------------
+--------------------------------*/
+.bigimg{
+  margin: 25px 0px;
+  padding: 0px 20px;
+}
+.bigimg img{
+  width: 100%;
+}
+.bigimg .col-40{
+  width: 40%;
+  padding: 15px 10px;
+}
+.bigimg .col-40 img{
+  height:245px;
+}
+.bigimg .col-60{
+  width: 60%;
+  padding: 15px 30px;
+}
+.bigimg .col-60 img{
+  height: 500px;
+}
+.bigimg .col-30{
+  width: 30%;
+  padding-left: 15px;
+}
+.bigimg .col-70{
+  width: 70%;
+  padding-right: 15px;
+}
+.bigimg .col-30 img{
+  height: 25px;
+  width: auto;
+}
+.bigimg h3{
+  color: #14A807;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.bigimg .col-30 p{
+  font-size: 14px;
+  font-weight: 700;
+}
+.bigimg p{
+  font-size: 16px;
+  font-weight: 500;
+}
+.bigimg h4{
+  font-size: 26px;
+  font-weight: 700;
+}
+.bigimg h5{
+  font-size: 24px;
+  font-weight: 400;
+}
+.bigimg h6{
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+.bigimg button{
+  width: 15%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  margin-bottom: 15px;
+}
+.bigimg .spesifikasi h5{
+  font-size: 16px;
+  color: #cecece;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+.bigimg .spesifikasi h4{
+  font-size: 20px;
+  font-weight: 500;
+}
+.bigimg .spesifikasi .grey{
+  color: #cecece;
+}
+.bigimg .spesifikasi .col-50{
+  width: 50%;
+  padding: 0px 20px;
+}
+/*--------------------------------
+----------  BIGIMG END -----------
+--------------------------------*/
+/*--------------------------------
+-----------  KALKULATOR ----------
+--------------------------------*/
+.kalkulator{
+  margin: 25px 0px;
+  border: 2px solid black;
+}
+.kalkulator .title{
+  background-color: #14A807;
+  padding: 15px 30px;
+}
+.kalkulator .title h2{
+  font-size: 18px;
+  color: #ffffff;
+}
+.kalkulator .isi{
+  padding: 15px 30px;
+}
+.kalkulator .isi h5{
+  color: black;
+  margin-bottom: 10px;
+}
+.kalkulator input[type=text]{
+  width: 100%;
+  font-size: 14px;
+}
+.kalkulator select{
+  width: 100%;
+  font-size: 14px;
+  padding: 5px 0px;
+}
+.kalkulator .hasilkal{
+  text-align: justify;
+  padding: 0px 15px;
+}
+.kalkulator h1{
+  font-size: 30px;
+  font-weight: 500;
+}
+.kalkulator h3{
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+}
+/*--------------------------------
+---------  KALKULATOR END --------
+--------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------  PAGE ABOUT ---------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------
+-------------  ABOUT -------------
+--------------------------------*/
+.bannerr img{
+  width: 100%;
+  height: auto;
+}
+.about{
+  margin: 25px 0px;
+}
+.about .col-50{
+  width: 50%;
+  padding: 25px 50px;
+  text-align: justify;
+}
+.about .col-50 img{
+  width: 100%;
+  height: auto;
+}
+.about h2{
+  font-size: 26px;
+  font-weight: 700;
+}
+.about h3{
+  font-size: 22px;
+  font-weight: 400;
+}
+.about .box{
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 100%;
+  height: 300px;
+  padding: 30px 40px;
+  text-align: center;
 }

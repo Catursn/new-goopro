@@ -10,7 +10,7 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="images/banner1.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="container">
+                    <div class="wadah">
                         <div >
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -49,7 +49,7 @@
             <div class="carousel-item">
             <img class="d-block w-100" src="images/banner2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="container">
+                    <div class="wadah">
                         <div >
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -88,7 +88,7 @@
             <div class="carousel-item">
             <img class="d-block w-100" src="images/banner3.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="container">
+                    <div class="wadah">
                         <div >
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -134,7 +134,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container">
+    <div class="wadah">
         <div class="place">
             <div class="title">
                 <h3>Properti Perwilayah</h3>
@@ -294,7 +294,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="wadah">
         <div class="berita">
             <h3>Berita Properti Terbaru</h3>
             <div class="row">

@@ -1,6 +1,6 @@
 @extends('front.includes.master')
 @section('main-content')
-<div class="container">
+<div class="wadah">
     <div class="properti">
         <div class="title">
             <h3>Kategori Properti</h3>
@@ -41,7 +41,7 @@
         </div>
     </div>
 </div>
-<div class="content">
+<div class="contentt">
     <div class="row">
         <div class="leftbar">
             <h3>Berdasarkan Harga :</h3>
@@ -85,11 +85,56 @@
                     <button>5+</button>
                 </div>
             </div>
+            <br>
+            <br>
+            <h3>Berdasarkan Daerah :</h3>
+            <div class="row">
+                <div class="col-50">
+                    <button>Bandung</button>
+                </div>
+                <div class="col-50">
+                    <button class="active">Cimahi</button>
+                </div>
+                <div class="col-50">
+                    <button>Kab. Bandung</button>
+                </div>
+                <div class="col-50">
+                    <button>Kab. Bandung Barat</button>
+                </div>
+                <div class="col-50">
+                    <button>Sumedang</button>
+                </div>
+                <div class="col-50">
+                    <button>Subang</button>
+                </div>
+                <div class="col-50">
+                    <button>Jakarta</button>
+                </div>
+                <div class="col-50">
+                    <button>Bogor</button>
+                </div>
+                <div class="col-50">
+                    <button>Depok</button>
+                </div>
+                <div class="col-50">
+                    <button>Tangerang</button>
+                </div>
+                <div class="col-50">
+                    <button>Bekasi</button>
+                </div>
+                <div class="col-50">
+                    <button>Sukabumi</button>
+                </div>
+            </div>
         </div>
         <div class="rightbar">
             <h3>746,819 Rumah Dijual</h3>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -115,6 +160,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -140,6 +189,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -165,6 +218,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -190,6 +247,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -215,6 +276,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -240,6 +305,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -265,6 +334,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -290,6 +363,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
@@ -315,6 +392,10 @@
             </div>
             <div class="row">
                 <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
