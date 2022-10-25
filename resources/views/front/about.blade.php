@@ -51,6 +51,65 @@
                     </h3>
                 </div>
             </div>
+            <div class="title">
+                <h2>Manajemen</h2>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+                <div class="col-25">
+                    <img src="/images/testi1.png" alt="">
+                    <h4>Andrew Kurniawan</h4>
+                    <h5>Dir. Marketing</h5>
+                </div>
+            </div>
+            <div class="title">
+                <h2>Bank Partner</h2>
+            </div>
+            <div class="row bank">
+                <div class="boxbank">
+                    <img src="/images/mega.png" alt="">
+                </div>
+                <div class="boxbank">
+                    <img src="/images/btn.png" alt="">
+                </div>
+                <div class="boxbank">
+                    <img src="/images/mandiri.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
 @endsection

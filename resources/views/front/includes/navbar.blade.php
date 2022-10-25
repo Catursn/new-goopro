@@ -11,11 +11,11 @@
           Dijual
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardijual">
-          <a class="dropdown-item" href="#">Semuanya</a>
-          <a class="dropdown-item" href="#">Komersial</a>
-          <a class="dropdown-item" href="#">Rumah</a>
-          <a class="dropdown-item" href="#">Apartemen</a>
-          <a class="dropdown-item" href="#">Tanah</a>
+          <a class="dropdown-item" href="/dijual">Semuanya</a>
+          <a class="dropdown-item" href="/dijual">Komersial</a>
+          <a class="dropdown-item" href="/dijual">Rumah</a>
+          <a class="dropdown-item" href="/dijual">Apartemen</a>
+          <a class="dropdown-item" href="/dijual">Tanah</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -23,11 +23,11 @@
           Disewakan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardisewa">
-          <a class="dropdown-item" href="#">Semuanya</a>
-          <a class="dropdown-item" href="#">Komersial</a>
-          <a class="dropdown-item" href="#">Rumah</a>
-          <a class="dropdown-item" href="#">Apartemen</a>
-          <a class="dropdown-item" href="#">Tanah</a>
+          <a class="dropdown-item" href="/disewakan">Semuanya</a>
+          <a class="dropdown-item" href="/disewakan">Komersial</a>
+          <a class="dropdown-item" href="/disewakan">Rumah</a>
+          <a class="dropdown-item" href="/disewakan">Apartemen</a>
+          <a class="dropdown-item" href="/disewakan">Tanah</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -35,10 +35,10 @@
           Layanan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarlayanan">
-          <a class="dropdown-item" href="#">Provided Services</a>
-          <a class="dropdown-item" href="#">Advertise Property with me</a>
-          <a class="dropdown-item" href="#">KPR Gallery</a>
-          <a class="dropdown-item" href="#">Calculator KPR</a>
+          <a class="dropdown-item" href="/layanan">Provided Services</a>
+          <a class="dropdown-item" href="/layanan">Advertise Property with me</a>
+          <a class="dropdown-item" href="/layanan">KPR Gallery</a>
+          <a class="dropdown-item" href="/layanan">Calculator KPR</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
           Informasi
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarinformasi">
-          <a class="dropdown-item" href="#">Property News</a>
+          <a class="dropdown-item" href="/berita">Property News</a>
           <a class="dropdown-item" href="#">Isue Article</a>
           <a class="dropdown-item" href="#">Event</a>
           <a class="dropdown-item" href="#">Property Trend</a>
@@ -63,7 +63,7 @@
           Profil
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarprofil">
-          <a class="dropdown-item" href="#">About Us</a>
+          <a class="dropdown-item" href="/about">About Us</a>
           <a class="dropdown-item" href="#">Visi & Misi</a>
           <a class="dropdown-item" href="#">Management</a>
           <a class="dropdown-item" href="#">Why with me?</a>
@@ -83,13 +83,13 @@
           <a class="dropdown-item" href="#">Iklankan</a>
           <a class="dropdown-item" href="#">Penawaran Produk</a>
           <a class="dropdown-item" href="#">Keagenan</a>
-          <a class="dropdown-item" href="#">Kontak</a>
+          <a class="dropdown-item" href="/kontak">Kontak</a>
         </div>
       </li>
     </ul>
     <div class="my-2 my-lg-0">
         <div class="right">
-            <a href="#">Login/Daftar</a>
+            <a href="/login">Login/Daftar</a>
             <button class="iklan">Iklankan Property</button>
         </div>
     </div>

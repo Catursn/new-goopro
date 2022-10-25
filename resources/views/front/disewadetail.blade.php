@@ -2,7 +2,7 @@
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
-        <a href="#">Dijual ></a>
+        <a href="#">Disewa ></a>
         <a href="#">Rumah ></a>
         <a href="#">Kota Bandung ></a>
         <a href="#" class="active">Rumah Siap Huni di Pusat Kota Bandung Cluster Parahyangan</a>

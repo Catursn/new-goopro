@@ -126,9 +126,19 @@
                     <button>Sukabumi</button>
                 </div>
             </div>
+            <br><br>
+            <h3>Tanggal siap huni</h3>
+            <input type="text">
+            <h3>Luas bangunan</h3>
+            <input type="text">
+            <h3>Luas tanah</h3>
+            <input type="text">
+            <div class="terapkan">
+                <a href="#">Terapkan Filter</a>
+            </div>
         </div>
         <div class="rightbar">
-            <h3>746,819 Rumah Dijual</h3>
+            <h3>746,819 Rumah Baru</h3>
             <div class="row">
                 <div class="col-40">
                     <div class="icon">
@@ -138,7 +148,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -167,7 +177,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -196,7 +206,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -225,7 +235,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -254,7 +264,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -283,7 +293,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -312,7 +322,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -341,7 +351,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -370,7 +380,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
@@ -399,7 +409,7 @@
                     <img src="images/villa.png" alt="">
                 </div>
                 <div class="col-60">
-                    <h2>Dijual Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
+                    <h2>Baru Rumah Siap Huni di Pusat Kota Bandung. Cluster Parahyangan</h2>
                     <p><img src="images/point.png" alt=""> Dago, Bandung</p>
                     <br>
                     <h4>Tipe Properti : Rumah</h4>
