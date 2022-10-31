@@ -129,7 +129,38 @@
         </div>
         <div class="rightbar">
             <h3>746,819 Rumah Disewakan</h3>
+            @foreach($properti as $prop)
             <div class="row">
+                <div class="col-40">
+                    <div class="icon">
+                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                    </div>
+                    <img src="images{{$prop->foto1}}" alt="">
+                </div>
+                <div class="col-60">
+                    <a href="/properti/{{$prop->slug}}">{{$prop->judul}}</a>
+                    <p><img src="images/point.png" alt=""> {{$prop->tempat}}</p>
+                    <br>
+                    <h4>Tipe Properti : {{$prop->hunian}}</h4>
+                    <h5>{{$prop->informasi}}</h5>
+                    <br>
+                    <h5>Tempat Tidur : <b><strong>{{$prop->tidur}}</strong></b>, Kamar Mandi : <b><strong>{{$prop->mandi}}</strong></b>, Bangunan : <b><strong>{{$prop->bangunan}}</strong></b> m <sup>2</sup></h5>
+                    <h3>Rp. {{$prop->harga}}</h3>
+                    <div class="row">
+                        <div class="col-20">
+                            <button>Kontak Agent</button>
+                        </div>
+                        <div class="col-80">
+                            <p>Didaftarkan oleh Budiyono Prasetya <br>
+                            Anggota sejak tahun 2017 <br>
+                            Tayang sejak 06 Mei 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            <!-- <div class="row">
                 <div class="col-40">
                     <div class="icon">
                         <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
@@ -418,7 +449,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="paginationn">
                 <div class="row">
                     <div class="col-40">

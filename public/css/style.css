@@ -50,6 +50,9 @@ nav .right a:link{
 .wadah{
   margin: 0px 150px !important;
 }
+.carousel-control-prev:hover, .carousel-control-next:hover{
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
 /*--------------------------------
 ----------  NAVBAR END -----------
 --------------------------------*/
@@ -69,7 +72,7 @@ nav .right a:link{
   height: 50px;  
   border-radius: 0px 30px 30px 0px;
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .tab-pane select{
   width: 20%;
@@ -87,8 +90,11 @@ nav .right a:link{
   border: none;
 }
 .tab-pane button{
-  margin-left: 10px;
-  height: 100%;
+  position: relative;
+  right: -25px;
+  top: -1px;
+  margin-left: 5px;
+  height: 51px;
   width: 20%;
   padding: 10px 15px;
   background-color: var(--hijau);
@@ -192,7 +198,7 @@ nav .right a:link{
 }
 .berita .col-30{
   width: 31%;
-  height: 300px;
+  height: 350px;
   margin: 5px 12px;
 }
 .berita img{
@@ -555,10 +561,15 @@ nav .right a:link{
 .rightbar .col-60 img{
   height: 25px;
 }
-.rightbar h2{
+.rightbar a{
   color: #14A807;
+  text-decoration: none;
   font-size: 24px;
   font-weight: 700
+}
+.rightbar a:hover{
+  color: #ffffff;
+  text-decoration: none;
 }
 .rightbar p{
   font-size: 12px;
@@ -983,7 +994,7 @@ nav .right a:link{
 .register .submit{
   margin: 40px 25px;
 }
-.register .submit a{
+.register .submit input[type=submit]{
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;

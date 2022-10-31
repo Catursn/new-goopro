@@ -2,85 +2,79 @@
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
-        <a href="#">Dijual ></a>
-        <a href="#">Rumah ></a>
+        <a href="#">{{$properti->kategori}} ></a>
+        <a href="#">{{$properti->hunian}} ></a>
         <a href="#">Kota Bandung ></a>
-        <a href="#" class="active">Rumah Siap Huni di Pusat Kota Bandung Cluster Parahyangan</a>
+        <a href="#" class="active">{{$properti->judul}}</a>
     </div>
     <div class="bigimg">
         <div class="row">
             <div class="col-60">
-                <img src="images/hunian2.png" alt="">
+                <img src="/images{{$properti->foto1}}" alt="">
             </div>
             <div class="col-40">
-                <img src="images/ruangtamu.png" alt="">
+                <img src="/images{{$properti->foto2}}" alt="">
                 <br>
                 <br>
-                <img src="images/dapur.png" alt="">
+                <img src="/images{{$properti->foto3}}" alt="">
             </div>
             <div class="col-60">
-                <h3>Rumah Siap Huni di Pusat Kota Bandung Cluster Parahyangan</h3>
+                <h3>{{$properti->judul}}</h3>
                 <div class="row">
                     <div class="col-30">
-                        <p><img src="images/point.png" alt=""> Dago, Bandung</p>
-                        <h4>Rp 350.000.000,00</h4>
+                        <p><img src="images/point.png" alt=""> {{$properti->tempat}}</p>
+                        <h4>Rp {{$properti->harga}}</h4>
                     </div>
                     <div class="col-70">
-                        <button>Rumah</button>
+                        <button>{{$properti->hunian}}</button>
                         <br>
-                        <h5>Tempat Tidur : <b><strong>2</strong></b>, Kamar Mandi : <b><strong>1</strong></b>, Bangunan : <b><strong>50</strong></b> m <sup>2</sup></h5>
+                        <h5>Tempat Tidur : <b><strong>{{$properti->tidur}}</strong></b>, Kamar Mandi : <b><strong>{{$properti->mandi}}</strong></b>, Bangunan : <b><strong>{{$properti->bangunan}}</strong></b> m <sup>2</sup></h5>
                     </div>
                 </div>
                 <h6>Informasi :</h6>
-                <p>Rumah minimalis seken siap huni dan asri, lokasi startegis d pusat kota Bandung dengan fasilitas umum yang mudah diakses. Akses 2 Mobil, Raedy Stok, 100 Meter Dr Jl Raya Utama</p>
+                <p>{{$properti->informasi}}</p>
                 <div class="spesifikasi">
                     <h6>Detail Spesifikasi :</h6>
                     <div class="row">
                         <div class="col-50">
                             <h5>Tipe Properti</h5>
-                            <h4>Rumah Dijual</h4>
+                            <h4>{{$properti->hunian}} {{$properti->properti}}</h4>
                             <h5>Pengembang</h5>
-                            <h4 class="grey">N/A</h4>
+                            <h4 class="grey">{{$properti->pengembang}}</h4>
                             <h5>Per M</h5>
-                            <h4>Rp 10.777.000 per M</h4>
+                            <h4>Rp {{$properti->perm}} per M</h4>
                             <h5>Lantai</h5>
-                            <h4>1</h4>
+                            <h4>{{$properti->lantai}}</h4>
                             <h5>Tahun Dibuat</h5>
-                            <h4>1998</h4>
+                            <h4>{{$properti->tahun}}</h4>
                             <h5>Listrik</h5>
-                            <h4>950 watt</h4>
+                            <h4>{{$properti->listrik}} watt</h4>
                             <h5>Tempat Parkir</h5>
-                            <h4>2</h4>
+                            <h4>{{$properti->parkir}}</h4>
                         </div><div class="col-50">
                             <h5>Luas Bangunan</h5>
-                            <h4>58 M</h4>
+                            <h4>{{$properti->bangunan}} M</h4>
                             <h5>Luas Tanah</h5>
-                            <h4>65 M</h4>
+                            <h4>{{$properti->tanah}} M</h4>
                             <h5>Interior</h5>
-                            <h4>Tak Berperabot</h4>
+                            <h4>{{$properti->interior}}</h4>
                             <h5>Sertifikat</h5>
-                            <h4>SHM - Sertifikat Hak Milik</h4>
+                            <h4>{{$properti->sertifikat}}</h4>
                             <h5>ID Listing</h5>
-                            <h4>187</h4>
+                            <h4>{{$properti->listing}}</h4>
                             <h5>Terdatar Pada</h5>
-                            <h4>20/10/2022</h4>
+                            <h4>{{ tanggal_indonesia($properti->created_at, false) }}</h4>
                             <h5>Eksterior</h5>
-                            <h4>Ada</h4>
+                            <h4>{{$properti->eksterior}}</h4>
                         </div>
                     </div>
                     <br>
                     <br>
                     <h6>Sarana Prasarana :</h6>
-                    <p>Keamanan 24 Jam</p>
-                    <p>Taman</p>
-                    <p>AC</p>
-                    <p>Wifi</p>
-                    <p>Masjid</p>
-                    <p>Kolam Renang</p>
+                    <?php echo $properti->sarpras; ?>
                     <br>
                     <br>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mSaxsQdE64g" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php echo $properti->video; ?>
                     <br>
                     <br>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014694.0174272042!2d106.68476197565994!3d-6.565972568669816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d93d0b2725%3A0xbd5de86b7736a3bd!2sJustCo%20at%20The%20Plaza%20Office%20Tower%2C%20Coworking%20Space%20%26%20Hot%20Desking%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1665383776140!5m2!1sid!2sid" 

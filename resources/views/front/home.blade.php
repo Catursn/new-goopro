@@ -2,12 +2,56 @@
 @section('main-content')
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            @foreach ($slider as $key=>$ban)
+              <li data-target="#carouselExampleIndicators" data-slide-to="{{$key}}" class="{{(($key==0)? 'active' : '')}}"></li>
+            @endforeach   
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            @foreach ($slider as $key=>$ban)
+              <div class="carousel-item {{(($key==0)? 'active' : '')}}">
+                <img class="d-block w-100" src="images{{$ban->slider}}">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="wadah">
+                        <div >
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <form action="#">
+                                        <select name="coba" id="coba">
+                                            <option value="#">satu</option>
+                                            <option value="#">dua</option>
+                                        </select>
+                                        <input type="text" placeholder="cobaa">
+                                        <button type="submit" class="subb">Search</button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <form action="#">
+                                        <select name="coba" id="coba">
+                                            <option value="#">satu</option>
+                                            <option value="#">dua</option>
+                                        </select>
+                                        <input type="text" placeholder="cobaa">
+                                        <button type="submit" class="subb">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+            <!-- <div class="carousel-item active">
                 <img class="d-block w-100" src="images/banner1.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="wadah">
@@ -47,7 +91,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="images/banner2.jpg" alt="Second slide">
+                <img class="d-block w-100" src="images/banner2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="wadah">
                         <div >
@@ -86,7 +130,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="images/banner3.jpg" alt="Third slide">
+                <img class="d-block w-100" src="images/banner3.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="wadah">
                         <div >
@@ -123,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -135,6 +179,47 @@
         </a>
     </div>
     <div class="wadah">
+        <div class="properti">
+            <div class="title">
+                <h3>Kategori Properti</h3>
+            </div>
+            <div class="row">
+                @foreach($hunian as $hun)
+                <div class="col-12">
+                    <img src="images{{$hun->icon}}" alt="">
+                    <p>{{$hun->hunian}}</p>
+                </div>
+                @endforeach
+                <!-- <div class="col-12">
+                    <img src="images/pabrik.png" alt="">
+                    <p>Pabrik</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/rumah.png" alt="">
+                    <p>Rumah</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/tanah.png" alt="">
+                    <p>Tanah</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/gedung.png" alt="">
+                    <p>Gedung Perkantoran</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/ruko.png" alt="">
+                    <p>Ruko</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/gudang.png" alt="">
+                    <p>Gudang</p>
+                </div>
+                <div class="col-12">
+                    <img src="images/rukan.png" alt="">
+                    <p>Rukan</p>
+                </div> -->
+            </div>
+        </div>
         <div class="place">
             <div class="title">
                 <h3>Properti Perwilayah</h3>
@@ -185,45 +270,6 @@
                 </div>
             </div>
         </div>
-        <div class="properti">
-            <div class="title">
-                <h3>Kategori Properti</h3>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <img src="images/apartemen.png" alt="">
-                    <p>Apartemen</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/pabrik.png" alt="">
-                    <p>Pabrik</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/rumah.png" alt="">
-                    <p>Rumah</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/tanah.png" alt="">
-                    <p>Tanah</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/gedung.png" alt="">
-                    <p>Gedung Perkantoran</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/ruko.png" alt="">
-                    <p>Ruko</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/gudang.png" alt="">
-                    <p>Gudang</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/rukan.png" alt="">
-                    <p>Rukan</p>
-                </div>
-            </div>
-        </div>
         <div class="cari">
             <div class="title">
                 <h3>Cari Properti Berdasarkan Harta</h3>
@@ -268,15 +314,17 @@
             <h3>PROPERTI HUNIAN ASRI</h3>
         </div>
         <div class="row">
+            @foreach($properti as $pro)
             <div class="col-30">
-                <img src="images/hunian1.png" alt="">
+                <img src="images{{$pro->foto1}}" alt="">
                 <div class="caption">
-                    <h5>Tipe Properti : Rumah</h5>
-                    <h6>Tempat Tidur : 4, Kamar Mandi : 1, Lantai : 2, Bangunan : 50, Lahan : 100</h6>
-                    <h6>Rp 1.650.000.000,00</h6>
+                    <h5>Tipe Properti : {{$pro->hunian}}</h5>
+                    <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
+                    <h6>Rp {{$pro->harga}}</h6>
                 </div>
             </div>
-            <div class="col-30">
+            @endforeach
+            <!-- <div class="col-30">
                 <img src="images/hunian2.png" alt="">
                 <div class="caption">
                     <h5>Tipe Properti : Rumah</h5>
@@ -291,20 +339,22 @@
                     <h6>Tempat Tidur : 1, Kamar Mandi : 1, Lantai : 2, Bangunan : 50</h6>
                     <h6>Rp 550.000.000,00</h6>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="wadah">
         <div class="berita">
             <h3>Berita Properti Terbaru</h3>
             <div class="row">
+                @foreach($berita as $ber)
                 <div class="col-30">
-                    <img src="images/pemerintah.png" alt="">
-                    <h4>Pemerintah Menurunkan Suku Bunga Properti</h4>
-                    <h5>18 Desember 2021</h5>
-                    <a href="#">>Baca Selengkapnya</a>
+                    <img src="images{{$ber->foto}}" alt="">
+                    <h4>{{$ber->judul}}</h4>
+                    <h5>{{ tanggal_indonesia($ber->tanggal, false) }}</h5>
+                    <a href="{{$ber->slug}}">>Baca Selengkapnya</a>
                 </div>
-                <div class="col-30">
+                @endforeach
+                <!-- <div class="col-30">
                     <img src="images/apa.png" alt="">
                     <h4>Apa & Kenapa Harus Investasi Properti</h4>
                     <h5>21 Desember 2021</h5>
@@ -315,10 +365,10 @@
                     <h4>Kota Baru Parahyangan menggelar JABAR Properti Expo 2022</h4>
                     <h5>22 Desember 2021</h5>
                     <a href="#">>Baca Selengkapnya</a>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="kenapa">
+        <!-- <div class="kenapa">
             <h3>Kenapa Beli Rumah di Goopro?</h3>
             <div class="row">
                 <div class="col-70">
@@ -357,7 +407,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="cara">
             <h3>Cara Beli Properti di Goopro? Mudah</h3>
             <div class="center">

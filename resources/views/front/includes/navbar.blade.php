@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#"><img src="/images/logo.jpeg" alt="" height="100%"></a>
+  <a class="navbar-brand" href="/"><img src="/images/logo.jpeg" alt="" height="100%"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,7 +8,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbardijual" role="button" data-toggle="dijual" aria-haspopup="true" aria-expanded="false">
-          Dijual
+          DIJUAL
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardijual">
           <a class="dropdown-item" href="/dijual">Semuanya</a>
@@ -20,7 +20,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbardisewa" role="button" data-toggle="disewa" aria-haspopup="true" aria-expanded="false">
-          Disewakan
+          DISEWAKAN
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardisewa">
           <a class="dropdown-item" href="/disewakan">Semuanya</a>
@@ -31,19 +31,26 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarlayanan" role="button" data-toggle="layanan" aria-haspopup="true" aria-expanded="false">
-          Layanan
+        <a class="nav-link" href="#" id="navbarproperty" role="button" data-toggle="property" aria-haspopup="true" aria-expanded="false">
+          PROPERTY BARU
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarlayanan">
-          <a class="dropdown-item" href="/layanan">Provided Services</a>
-          <a class="dropdown-item" href="/layanan">Advertise Property with me</a>
-          <a class="dropdown-item" href="/layanan">KPR Gallery</a>
-          <a class="dropdown-item" href="/layanan">Calculator KPR</a>
+        <div class="dropdown-menu" aria-labelledby="navbarproperty">
+          <a class="dropdown-item" href="/disewakan">Semuanya</a>
+          <a class="dropdown-item" href="/disewakan">Komersial</a>
+          <a class="dropdown-item" href="/disewakan">Rumah</a>
+          <a class="dropdown-item" href="/disewakan">Apartemen</a>
+          <a class="dropdown-item" href="/disewakan">Tanah</a>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="direktori">DIREKTORI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="direktori">CARI AGEN</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbarinformasi" role="button" data-toggle="informasi" aria-haspopup="true" aria-expanded="false">
-          Informasi
+          BERITA PROPERTY
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarinformasi">
           <a class="dropdown-item" href="/berita">Property News</a>
@@ -59,23 +66,8 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarprofil" role="button" data-toggle="profil" aria-haspopup="true" aria-expanded="false">
-          Profil
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarprofil">
-          <a class="dropdown-item" href="/about">About Us</a>
-          <a class="dropdown-item" href="#">Visi & Misi</a>
-          <a class="dropdown-item" href="#">Management</a>
-          <a class="dropdown-item" href="#">Why with me?</a>
-          <a class="dropdown-item" href="#">What People Say</a>
-          <a class="dropdown-item" href="#">Meet Our Sales</a>
-          <a class="dropdown-item" href="#">Apreciation</a>
-          <a class="dropdown-item" href="#">Partners</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
         <a class="nav-link " href="#" id="navbarpanduan" role="button" data-toggle="panduan" aria-haspopup="true" aria-expanded="false">
-          Panduan
+          PANDUAN
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarpanduan">
           <a class="dropdown-item" href="#">Simulasi KPR</a>
@@ -89,7 +81,7 @@
     </ul>
     <div class="my-2 my-lg-0">
         <div class="right">
-            <a href="/login">Login/Daftar</a>
+            <a href="/login">LOGIN / DAFTAR</a>
             <button class="iklan">Iklankan Property</button>
         </div>
     </div>
