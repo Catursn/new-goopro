@@ -8,6 +8,7 @@ use App\Http\Controllers\PropertiController;
 use App\Http\Controllers\KategoriBeritaController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\KategoriPropertiController;
+use App\Http\Controllers\KategoriKotaController;
 use App\Http\Controllers\KategoriHunianController;
 use App\Http\Controllers\HomeController;
 
@@ -42,6 +43,7 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/properti', PropertiController::class);
     Route::resource('/kategoriberita', KategoriBeritaController::class);
     Route::resource('/kategoriproperti', KategoriPropertiController::class);
+    Route::resource('/kategorikota', KategoriKotaController::class);
     Route::resource('/kategorihunian', KategoriHunianController::class);
     Route::resource('/slider', SliderController::class);
 });

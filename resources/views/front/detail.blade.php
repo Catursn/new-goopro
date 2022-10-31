@@ -4,7 +4,7 @@
         <a href="#">Halaman Utama ></a>
         <a href="#">{{$properti->kategori}} ></a>
         <a href="#">{{$properti->hunian}} ></a>
-        <a href="#">Kota Bandung ></a>
+        <a href="#">{{$properti->kota}} ></a>
         <a href="#" class="active">{{$properti->judul}}</a>
     </div>
     <div class="bigimg">
@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-50">
                             <h5>Tipe Properti</h5>
-                            <h4>{{$properti->hunian}} {{$properti->properti}}</h4>
+                            <h4>{{$properti->hunian}} {{$properti->kategori}}</h4>
                             <h5>Pengembang</h5>
                             <h4 class="grey">{{$properti->pengembang}}</h4>
                             <h5>Per M</h5>
@@ -46,7 +46,7 @@
                             <h5>Lantai</h5>
                             <h4>{{$properti->lantai}}</h4>
                             <h5>Tahun Dibuat</h5>
-                            <h4>{{$properti->tahun}}</h4>
+                            <h4>{{$properti->dibuat}}</h4>
                             <h5>Listrik</h5>
                             <h4>{{$properti->listrik}} watt</h4>
                             <h5>Tempat Parkir</h5>
@@ -77,7 +77,7 @@
                     <?php echo $properti->video; ?>
                     <br>
                     <br>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014694.0174272042!2d106.68476197565994!3d-6.565972568669816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d93d0b2725%3A0xbd5de86b7736a3bd!2sJustCo%20at%20The%20Plaza%20Office%20Tower%2C%20Coworking%20Space%20%26%20Hot%20Desking%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1665383776140!5m2!1sid!2sid" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014694.0174272042!2d107.66538021074251!3d-6.951330520197916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d93d0b2725%3A0xbd5de86b7736a3bd!2sJustCo%20at%20The%20Plaza%20Office%20Tower%2C%20Coworking%20Space%20%26%20Hot%20Desking%2C%20Jakarta!5e0!3m2!1sid!2sid!4v1665383776140!5m2!1sid!2sid" 
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="kalkulator">
                         <div class="title">

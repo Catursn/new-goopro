@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Properti;
 use App\Models\KategoriProperti;
 use App\Models\KategoriHunian;
+use App\Models\KategoriKota;
 use File;
 use Storage;
 use Illuminate\Support\Str;
@@ -39,7 +40,8 @@ class PropertiController extends Controller
     {
         $kategori = KategoriProperti::where('status','aktif')->orderBy('id_kategori','DESC')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
-        return view('back.properti.add',compact('kategori','hunian'));
+        $kota = KategoriKota::where('status','aktif')->orderBy('id_kota','DESC')->get();
+        return view('back.properti.add',compact('kategori','hunian','kota'));
     }
 
     /**
@@ -126,7 +128,8 @@ class PropertiController extends Controller
         $properti= Properti::findOrFail($id);
         $kategori = KategoriProperti::where('status','aktif')->orderBy('id_kategori','DESC')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
-        return view('back.properti.edit',compact('properti','kategori', 'hunian'));
+        $kota = KategoriKota::where('status','aktif')->orderBy('id_kota','DESC')->get();
+        return view('back.properti.edit',compact('properti','kategori', 'hunian','kota'));
     }
 
     /**

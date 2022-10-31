@@ -1,10 +1,10 @@
 @extends('front.includes.master')
 @section('main-content')
+<div class="titleproperti">
+    <h3>DIJUAL</h3>
+</div>
 <div class="wadah">
     <div class="properti">
-        <div class="title">
-            <h3>Kategori Properti</h3>
-        </div>
         <div class="row">
             <div class="col-12">
                 <img src="images/apartemen.png" alt="">

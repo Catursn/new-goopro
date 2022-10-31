@@ -10,20 +10,21 @@
             <h5>+62855-7499-7499 (Call Only)</h5>
             <br>
             <h3>Ikuti Kami</h3>
-            <img src="images/sosmed.png" alt="">
+            <img src="/images/sosmed.png" alt="">
         </div>
         <div class="col-25">
-            <h3>TENTANG</h3>
+            <h3>PERUSAHAAN</h3>
             <br>
-            <h5>About Us</h5>
+            <h5>Tentang Kami</h5>
+            <h5>Visi&Misi</h5>
+            <h5>Manajemen</h5>
             <h5>Layanan</h5>
-            <h5>Passhouses Expert Consultant</h5>
-            <h5>Panduan Jual Beli Rumah</h5>
+            <h5>Info Properti</h5>
             <h5>Karir</h5>
             <h5>Hubungi Kami</h5>
         </div>
         <div class="col-25">
-            <h3>PRODUCT</h3>
+            <h3>RUMAH IMPIAN</h3>
             <br>
             <h5>Express Sell</h5>
             <h5>Booster Sell</h5>
@@ -36,7 +37,7 @@
             <h5>Rumah Dijual di Jabodetabek</h5>
         </div>
         <div class="col-25">
-            <h3>Properti Business</h3>
+            <h3>KATEGORI PROPERTI</h3>
             <br>
             <h5>Semuanya</h5>
             <h5>Rumah</h5>
@@ -48,7 +49,7 @@
             <h5>Tanah</h5>
         </div>
         <div class="col-25">
-            <h3>OTHER</h3>
+            <h3>LAINNYA</h3>
             <br>
             <h5>Terms & Conditions</h5>
             <h5>Privacy Policy</h5>

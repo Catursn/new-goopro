@@ -19,6 +19,7 @@ class CreatePropertisTable extends Migration
             $table->string('slug');
             $table->string('kategori');
             $table->string('hunian');
+            $table->string('kota');
             $table->string('tempat');
             $table->string('harga');
             $table->string('tidur');

@@ -4,7 +4,7 @@
 <div class="nav-left-sidebar sidebar-dark">
     <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <a class="d-xl-none d-lg-none" href="{{route('admin')}}">Dashboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -14,7 +14,7 @@
                         Menu
                     </li> -->
                     <li class="nav-item ">
-                        <a class="nav-link active" href="/content"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                        <a class="nav-link active" href="{{route('admin')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                     </li>
                     <li class="nav-divider">
                         PROPERTI
@@ -95,6 +95,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('kategorihunian.index')}}">Kategori Hunian</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('kategorikota.index')}}">Kategori Kota</a>
                                 </li>
                             </ul>
                         </div>

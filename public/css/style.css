@@ -377,12 +377,13 @@ nav .right a:link{
 .properti{
   margin: 25px 0px;
 }
-.properti .title{
-  text-align: center;
+.titleproperti{
+  margin: 15px;
+  text-align: left;
 }
-.properti h3{
-  font-size: 22px;
-  font-weight: 500;
+.titleproperti h3{
+  font-size: 24px;
+  font-weight: 700;
 }
 .properti .col-12{
   max-width: 12.5%;
@@ -1722,7 +1723,7 @@ nav .right a:link{
   /*--------------------------------
   ----------  PROPERTI -------------
   --------------------------------*/
-  .properti h3{
+  .titleproperti h3{
     font-size: 18px;
   }
   .properti .col-12{
