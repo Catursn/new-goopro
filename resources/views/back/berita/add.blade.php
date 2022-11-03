@@ -106,7 +106,7 @@ $(document).ready(function() {
   $('#summernote').summernote({
     placeholder: 'Type here.....',
     tabsize: 2,
-    height: 200,
+    height: 500,
   });
 });
 </script>
