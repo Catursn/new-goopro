@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  DISEWAKAN | GOOPRO
+@endsection
+
 @section('main-content')
 <div class="titleproperti">
     <h3>DISEWAKAN</h3>

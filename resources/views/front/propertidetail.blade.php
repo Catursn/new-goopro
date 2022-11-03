@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  PROPERTI DETAIL | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>

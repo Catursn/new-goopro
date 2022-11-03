@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  LAYANAN | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>

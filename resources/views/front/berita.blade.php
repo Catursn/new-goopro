@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+<?php echo strtoupper($berita->judul); ?>  | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>

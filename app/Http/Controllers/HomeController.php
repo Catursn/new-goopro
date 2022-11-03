@@ -8,6 +8,12 @@ use App\Models\Properti;
 use App\Models\Berita;
 use App\Models\KategoriBerita;
 use App\Models\KategoriHunian;
+use App\Models\Terms;
+use App\Models\Privacy;
+use App\Models\Syarat;
+use App\Models\Keuntungan;
+use App\Models\HakCipta;
+use App\Models\CaraKerja;
 
 class HomeController extends Controller
 {
@@ -46,5 +52,35 @@ class HomeController extends Controller
     public function detail($slug){
         $properti = Properti::where('slug',$slug)->first();
         return view('front.detail',compact('properti'));
+    }
+
+    public function terms(){
+        $terms = Terms::findorFail('1');
+        return view('front.terms',compact('terms'));
+    }
+
+    public function privacy(){
+        $privacy = Privacy::findorFail('1');
+        return view('front.privacy',compact('privacy'));
+    }
+
+    public function syarat(){
+        $syarat = Syarat::findorFail('1');
+        return view('front.syarat',compact('syarat'));
+    }
+
+    public function keuntungan(){
+        $keuntungan = Keuntungan::findorFail('1');
+        return view('front.keuntunganagen',compact('keuntungan'));
+    }
+
+    public function hakcipta(){
+        $hakcipta = HakCipta::findorFail('1');
+        return view('front.hakcipta',compact('hakcipta'));
+    }
+
+    public function carakerja(){
+        $carakerja = CaraKerja::findorFail('1');
+        return view('front.carakerja',compact('carakerja'));
     }
 }

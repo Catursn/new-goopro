@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  DIJUAL | GOOPRO
+@endsection
+
 @section('main-content')
 <div class="titleproperti">
     <h3>DIJUAL</h3>

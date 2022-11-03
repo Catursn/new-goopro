@@ -11,6 +11,12 @@ use App\Http\Controllers\KategoriPropertiController;
 use App\Http\Controllers\KategoriKotaController;
 use App\Http\Controllers\KategoriHunianController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TermsController;
+use App\Http\Controllers\PrivacyController;
+use App\Http\Controllers\SyaratController;
+use App\Http\Controllers\KeuntunganController;
+use App\Http\Controllers\HakCiptaController;
+use App\Http\Controllers\CaraKerjaController;
 
 
 /*
@@ -46,14 +52,26 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/kategorikota', KategoriKotaController::class);
     Route::resource('/kategorihunian', KategoriHunianController::class);
     Route::resource('/slider', SliderController::class);
+    Route::resource('/terms', TermsController::class);
+    Route::resource('/privacy', PrivacyController::class);
+    Route::resource('/syarat', SyaratController::class);
+    Route::resource('/keuntungan', KeuntunganController::class);
+    Route::resource('/hakcipta', HakCiptaController::class);
+    Route::resource('/carakerja', CaraKerjaController::class);
 });
 
 // Route::resource('dijual', DijualController::class);
 Route::get('/berita/{judul}', [HomeController::class, 'berita']);
-Route::get('/dijual', [HomeController::class, 'dijual']);
-Route::get('/disewakan', [HomeController::class, 'disewakan']);
-Route::get('/propertibaru', [HomeController::class, 'properti']);
+Route::get('/dijual', [HomeController::class, 'dijual'])->name('dijual');
+Route::get('/disewakan', [HomeController::class, 'disewakan'])->name('disewakan');
+Route::get('/propertibaru', [HomeController::class, 'properti'])->name('propertibaru');
 Route::get('/properti/{slug}', [HomeController::class, 'detail']);
+Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
+Route::get('/syarat', [HomeController::class, 'syarat'])->name('syarat');
+Route::get('/keuntungan', [HomeController::class, 'keuntungan'])->name('keuntungan');
+Route::get('/hakcipta', [HomeController::class, 'hakcipta'])->name('hakcipta');
+Route::get('/carakerja', [HomeController::class, 'carakerja'])->name('carakerja');
 // Route::view('/disewakan','front.disewakan');
 Route::view('/about','front.about');
 Route::view('/register','front.register');
@@ -67,7 +85,7 @@ Route::view('/kontak','front.kontak');
 // Route::view('/detail','front.detail');
 Route::view('/disewadetail','front.disewadetail');
 Route::view('/propertidetail','front.propertidetail');
-Route::view('/keuntunganagen','front.keuntunganagen');
-Route::view('/terms','front.terms');
-Route::view('/privacy','front.privacy');
+// Route::view('/keuntunganagen','front.keuntunganagen');
+// Route::view('/terms','front.terms');
+// Route::view('/privacy','front.privacy');
 Route::view('/karir','front.karir');

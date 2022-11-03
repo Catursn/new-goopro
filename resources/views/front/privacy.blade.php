@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  PRIVACY POLICY | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
@@ -9,7 +14,8 @@
     </div>
     <div class="wadah">
         <div class="terms">
-            <h6>Terimakasih telah mengakses lamudi.co.id, situs yang dioperasikan oleh PT. Lamudi Classifieds Indonesia. Kami menghormati privasi Anda dan ingin melindungi 
+        <?php echo $privacy->privacy; ?>
+            <!-- <h6>Terimakasih telah mengakses lamudi.co.id, situs yang dioperasikan oleh PT. Lamudi Classifieds Indonesia. Kami menghormati privasi Anda dan ingin melindungi 
                 informasi pribadi Anda. Untuk mempelajari lebih lanjut, silakan baca kebijakan privasi ini. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, 
                 menggunakan dan (di bawah kondisi tertentu) mengungkapkan informasi pribadi Anda. Kebijakan Privasi ini juga menjelaskan langkah-langkah yang telah kami ambil 
                 untuk mengamankan informasi pribadi Anda. Akhirnya, kebijakan privasi ini menjelaskan pilihan mengenai pengumpulan, penggunaan dan pengungkapan informasi pribadi 
@@ -42,7 +48,7 @@
                 pribadi anda untuk tujuan pemasaran langsung. Lamudi.co.id
             </h6>
             <h6>Umum</h6>
-            <h6>Kami dapat mengubah Kebijakan Privasi ini setiap saat dengan memposting ketentuan yang diubah pada situs ini.</h6>
+            <h6>Kami dapat mengubah Kebijakan Privasi ini setiap saat dengan memposting ketentuan yang diubah pada situs ini.</h6> -->
         </div>
     </div>
 @endsection

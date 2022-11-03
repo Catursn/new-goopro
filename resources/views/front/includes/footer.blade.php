@@ -1,13 +1,12 @@
 <div class="footer">
     <div class="row">
         <div class="col-25">
-            <h3>GOOPRO WAHID AHAD</h3>
+            <h3>PT GOOPRO MEDIA INDOLAND</h3>
             <br>
-            <h5>GRAHA JAGAD Central,31th Floor (JustCo)</h5>
-            <h5>Jl.Jendral Sudirman No.Kav. 48A</h5>
-            <h5>South Jakarta, 12930, Indonesia</h5>
+            <h5>Ruko Metro Suits kav.f5</h5>
+            <h5>Bandung, Indonesia</h5>
             <h5>cs@goopro.id</h5>
-            <h5>+62855-7499-7499 (Call Only)</h5>
+            <h5>+62817-122262 (Call Only)</h5>
             <br>
             <h3>Ikuti Kami</h3>
             <img src="/images/sosmed.png" alt="">
@@ -51,9 +50,12 @@
         <div class="col-25">
             <h3>LAINNYA</h3>
             <br>
-            <h5>Terms & Conditions</h5>
-            <h5>Privacy Policy</h5>
-            <h5>Syarat Penggunaan</h5>
+            <a href="{{route('terms')}}">Terms & Conditions</a><br>
+            <a href="{{route('privacy')}}">Privacy Policy</a><br>
+            <a href="{{route('syarat')}}">Syarat Penggunaan</a><br>
+            <a href="{{route('keuntungan')}}">Keuntungan Agen</a><br>
+            <a href="{{route('hakcipta')}}">Hak Cipta</a><br>
+            <a href="{{route('carakerja')}}">Cara Kerja</a>
             <h5>Syarat Penggunaan Agen</h5>
             <h5>Pusat Bantuan</h5>
             <h5>Tanya Jawab (FAQ)</h5>
@@ -62,8 +64,8 @@
         </div>
     </div>
     <div class="copyright">
-        <h4>Copyright @2022 Goopro</h4>
-        <h5>PT. Goo Property Sejahtera is registered company based on SK Number AHU-0022557.AH.01.01.TAHUN 2022</h5>
+        <h4>Copyright @2022 Goopro.id</h4>
+        <h5>PT GOOPRO MEDIA INDOLAND is registered company based on SK Number AHU-0022557.AH.01.01.TAHUN 2022</h5>
     </div>
 </div>
 

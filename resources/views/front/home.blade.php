@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  GOOPRO
+@endsection
+
 @section('main-content')
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -430,7 +435,7 @@
                 </div>
             </div>
         </div>
-        <div class="testimoni">
+        <!-- <div class="testimoni">
             <h3>Testimoni atas kepercayaan selama ini....</h3>
             <div class="row">
                 <div class="col-30">
@@ -470,7 +475,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection
 @push('styles')

@@ -65,6 +65,31 @@
                         </div>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#pages" aria-controls="pages"><i class="fas fa-fw fa-file"></i>PAGES LAINNYA</a>
+                        <div id="pages" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('terms.index')}}">Terms & Conditions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('privacy.index')}}">Privacy & Policy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('syarat.index')}}">Syarat Penggunaan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('keuntungan.index')}}">Keuntungan Pengguna</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('hakcipta.index')}}">Hak Cipta</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('carakerja.index')}}">Cara Kerja</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#media" aria-controls="media"><i class="fas fa-fw fa-file"></i>MEDIA</a>
                         <div id="media" class="collapse submenu" style="">
                             <ul class="nav flex-column">

@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  ABOUT | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
@@ -9,6 +14,10 @@
     </div>
     <div class="wadah">
         <div class="about">
+            <div class="title">
+                <h1>Platform Jual, Beli dan Sewa Properti Berbasis Teknologi</h1>
+                <a href="#">Bergabung Bersama kami</a>
+            </div>
             <div class="row">
                 <div class="col-50">
                     <img src="/images/about.png" alt="">
@@ -16,42 +25,54 @@
                 <div class="col-50">
                     <h2>Tentang Kami</h2>
                     <br>
-                    <h3>Goopro adalah perusahaan teknologi properti terbesar di Indonesia bersama dengan segenap anngota agensi terbaiks kami dan terkemuka yang mengoperasikan 
-                        portal real estate di seluruh Indonesia.<br><br> Didorong oleh misi kami untuk membantu semua orang mendapatkan properti impian mereka, kami menghadirkan 
-                        solusi end-to-end untuk perjalanan kepemilikan properti yang menghubungkan pengembang, agen, mitra bank, dan pencari properti, di bawah satu platform 
-                        yang mudah digunakan dan paling tepercaya.  Dan kini hadir dengan tagline baru, “Jual Beli Properti Lebih Mudah dan Berkah Terbaik Dunbi Akherat”. 
-                        Aamiin.
-                    </h3>
+                    <h3 style="" >Kami memfasilitasi transaksi properti end-to-end untuk pembelian dan penyewaan melalui model agensi.</h3><br>
+                    <h4 style="color:#8f8e8e;" >Kami menghilangkan perbedaan antara pembeli dan pemilik dalam transaksi properti dengan:</h4>
+                    <div class="title">
+                        <img src="/images/contract.png" alt="" style="width:10%;">
+                        <h4 style="color:#8f8e8e;" >Mengkurasi, memeriksa, dan memberdayakan agen</h4>
+                        <img src="/images/home.png" alt="" style="width:10%;">
+                        <h4 style="color:#8f8e8e;" >Memfasilitasi transaksi properti O2O secara end-to-end</h4>
+                        <img src="/images/profile.png" alt="" style="width:10%;">
+                        <h4 style="color:#8f8e8e;" >Mengkurasi dan memfasilitasi interaksi antara pembeli dan pemilik dengan perantara</h4>
+                    </div>
                 </div>
                 <div class="col-50">
                     <div class="box">
                         <h2>Visi</h2>
                         <br>
-                        <h3>Goopro adalah perusahaan teknologi properti terbesar di Indonesia bersama dengan segenap anngota agensi terbaiks kami dan terkemuka yang mengoperasikan 
-                            portal real estate di seluruh Indonesia.</h3>
+                        <h3>Menjadikan properti lebih dapat diakses untuk meningkatkan penghidupan dan inklusi finansial</h3>
                     </div>
                 </div>
                 <div class="col-50">
                     <div class="box">
                         <h2>Misi</h2>
                         <br>
-                        <h3>Goopro adalah perusahaan teknologi properti terbesar di Indonesia bersama dengan segenap anngota agensi terbaiks kami dan terkemuka yang mengoperasikan 
-                            portal real estate di seluruh Indonesia. segenap anngota agensi terbaiks kami dan terkemuka yang mengoperasikan portal real estate di seluruh Indonesia. </h3>
+                        <h3>Menyediakan platform teknologi yang membantu mengatur informasi properti dan memfasilitasi interaksi antara pembeli, pemilik, agen, dan perantara properti</h3>
                     </div>
                 </div>
+            </div>
+                <div class="title">
+                    <h2>Layanan Kami</h2>
+                </div>
+            <div class="row">
                 <div class="col-50">
-                    <img src="/images/peta.png" alt="">
+                    <img src="/images/jabattangan.jpg" alt="">
                 </div>
                 <div class="col-50">
-                    <h2>Jangkauan Goopro di Nusantara</h2>
+                    <h2>Jual, Beli, dan Sewa Properti</h2>
                     <br>
-                    <h3>Pada tahun 2049, Goopro.id telah menjadi bagian dari grup perusahaan  terkemuka di dunia akherat yang selalu untuk terus mendorong perubahan industri teknologi 
-                        properti di Indonesia dengan menggabungkan pengetahuan pasar kami dengan teknologi dan pengalaman kami ini dalam mengembangkan kesuksesan bisnis properti di berbagai 
-                        daerah tempatnya beroperasi.
-                    </h3>
+                    <h3>Goopro Media Indoland menyediakan layanan transaksi properti secara menyeluruh mulai dari pencarian hingga akad dengan menggunakan teknologi.</h3>
+                </div>
+                <div class="col-50">
+                    <h2>Layanan Edukasi Properti</h2>
+                    <br>
+                    <h3>Layanan edukasi properti yang dirancang oleh Goopro Media Indoland sebagai media belajar bagi masyarakat yang tertarik terhadap dunia properti bersama Property Expert.</h3>
+                </div>
+                <div class="col-50">
+                    <img src="/images/edukasi.jpg" alt="">
                 </div>
             </div>
-            <div class="title">
+            <!-- <div class="title">
                 <h2>Manajemen</h2>
             </div>
             <div class="row">
@@ -109,7 +130,7 @@
                 <div class="boxbank">
                     <img src="/images/mandiri.png" alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 @endsection

@@ -1,4 +1,9 @@
 @extends('front.includes.master')
+
+@section('title')
+  TERMS AND CONDITIONS | GOOPRO
+@endsection
+
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
@@ -9,7 +14,8 @@
     </div>
     <div class="wadah">
         <div class="terms">
-            <h5>Pendahuluan</h5>
+        <?php echo $terms->terms; ?>
+            <!-- <h5>Pendahuluan</h5>
             <h6>Situs dan Layanan disediakan kepada anda dengan tunduk kepada Syarat dan Ketentuan Umum ini. “Anda” atau “Pengguna” berarti setiap orang yang menggunakan atau 
                 mengakses Layanan atau Situs baik secara manual maupun melalui sistem otomatis, termasuk setiap orang yang melihat-lihat Layanan dan materi di dalamnya, 
                 memberikan komentar terhadap materi atau merespon terhadap iklan yang dipasang di dalam Situs.
@@ -81,7 +87,7 @@
                 <li>produk dan/atau jasa yang diiklankan bukan merupakan produk dan/atau jasa yang dilarang untuk diperjualbelikan secara umum berdasarkan ketentuan peraturan 
                     perundang-undangan.
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 @endsection
