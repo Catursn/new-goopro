@@ -7,6 +7,9 @@
 /*--------------------------------
 -------------  NAVBAR  -----------
 --------------------------------*/
+body{
+  font-family: "Museo Sans",sans-serif !important;
+}
 nav{
   background-color: var(--hijau);
   font-size: 16px;
@@ -22,7 +25,7 @@ nav .right .iklan{
   font-size: 14px;
   padding: 10px 15px;
   color: black;
-  background-color: transparent;
+  background-color: #ffffff;
   border: 1px solid black;
 }
 nav .right a:link{
@@ -30,6 +33,9 @@ nav .right a:link{
 }
 .navbar-light .navbar-nav .nav-link{
   color: black !important;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #ffffff !important;
 }
 .navbar ul{
   margin:0px 15px;
@@ -46,6 +52,9 @@ nav .right a:link{
   border-radius: 10px;
   padding: 0px 0px;
   width: 100%;
+}
+.navbar .nav-item:hover .dropdown-item:hover{
+  color: #14A807 !important;
 }
 .wadah{
   margin: 0px 150px !important;
@@ -129,7 +138,6 @@ nav .right a:link{
   width: 24%;
   height: 150px;
   border-radius: 10px;
-  margin: 5px 5px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -279,8 +287,8 @@ nav .right a:link{
 }
 .cara .col-30{
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 25px 5px;
 }
 .cara .text{
@@ -289,7 +297,7 @@ nav .right a:link{
   position: relative;
   color: #ffffff;
   top: 35%;
-  left: 15%;
+  left: 8%;
   font-size: 12px;
   font-weight: 700;
 }
@@ -807,6 +815,18 @@ nav .right a:link{
   height: auto;
   margin-bottom: 25px;
 }
+.penjual .pic a{
+  background-color: #14A807 !important;
+  color: #ffffff !important;
+  padding: 10px 100px;
+  border-radius: 15px;
+  margin: 30px 0px;
+}
+.penjual .pic a:link{
+  text-decoration: #14A807;
+  background-color: transparent;
+  color: #ffffff;
+}
 .penjual input{
   width: 100%;
   border-radius: 15px;
@@ -822,7 +842,7 @@ nav .right a:link{
 .penjual a:link{
   text-decoration: none;
   background-color: transparent;
-  color: #14A807 !important;
+  /* color: #14A807 !important; */
 }
 .penjual button{
   width: 100%;

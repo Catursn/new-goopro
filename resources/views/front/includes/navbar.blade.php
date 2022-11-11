@@ -8,7 +8,7 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbardijual" role="button" data-toggle="dijual" aria-haspopup="true" aria-expanded="false">
-          DIJUAL
+          Dijual
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardijual">
           <a class="dropdown-item" href="/dijual">Semuanya</a>
@@ -20,7 +20,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbardisewa" role="button" data-toggle="disewa" aria-haspopup="true" aria-expanded="false">
-          DISEWAKAN
+          Disewakan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardisewa">
           <a class="dropdown-item" href="/disewakan">Semuanya</a>
@@ -32,7 +32,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbarproperty" role="button" data-toggle="property" aria-haspopup="true" aria-expanded="false">
-          PROPERTY BARU
+          Property Baru
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarproperty">
           <a class="dropdown-item" href="/disewakan">Semuanya</a>
@@ -43,14 +43,14 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="direktori">DIREKTORI</a>
+        <a class="nav-link" href="#" id="direktori">Direktori</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" id="direktori">CARI AGEN</a>
+        <a class="nav-link" href="#" id="direktori">Cari Agen</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" id="navbarinformasi" role="button" data-toggle="informasi" aria-haspopup="true" aria-expanded="false">
-          BERITA PROPERTY
+          Berita Property
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarinformasi">
           <a class="dropdown-item" href="/berita">Property News</a>
@@ -67,7 +67,7 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link " href="#" id="navbarpanduan" role="button" data-toggle="panduan" aria-haspopup="true" aria-expanded="false">
-          PANDUAN
+          Panduan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarpanduan">
           <a class="dropdown-item" href="#">Simulasi KPR</a>
@@ -81,7 +81,7 @@
     </ul>
     <div class="my-2 my-lg-0">
         <div class="right">
-            <a href="/login">LOGIN / DAFTAR</a>
+            <a href="/login">Login / Daftar</a>
             <button class="iklan">Iklankan Property</button>
         </div>
     </div>

@@ -17,6 +17,8 @@ use App\Http\Controllers\SyaratController;
 use App\Http\Controllers\KeuntunganController;
 use App\Http\Controllers\HakCiptaController;
 use App\Http\Controllers\CaraKerjaController;
+use App\Http\Controllers\TestimoniController;
+use App\Http\Controllers\IklanController;
 
 
 /*
@@ -58,6 +60,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/keuntungan', KeuntunganController::class);
     Route::resource('/hakcipta', HakCiptaController::class);
     Route::resource('/carakerja', CaraKerjaController::class);
+    Route::resource('/testimoni', TestimoniController::class);
+    Route::resource('/iklan', IklanController::class);
 });
 
 // Route::resource('dijual', DijualController::class);

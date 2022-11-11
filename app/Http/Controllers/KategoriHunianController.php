@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KategoriHunian;
+use File;
 
 class KategoriHunianController extends Controller
 {
@@ -131,6 +132,7 @@ class KategoriHunianController extends Controller
     public function destroy($id)
     {
         $hunian=KategoriHunian::findOrFail($id);
+        File::delete('/images/kategoriproperti/'.$hunian->icon);
         $status=$hunian->delete();
         
         if($status){

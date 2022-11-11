@@ -230,7 +230,7 @@
                 <h3>Properti Perwilayah</h3>
             </div>
             <div class="row">
-                <div class="col-25" style="background-image: url('images/bandung.png')">
+                <!-- <div class="col-25" style="background-image: url('images/bandung.png')">
                     <a href="#">Kota Bandung <br>>Properti Detail</a>
                 </div>
                 <div class="col-25" style="background-image: url('images/kabbandung.png')">
@@ -241,6 +241,30 @@
                 </div>
                 <div class="col-25" style="background-image: url('images/jakarta.png')">
                     <a href="#">Jakarta <br>>Properti Detail</a>
+                </div> -->
+                <div class="col-25">
+                    <img src="images/bandung.png" alt="">
+                    <div class="caption">
+                        <a href="#">Kota Bandung <br>>Properti Detail</a>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <img src="images/kabbandung.png" alt="">
+                    <div class="caption">
+                        <a href="#">Kabupaten Bandung <br>>Properti Detail</a>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <img src="images/cimahi.png" alt="">
+                    <div class="caption">
+                        <a href="#">Cimahi <br>>Properti Detail</a>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <img src="images/jakarta.png" alt="">
+                    <div class="caption">
+                        <a href="#">Jakarta <br>>Properti Detail</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -424,12 +448,17 @@
                     </div>
                     <div class="col-30" style="background-color: #158FFF;">
                         <div class="text">
-                            <p>2. <br> Lihat Properti</p>
+                            <p>2. <br> Lihat</p>
+                        </div>
+                    </div>
+                    <div class="col-30" style="background-color: #eb9834;">
+                        <div class="text">
+                            <p>3. <br> Negosiasi</p>
                         </div>
                     </div>
                     <div class="col-30" style="background-color: #14A807;">
                         <div class="text">
-                            <p>3. <br> Deal Properti</p>
+                            <p>4. <br> Deal</p>
                         </div>
                     </div>
                 </div>

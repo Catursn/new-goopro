@@ -140,7 +140,8 @@
                         <h4>Aris Dilanto Kusumo</h4>
                         <h5>PT. GRIYA PROPERI LARIS MANIS</h5>
                         <H5>Anggota Sejak Tahun 2019</H5>
-                        <h5>+62 8213334949</h5>
+                        <br>
+                        <a href="https://wa.me/628213334949" target="_blank" class="wa">Whatsapp</a>
                     </div>
                     <input type="text" placeholder="Nama Lengkap">
                     <input type="text" placeholder="No Telepon">

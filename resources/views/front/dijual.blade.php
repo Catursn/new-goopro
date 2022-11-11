@@ -49,7 +49,7 @@
 <div class="contentt">
     <div class="row">
         <div class="leftbar">
-            <h3>Berdasarkan Harga :</h3>
+            <h3>Harga :</h3>
             <div class="row">
                 <div class="col-50">
                     <button><= 500 juta</button>
@@ -72,7 +72,7 @@
             </div>
             <br>
             <br>
-            <h3>Berdasarkan Kamar Tidur :</h3>
+            <h3>Kamar Tidur :</h3>
             <div class="row">
                 <div class="col-20">
                     <button>1</button>
@@ -92,7 +92,7 @@
             </div>
             <br>
             <br>
-            <h3>Berdasarkan Daerah :</h3>
+            <h3>Daerah :</h3>
             <div class="row">
                 <div class="col-50">
                     <button>Bandung</button>

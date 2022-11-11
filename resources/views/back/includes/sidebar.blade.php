@@ -27,6 +27,9 @@
                         <div id="properti" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{route('iklan.index')}}">Iklan Property</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('properti.index')}}">Listing Aktif</a>
                                 </li>
                                 <li class="nav-item">
@@ -103,7 +106,7 @@
                                     <a class="nav-link" href="{{route('berita.index')}}">Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Testimoni</a>
+                                    <a class="nav-link" href="{{route('testimoni.index')}}">Testimoni</a>
                                 </li>
                             </ul>
                         </div>
