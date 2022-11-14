@@ -1,6 +1,9 @@
 <!-- ============================================================== -->
 <!-- left sidebar -->
 <!-- ============================================================== -->
+<?php
+    $role = Auth()->user()->role;
+?>
 <div class="nav-left-sidebar sidebar-dark">
     <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -26,9 +29,9 @@
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#properti" aria-controls="properti"><i class="fas fa-fw fa-file"></i>PROPERTI</a>
                         <div id="properti" class="collapse submenu" style="">
                             <ul class="nav flex-column">
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="{{route('iklan.index')}}">Iklan Property</a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('properti.index')}}">Listing Aktif</a>
                                 </li>
@@ -44,6 +47,7 @@
                             </ul>
                         </div>
                     </li>
+                    @if($role == '1')
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#kontak" aria-controls="kontak"><i class="fas fa-fw fa-file"></i>KONTAK</a>
                         <div id="kontak" class="collapse submenu" style="">
@@ -130,6 +134,7 @@
                             </ul>
                         </div>
                     </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#setting" aria-controls="setting"><i class="fas fa-fw fa-file"></i>SETTING</a>
                         <div id="setting" class="collapse submenu" style="">

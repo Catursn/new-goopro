@@ -37,8 +37,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/dijual','DijualController@index');
 
 /* ADMIN */
-    Route::get('/admin/login', [AuthController::class, 'login'])->name('login');
-    Route::post('/admin/loginstore', [AuthController::class, 'loginSubmit'])->name('loginstore');
+    Route::get('login', [AuthController::class, 'login'])->name('login');
+    Route::post('loginstore', [AuthController::class, 'loginSubmit'])->name('loginstore');
     Route::get('/admin/register', [AuthController::class, 'register'])->name('register');
     Route::post('/admin/regstore', [AuthController::class, 'registerSubmit'])->name('regstore');
 Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
@@ -64,12 +64,17 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/iklan', IklanController::class);
 });
 
+
+Route::get('/register', [AuthController::class, 'frontregister'])->name('frontregister');
+Route::post('/regstore', [AuthController::class, 'frontregisterSubmit'])->name('frontregstore');
 // Route::resource('dijual', DijualController::class);
 Route::get('/berita/{judul}', [HomeController::class, 'berita']);
-Route::get('/dijual', [HomeController::class, 'dijual'])->name('dijual');
-Route::get('/disewakan', [HomeController::class, 'disewakan'])->name('disewakan');
-Route::get('/propertibaru', [HomeController::class, 'properti'])->name('propertibaru');
-Route::get('/properti/{slug}', [HomeController::class, 'detail']);
+Route::get('/dijual/{hunian}', [HomeController::class, 'dijual'])->name('dijual');
+Route::get('/disewakan/{hunian}', [HomeController::class, 'disewakan'])->name('disewakan');
+Route::get('/propertibaru/{hunian}', [HomeController::class, 'properti'])->name('propertibaru');
+Route::get('/properti/detail/{slug}', [HomeController::class, 'detail']);
+Route::get('/properti/list/{list}', [HomeController::class, 'list']);
+Route::post('/properti/cari', [HomeController::class, 'cari']);
 Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/syarat', [HomeController::class, 'syarat'])->name('syarat');
@@ -78,9 +83,9 @@ Route::get('/hakcipta', [HomeController::class, 'hakcipta'])->name('hakcipta');
 Route::get('/carakerja', [HomeController::class, 'carakerja'])->name('carakerja');
 // Route::view('/disewakan','front.disewakan');
 Route::view('/about','front.about');
-Route::view('/register','front.register');
+// Route::view('/register','front.register');
 // Route::view('/berita','front.berita');
-Route::view('/login','front.login');
+// Route::view('/login','front.login');
 Route::view('/lupapassword','front.lupapassword');
 Route::view('/layanan','front.layanan');
 Route::view('/kontak','front.kontak');

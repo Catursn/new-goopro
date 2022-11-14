@@ -10,6 +10,44 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    public function frontregister(){
+        return view('front.register');
+    }
+    public function frontregisterSubmit(Request $request){
+        // return $request->all();
+        // $messages = [
+        //     'required' => ':attribute wajib diisi !!!',
+        //     'min' => ':attribute harus diisi minimal :min karakter !!!',
+        //     'unique' => ':atribute sudah pernah dipakai',
+        //     'numeric' => ':atribute harus menggunakan angka',
+        //     'confirmed' => 'konfirmasi password salah',
+        // ];
+        $this->validate($request,[
+            'nama'=>'string|required|min:2',
+            'email'=>'string|required|unique:users,email',
+            'password'=>'required|confirmed',
+        ]);
+        // $file = $request->file('photo');
+        $data=$request->all();
+        // dd($data['role']);
+        $check= User::create([
+            'name'=>$data['nama'],
+            'email'=>$data['email'],
+            'role'=>'2',
+            'password'=>Hash::make($data['password']),
+            ]);
+        
+        if($check){
+            Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
+            Session::put('user',$data['email']);
+            request()->session()->flash('success','Successfully registered');
+            return redirect()->route('admin');
+        }
+        else{
+            request()->session()->flash('error','Please try again!');
+            return back();
+        }
+    }
     public function register(){
         return view('back.auth.register');
     }
@@ -26,7 +64,6 @@ class AuthController extends Controller
         $this->validate($request,[
             'nama'=>'string|required|min:2',
             'email'=>'string|required|unique:users,email',
-            'nomor_telepon' => 'numeric|required',
             'password'=>'required|confirmed',
         ]);
         // $file = $request->file('photo');
@@ -35,7 +72,7 @@ class AuthController extends Controller
         $check= User::create([
             'name'=>$data['nama'],
             'email'=>$data['email'],
-            'notelp'=>$data['nomor_telepon'],
+            'role'=>'1',
             'password'=>Hash::make($data['password']),
             ]);
         
@@ -90,7 +127,6 @@ class AuthController extends Controller
 
     public function resetpassword(Request $request, $id){
         $user = User::findOrFail($id);
-
         $this->validate($request,[
             'password'=>'required|confirmed',
         ]);

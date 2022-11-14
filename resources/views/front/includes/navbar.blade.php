@@ -11,11 +11,15 @@
           Dijual
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardijual">
-          <a class="dropdown-item" href="/dijual">Semuanya</a>
-          <a class="dropdown-item" href="/dijual">Komersial</a>
-          <a class="dropdown-item" href="/dijual">Rumah</a>
-          <a class="dropdown-item" href="/dijual">Apartemen</a>
-          <a class="dropdown-item" href="/dijual">Tanah</a>
+          <a class="dropdown-item" href="/dijual/all">Semuanya</a>
+          <a class="dropdown-item" href="/dijual/Rukan">Rukan</a>
+          <a class="dropdown-item" href="/dijual/Gudang">Gudang</a>
+          <a class="dropdown-item" href="/dijual/Tanah">Tanah</a>
+          <a class="dropdown-item" href="/dijual/Ruko">Ruko</a>
+          <a class="dropdown-item" href="/dijual/Gedung Perkantoran">Gedung Perkantoran</a>
+          <a class="dropdown-item" href="/dijual/Pabrik">Pabrik</a>
+          <a class="dropdown-item" href="/dijual/Rumah">Rumah</a>
+          <a class="dropdown-item" href="/dijual/Apartemen">Apartemen</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -23,11 +27,15 @@
           Disewakan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbardisewa">
-          <a class="dropdown-item" href="/disewakan">Semuanya</a>
-          <a class="dropdown-item" href="/disewakan">Komersial</a>
-          <a class="dropdown-item" href="/disewakan">Rumah</a>
-          <a class="dropdown-item" href="/disewakan">Apartemen</a>
-          <a class="dropdown-item" href="/disewakan">Tanah</a>
+          <a class="dropdown-item" href="/disewakan/all">Semuanya</a>
+          <a class="dropdown-item" href="/disewakan/Rukan">Rukan</a>
+          <a class="dropdown-item" href="/disewakan/Gudang">Gudang</a>
+          <a class="dropdown-item" href="/disewakan/Tanah">Tanah</a>
+          <a class="dropdown-item" href="/disewakan/Ruko">Ruko</a>
+          <a class="dropdown-item" href="/disewakan/Gedung Perkantoran">Gedung Perkantoran</a>
+          <a class="dropdown-item" href="/disewakan/Pabrik">Pabrik</a>
+          <a class="dropdown-item" href="/disewakan/Rumah">Rumah</a>
+          <a class="dropdown-item" href="/disewakan/Apartemen">Apartemen</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -35,11 +43,15 @@
           Property Baru
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarproperty">
-          <a class="dropdown-item" href="/disewakan">Semuanya</a>
-          <a class="dropdown-item" href="/disewakan">Komersial</a>
-          <a class="dropdown-item" href="/disewakan">Rumah</a>
-          <a class="dropdown-item" href="/disewakan">Apartemen</a>
-          <a class="dropdown-item" href="/disewakan">Tanah</a>
+          <a class="dropdown-item" href="/propertibaru/all">Semuanya</a>
+          <a class="dropdown-item" href="/propertibaru/Rukan">Rukan</a>
+          <a class="dropdown-item" href="/propertibaru/Gudang">Gudang</a>
+          <a class="dropdown-item" href="/propertibaru/Tanah">Tanah</a>
+          <a class="dropdown-item" href="/propertibaru/Ruko">Ruko</a>
+          <a class="dropdown-item" href="/propertibaru/Gedung Perkantoran">Gedung Perkantoran</a>
+          <a class="dropdown-item" href="/propertibaru/Pabrik">Pabrik</a>
+          <a class="dropdown-item" href="/propertibaru/Rumah">Rumah</a>
+          <a class="dropdown-item" href="/propertibaru/Apartemen">Apartemen</a>
         </div>
       </li>
       <li class="nav-item">
@@ -82,7 +94,7 @@
     <div class="my-2 my-lg-0">
         <div class="right">
             <a href="/login">Login / Daftar</a>
-            <button class="iklan">Iklankan Property</button>
+            <a href="/login" class="iklan">Iklankan Property</a>
         </div>
     </div>
     <!-- <form class="form-inline my-2 my-lg-0">

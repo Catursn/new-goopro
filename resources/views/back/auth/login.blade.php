@@ -22,7 +22,7 @@
                 </ul>
             </div>
             @endif
-            <form method="POST" class="register-form" id="login-form" action="/admin/loginstore">
+            <form method="POST" class="register-form" id="login-form" action="loginstore">
             @csrf
                 <div class="row">
                     <div class="col-40">

@@ -11,36 +11,36 @@
 <div class="wadah">
     <div class="properti">
         <div class="row">
-            <div class="col-12">
-                <img src="images/apartemen.png" alt="">
+        <div class="col-12">
+                <a href="/dijual/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/apartemen.png" alt=""></a>
                 <p>Apartemen</p>
             </div>
             <div class="col-12">
-                <img src="images/pabrik.png" alt="">
+                <a href="/dijual/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/pabrik.png" alt=""></a>
                 <p>Pabrik</p>
             </div>
             <div class="col-12">
-                <img src="images/rumah.png" alt="">
+                <a href="/dijual/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/rumah.png" alt=""></a>
                 <p>Rumah</p>
             </div>
             <div class="col-12">
-                <img src="images/tanah.png" alt="">
+                <a href="/dijual/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/tanah.png" alt=""></a>
                 <p>Tanah</p>
             </div>
             <div class="col-12">
-                <img src="images/gedung.png" alt="">
-                <p class="active">Gedung Perkantoran</p>
+                <a href="/dijual/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/gedung.png" alt=""></a>
+                <p>Gedung Perkantoran</p>
             </div>
             <div class="col-12">
-                <img src="images/ruko.png" alt="">
+                <a href="/dijual/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/ruko.png" alt=""></a>
                 <p>Ruko</p>
             </div>
             <div class="col-12">
-                <img src="images/gudang.png" alt="">
+                <a href="/dijual/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/gudang.png" alt=""></a>
                 <p>Gudang</p>
             </div>
             <div class="col-12">
-                <img src="images/rukan.png" alt="">
+                <a href="/dijual/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/rukan.png" alt=""></a>
                 <p>Rukan</p>
             </div>
         </div>
@@ -133,19 +133,19 @@
             </div>
         </div>
         <div class="rightbar">
-            <h3>746,819 Rumah Disewakan</h3>
+            <h3>{{ $properti->total() }} {{$hunian}} Dijual</h3>
             @foreach($properti as $prop)
             <div class="row">
                 <div class="col-40">
                     <div class="icon">
-                        <a href="#"><img src="images/gallery.png" alt=""> 2 </a>
-                        <a href="#"><img src="images/play.png" alt=""> 2</a>
+                        <a href="#"><img src="/images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="/images/play.png" alt=""> 2</a>
                     </div>
-                    <img src="images{{$prop->foto1}}" alt="">
+                    <img src="/images{{$prop->foto1}}" alt="">
                 </div>
                 <div class="col-60">
-                    <a href="/properti/{{$prop->slug}}">{{$prop->judul}}</a>
-                    <p><img src="images/point.png" alt=""> {{$prop->tempat}}</p>
+                    <a href="/properti/detail/{{$prop->slug}}">{{$prop->judul}}</a>
+                    <p><img src="/images/point.png" alt=""> {{$prop->tempat}}</p>
                     <br>
                     <h4>Tipe Properti : {{$prop->hunian}}</h4>
                     <h5>{{$prop->informasi}}</h5>
@@ -458,17 +458,14 @@
             <div class="paginationn">
                 <div class="row">
                     <div class="col-40">
-                        <h4>Menampilkan 1-10 properti</h4>
+                        <h4>Menampilkan {{ $properti->firstItem() }}-{{ $properti->lastItem() }} properti</h4>
                     </div>
                     <div class="col-60 right">
-                        <a href="#"><<</a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        ...
-                        <a href="#">100</a>
-                        <a href="#">>></a>
+                        <a href="?page=1"><<</a>
+                        <a href="{{ $properti->previousPageUrl() }}"><</a>
+                        <a href="?page{{ $properti->currentPage() }}" class="active">{{ $properti->currentPage() }}</a>
+                        <a href="{{ $properti->nextPageUrl() }}">></a>
+                        <a href="?page{{ $properti->lastPage() }}">>></a>
                     </div>
                 </div>
             </div>

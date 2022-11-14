@@ -1,46 +1,46 @@
 @extends('front.includes.master')
 
 @section('title')
-  PROPERTI BARU | GOOPRO
+  DAFTAR PROPERTI | GOOPRO
 @endsection
 
 @section('main-content')
 <div class="titleproperti">
-    <h3>PROPERTI BARU</h3>
+    <h3>DAFTAR PROPERTI</h3>
 </div>
 <div class="wadah">
     <div class="properti">
         <div class="row">
         <div class="col-12">
-                <a href="/dijual/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/apartemen.png" alt=""></a>
+                <a href="/properti/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/apartemen.png" alt=""></a>
                 <p>Apartemen</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/pabrik.png" alt=""></a>
+                <a href="/properti/list/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/pabrik.png" alt=""></a>
                 <p>Pabrik</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/rumah.png" alt=""></a>
+                <a href="/properti/list/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/rumah.png" alt=""></a>
                 <p>Rumah</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/tanah.png" alt=""></a>
+                <a href="/properti/list/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/tanah.png" alt=""></a>
                 <p>Tanah</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/gedung.png" alt=""></a>
+                <a href="/properti/list/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/gedung.png" alt=""></a>
                 <p>Gedung Perkantoran</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/ruko.png" alt=""></a>
+                <a href="/properti/list/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/ruko.png" alt=""></a>
                 <p>Ruko</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/gudang.png" alt=""></a>
+                <a href="/properti/list/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/gudang.png" alt=""></a>
                 <p>Gudang</p>
             </div>
             <div class="col-12">
-                <a href="/dijual/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/rukan.png" alt=""></a>
+                <a href="/properti/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/rukan.png" alt=""></a>
                 <p>Rukan</p>
             </div>
         </div>

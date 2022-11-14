@@ -34,19 +34,54 @@ class HomeController extends Controller
         return view('front.berita',compact('berita','terkait','terkini','populer','kategori'));
     }
     
-    public function dijual(){
-        $properti = Properti::where('kategori','Dijual')->orderBy('id_properti','DESC')->get();
-        return view('front.dijual',compact('properti'));
+    public function dijual($hunian){
+        if($hunian == "all"){
+            $properti = Properti::where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
+            $hunian = " ";
+        }else{
+            $properti = Properti::where('hunian',$hunian)->where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
+        }
+        $count = $properti->count();
+        return view('front.dijual',compact('properti','hunian','count'));
     }
 
-    public function disewakan(){
-        $properti = Properti::where('kategori','Disewakan')->orderBy('id_properti','DESC')->get();
-        return view('front.disewakan',compact('properti'));
+    public function disewakan($hunian){
+        if($hunian == "all"){
+            $properti = Properti::where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
+            $hunian = " ";
+        }else{
+            $properti = Properti::where('hunian',$hunian)->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
+        }
+        $count = $properti->count();
+        return view('front.disewakan',compact('properti','hunian','count'));
     }
 
-    public function properti(){
-        $properti = Properti::where('kategori','Properti Baru')->orderBy('id_properti','DESC')->get();
-        return view('front.propertibaru',compact('properti'));
+    public function properti($hunian){
+        if($hunian == "all"){
+            $properti = Properti::where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
+            $hunian = " ";
+        }else{
+            $properti = Properti::where('hunian',$hunian)->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
+        }
+        $count = $properti->count();
+        return view('front.propertibaru',compact('properti','hunian','count'));
+    }
+
+    public function list($hunian){
+        if($hunian == "all"){
+            $properti = Properti::orderBy('id_properti','DESC')->paginate(10);
+            $hunian = " ";
+        }else{
+            $properti = Properti::where('hunian',$hunian)->orderBy('id_properti','DESC')->paginate(10);
+        }
+        $count = $properti->count();
+        return view('front.properti',compact('properti','hunian','count'));
+    }
+    public function cari(Request $request){
+        $data = $request->all();
+        $properti = Properti::where('kategori',$data['prop'])->where('hunian',$data['hunian'])->where('judul','LIKE',"%".$data['cari']."%")->paginate(10);
+        $hunian = $data['hunian'];
+        return view('front.cari',compact('properti','hunian'));
     }
 
     public function detail($slug){

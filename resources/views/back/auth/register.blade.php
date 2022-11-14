@@ -47,16 +47,6 @@
                     </div>
                     <div class="col-40">
                         <div class="label">
-                            <h5>No Telepon *</h5>
-                        </div>
-                    </div>
-                    <div class="col-60">
-                        <div class="input">
-                            <input type="text" name="nomor_telepon" placeholder="08xxxxxxxxxx">
-                        </div>
-                    </div>
-                    <div class="col-40">
-                        <div class="label">
                             <h5>Password *</h5>
                         </div>
                     </div>
