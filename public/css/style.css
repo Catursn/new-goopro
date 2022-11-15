@@ -1237,7 +1237,7 @@ nav .right a:link{
   height: 20px;
   margin-right: 10px;
 }
-.karir a{
+.karir input[type=submit]{
   background-color: #14A807;
   font-size: 14px;
   color: #ffffff;

@@ -53,7 +53,7 @@
                         <div id="kontak" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Pesan</a>
+                                    <a class="nav-link" href="{{route('pesan.index')}}">Pesan</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Kontak</a>

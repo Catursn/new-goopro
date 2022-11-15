@@ -19,6 +19,7 @@ use App\Http\Controllers\HakCiptaController;
 use App\Http\Controllers\CaraKerjaController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\IklanController;
+use App\Http\Controllers\PesanController;
 
 
 /*
@@ -62,6 +63,7 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/carakerja', CaraKerjaController::class);
     Route::resource('/testimoni', TestimoniController::class);
     Route::resource('/iklan', IklanController::class);
+    Route::resource('/pesan', PesanController::class);
 });
 
 
@@ -81,6 +83,7 @@ Route::get('/syarat', [HomeController::class, 'syarat'])->name('syarat');
 Route::get('/keuntungan', [HomeController::class, 'keuntungan'])->name('keuntungan');
 Route::get('/hakcipta', [HomeController::class, 'hakcipta'])->name('hakcipta');
 Route::get('/carakerja', [HomeController::class, 'carakerja'])->name('carakerja');
+Route::post('/postkontak', [HomeController::class, 'postkontak'])->name('postkontak');
 // Route::view('/disewakan','front.disewakan');
 Route::view('/about','front.about');
 // Route::view('/register','front.register');
@@ -88,7 +91,7 @@ Route::view('/about','front.about');
 // Route::view('/login','front.login');
 Route::view('/lupapassword','front.lupapassword');
 Route::view('/layanan','front.layanan');
-Route::view('/kontak','front.kontak');
+Route::view('/kontak','front.kontak')->name('kontak');
 
 // Route::view('/propertibaru','front.propertibaru');
 // Route::view('/detail','front.detail');

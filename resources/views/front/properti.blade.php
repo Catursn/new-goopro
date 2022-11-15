@@ -12,35 +12,35 @@
     <div class="properti">
         <div class="row">
         <div class="col-12">
-                <a href="/properti/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/apartemen.png" alt=""></a>
+                <a href="/properti/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/kategoriproperti/apartemen.png" alt=""></a>
                 <p>Apartemen</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/pabrik.png" alt=""></a>
+                <a href="/properti/list/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/kategoriproperti/pabrik.png" alt=""></a>
                 <p>Pabrik</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/rumah.png" alt=""></a>
+                <a href="/properti/list/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/kategoriproperti/rumah.png" alt=""></a>
                 <p>Rumah</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/tanah.png" alt=""></a>
+                <a href="/properti/list/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/kategoriproperti/tanah.png" alt=""></a>
                 <p>Tanah</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/gedung.png" alt=""></a>
+                <a href="/properti/list/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/kategoriproperti/gedung.png" alt=""></a>
                 <p>Gedung Perkantoran</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/ruko.png" alt=""></a>
+                <a href="/properti/list/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/kategoriproperti/ruko.png" alt=""></a>
                 <p>Ruko</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/gudang.png" alt=""></a>
+                <a href="/properti/list/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/kategoriproperti/gudang.png" alt=""></a>
                 <p>Gudang</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/rukan.png" alt=""></a>
+                <a href="/properti/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/kategoriproperti/rukan.png" alt=""></a>
                 <p>Rukan</p>
             </div>
         </div>

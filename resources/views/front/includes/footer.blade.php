@@ -14,13 +14,13 @@
         <div class="col-25">
             <h3>PERUSAHAAN</h3>
             <br>
-            <h5>Tentang Kami</h5>
-            <h5>Visi&Misi</h5>
-            <h5>Manajemen</h5>
-            <h5>Layanan</h5>
-            <h5>Info Properti</h5>
-            <h5>Karir</h5>
-            <h5>Hubungi Kami</h5>
+            <a href="/about">Tentang Kami</a><br>
+            <a href="#">Visi & Misi</a><br>
+            <a href="#">Manajemen</a><br>
+            <a href="/layanan">Layanan</a><br>
+            <a href="#">Info Properti</a><br>
+            <a href="/kontak">Hubungi Kami</a><br>
+            <a href="/karir">Karir</a><br>
         </div>
         <div class="col-25">
             <h3>RUMAH IMPIAN</h3>
@@ -38,14 +38,15 @@
         <div class="col-25">
             <h3>KATEGORI PROPERTI</h3>
             <br>
-            <h5>Semuanya</h5>
-            <h5>Rumah</h5>
-            <h5>Apartemen</h5>
-            <h5>Rukan</h5>
-            <h5>Pabrik</h5>
-            <h5>Gudang</h5>
-            <h5>Gedung Perkantoran</h5>
-            <h5>Tanah</h5>
+            <a href="/properti/list/all">Semuanya</a><br>
+            <a href="/properti/list/Rukan">Rukan</a><br>
+            <a href="/properti/list/Gudang">Gudang</a><br>
+            <a href="/properti/list/Tanah">Tanah</a><br>
+            <a href="/properti/list/Ruko">Ruko</a><br>
+            <a href="/properti/list/Gedung Perkantoran">Gedung Perkantoran</a><br>
+            <a href="/properti/list/Pabrik">Pabrik</a><br>
+            <a href="/properti/list/Rumah">Rumah</a><br>
+            <a href="/properti/list/Apartemen">Apartemen</a><br>
         </div>
         <div class="col-25">
             <h3>LAINNYA</h3>

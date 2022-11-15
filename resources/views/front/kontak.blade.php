@@ -15,68 +15,78 @@
     <div class="wadah">
         <div class="karir">
         <h3>Formulir Kebutuhan atau Masukan Anda kepada Kami</h3>
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissable fade show text-center">
+                <button class="close" data-dismiss="alert" aria-label="Close">×</button>
+                {{session('success')}}
+            </div>
+        @endif
+
+
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissable fade show text-center">
+                <button class="close" data-dismiss="alert" aria-label="Close">×</button>
+                {{session('error')}}
+            </div>
+        @endif
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+        <form method="POST"action="/postkontak" enctype="multipart/form-data">
+            {{ csrf_field() }} {{ method_field('POST') }}
             <div class="form">
                 <div class="row">
                     <div class="col-40">
-                        Nama Lengkap *
+                        Nama Lengkap
                     </div>
                     <div class="col-60">
-                        <input type="text">
+                        <input type="text" name="nama">
                     </div>
                     <div class="col-40">
-                        Alamat Email *
+                        Alamat Email
                     </div>
                     <div class="col-60">
-                        <input type="text">
+                        <input type="text" name="email">
                     </div>
                     <div class="col-40">
-                        No Telepon *
+                        No Telepon
                     </div>
                     <div class="col-60">
-                        <input type="text">
+                        <input type="text" name="notelp">
                     </div>
                     <div class="col-40">
-                        Status Sebagai *
+                        Topik
                     </div>
                     <div class="col-60">
-                        <select name="" id="">
-                            <option value="0">Select</option>
-                            <option value="MA">MA</option>
-                            <option value="CA">CA</option>
-                        </select>
+                        <input type="text" name="topik">
                     </div>
                     <div class="col-40">
-                        Nama Perusahaan *
+                        Pertanyaan / Saran / Pesan
                     </div>
                     <div class="col-60">
-                        <input type="text">
+                        <textarea name="saran" id="" cols="40" rows="10"></textarea>
                     </div>
                     <div class="col-40">
-                        Status Agent *
                     </div>
                     <div class="col-60">
-                        <input type="checkbox" name="" id="" checked>Saya sebagai independent agent
-                    </div>
-                    <div class="col-40">
-                        Password *
-                    </div>
-                    <div class="col-60">
-                        <input type="text">
-                    </div>
-                    <div class="col-40">
-                        Konfirmasi Password *
-                    </div>
-                    <div class="col-60">
-                        <input type="text">
+                        <div class="col-md-6"> {!! htmlFormSnippet() !!} </div>
                     </div>
                     <br><br>
                 </div>
             </div>
-            <a href="#">Submit</a>
+            <input type="submit" value="Submit">
+        </form>
         </div>
     </div>
 @endsection
 @push('styles')
+{!! ReCaptcha::htmlScriptTagJsApi() !!}
 @endpush
 @push('scripts')
 @endpush

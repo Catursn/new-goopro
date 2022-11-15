@@ -14,6 +14,7 @@ use App\Models\Syarat;
 use App\Models\Keuntungan;
 use App\Models\HakCipta;
 use App\Models\CaraKerja;
+use App\Models\Kontak;
 
 class HomeController extends Controller
 {
@@ -117,5 +118,25 @@ class HomeController extends Controller
     public function carakerja(){
         $carakerja = CaraKerja::findorFail('1');
         return view('front.carakerja',compact('carakerja'));
+    }
+    public function postkontak(Request $request){
+        $this->validate($request,[
+            // 'nama'=>'required|string|min:5',
+            // 'email' => 'required',
+            // 'notelp' => 'required',
+            // 'topik' => 'required',
+            // 'saran' => 'required',
+            'g-recaptcha-response' => 'recaptcha',
+        ]);
+        $kontak = new Kontak;
+        $data = $request->all();
+        $status=$kontak->fill($data)->save();
+        if($status){
+            request()->session()->flash('success','Kontak successfully sended');
+        }
+        else{
+            request()->session()->flash('error','Eror while send kontak');
+        }
+        return redirect()->route('kontak');
     }
 }
