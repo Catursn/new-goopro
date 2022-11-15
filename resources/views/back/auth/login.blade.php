@@ -12,6 +12,20 @@
             <div class="title">
                 <h2>Login Masuk Halaman Sendiri</h2>
             </div>
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissable fade show text-center">
+                    <button class="close" data-dismiss="alert" aria-label="Close">×</button>
+                    {{session('success')}}
+                </div>
+            @endif
+
+
+            @if(session('error'))
+                <div class="alert alert-danger alert-dismissable fade show text-center">
+                    <button class="close" data-dismiss="alert" aria-label="Close">×</button>
+                    {{session('error')}}
+                </div>
+            @endif
             {{-- menampilkan error validasi --}}
             @if (count($errors) > 0)
             <div class="alert alert-danger">

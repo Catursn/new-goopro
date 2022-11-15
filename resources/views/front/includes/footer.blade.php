@@ -6,7 +6,7 @@
             <h5>Ruko Metro Suits kav.f5</h5>
             <h5>Bandung, Indonesia</h5>
             <h5>cs@goopro.id</h5>
-            <h5>+62817-122262 (Call Only)</h5>
+            <h5>+6281-912-071-977</h5>
             <br>
             <h3>Ikuti Kami</h3>
             <img src="/images/sosmed.png" alt="">

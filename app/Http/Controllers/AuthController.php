@@ -110,7 +110,7 @@ class AuthController extends Controller
             return redirect()->route('admin');
         }
         else{
-            request()->session()->flash('error','Invalid email and password pleas try again!');
+            request()->session()->flash('error','Invalid email and password please try again!');
             return back();
         }
     }

@@ -35,7 +35,7 @@
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Properti Aktif Table <span class="cardright" style="float:right"><a href="{{route('properti.create')}}">New</a></span></h5>
+                            <h5 class="card-header">Properti Aktif Table <span class="cardright" style="float:right"><a href="{{route('properti.create')}}">Iklankan Properti</a></span></h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
