@@ -607,9 +607,9 @@ nav .right a:link{
   font-size: 12px;
   font-weight: 500;
 }
-.rightbar button{
-  width: 100%;
-  height: 50px;
+.rightbar .col-20 a{
+  padding: 10px;
+  font-size: 16px;
   border-radius: 10px;
   border: none;
   background-color: #14A807;

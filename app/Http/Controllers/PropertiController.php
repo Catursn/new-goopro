@@ -91,7 +91,7 @@ class PropertiController extends Controller
         }
         $slug=Str::slug($request->judul);
         $count=properti::where('slug',$slug)->count();
-        $data['agen'] = Auth()->user()->name;
+        $data['agen'] = Auth()->user()->id;
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }

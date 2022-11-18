@@ -15,6 +15,7 @@ use App\Models\Keuntungan;
 use App\Models\HakCipta;
 use App\Models\CaraKerja;
 use App\Models\Kontak;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -37,10 +38,15 @@ class HomeController extends Controller
     
     public function dijual($hunian){
         if($hunian == "all"){
-            $properti = Properti::where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                    ->select('users.*', 'propertis.*')
+                                    ->where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::where('hunian',$hunian)->where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('hunian',$hunian)->where('kategori','Dijual')
+                                ->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
         return view('front.dijual',compact('properti','hunian','count'));
@@ -48,10 +54,14 @@ class HomeController extends Controller
 
     public function disewakan($hunian){
         if($hunian == "all"){
-            $properti = Properti::where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::where('hunian',$hunian)->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('hunian',$hunian)->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
         return view('front.disewakan',compact('properti','hunian','count'));
@@ -59,10 +69,14 @@ class HomeController extends Controller
 
     public function properti($hunian){
         if($hunian == "all"){
-            $properti = Properti::where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::where('hunian',$hunian)->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('hunian',$hunian)->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
         return view('front.propertibaru',compact('properti','hunian','count'));
@@ -70,24 +84,31 @@ class HomeController extends Controller
 
     public function list($hunian){
         if($hunian == "all"){
-            $properti = Properti::orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::where('hunian',$hunian)->orderBy('id_properti','DESC')->paginate(10);
+            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                                ->select('users.*', 'propertis.*')
+                                ->where('hunian',$hunian)->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
         return view('front.properti',compact('properti','hunian','count'));
     }
     public function cari(Request $request){
         $data = $request->all();
-        $properti = Properti::where('kategori',$data['prop'])->where('hunian',$data['hunian'])->where('judul','LIKE',"%".$data['cari']."%")->paginate(10);
+        $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
+                            ->select('users.*', 'propertis.*')
+                            ->where('kategori',$data['prop'])->where('hunian',$data['hunian'])->where('judul','LIKE',"%".$data['cari']."%")->paginate(10);
         $hunian = $data['hunian'];
         return view('front.cari',compact('properti','hunian'));
     }
 
     public function detail($slug){
         $properti = Properti::where('slug',$slug)->first();
-        return view('front.detail',compact('properti'));
+        $user = User::where('id',$properti->agen)->first();
+        return view('front.detail',compact('properti','user'));
     }
 
     public function terms(){

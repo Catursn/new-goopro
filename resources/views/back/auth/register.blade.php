@@ -25,6 +25,7 @@
             <form method="POST" class="register-form" id="register-form" action="/admin/regstore">
             @csrf
                 <div class="row">
+                <input type="text" name="role" value="2" hidden>
                     <div class="col-40">
                         <div class="label">
                             <h5>Nama Lengkap *</h5>

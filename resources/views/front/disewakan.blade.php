@@ -154,12 +154,11 @@
                     <h3>Rp. {{$prop->harga}}</h3>
                     <div class="row">
                         <div class="col-20">
-                            <button>Kontak Agent</button>
+                            <a href="https://wa.me/6281912071977">Kontak Agent</a>
                         </div>
                         <div class="col-80">
-                            <p>Didaftarkan oleh Budiyono Prasetya <br>
-                            Anggota sejak tahun 2017 <br>
-                            Tayang sejak 06 Mei 2022</p>
+                            <p>Didaftarkan oleh {{$prop->name}} <br>
+                            Tayang sejak {{ tanggal_indonesia($prop->created_at, false) }}</p>
                         </div>
                     </div>
                 </div>

@@ -16,9 +16,11 @@
                     <!-- <li class="nav-divider">
                         Menu
                     </li> -->
+                    @if($role == '1')
                     <li class="nav-item ">
                         <a class="nav-link active" href="{{route('admin')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
                     </li>
+                    @endif
                     <li class="nav-divider">
                         PROPERTI
                     </li>

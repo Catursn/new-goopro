@@ -107,7 +107,12 @@ class AuthController extends Controller
             // dd($data);
             Session::put('user',$data['email']);
             request()->session()->flash('success','Successfully login');
-            return redirect()->route('admin');
+            if (Auth()->user()->role == "1"){
+                return redirect()->route('admin');
+            }
+            else{
+                return redirect()->route('properti.index');
+            }
         }
         else{
             request()->session()->flash('error','Invalid email and password please try again!');

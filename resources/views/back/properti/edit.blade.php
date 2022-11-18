@@ -46,12 +46,12 @@
             <h5 class="card-header">Edit {{$properti->judul}}</h5>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Judul <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Judul </label>
                     <input id="inputText3" type="text" class="form-control" name="judul" value="{{$properti->judul}}" required>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Hunian <span class="text-danger">*</span></label>
+                        <label for="status">Kategori Hunian </label>
                         <select name="hunian" class="form-control" required>
                             <option value="">--Pilih Kategori--</option required>
                             @foreach($hunian as $data)
@@ -60,7 +60,7 @@
                         </select>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Properti <span class="text-danger">*</span></label>
+                        <label for="status">Kategori Properti </label>
                         <select name="kategori" class="form-control" required>
                             <option value="">--Pilih Kategori--</option required>
                             @foreach($kategori as $data)
@@ -71,11 +71,11 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Tempat </label>
                         <input id="inputText3" type="text" class="form-control" name="tempat" value="{{$properti->tempat}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Kota <span class="text-danger">*</span></label>
+                        <label for="status">Kategori Kota </label>
                         <select name="kota" class="form-control" required>
                             <option value="">--Pilih Kategori--</option required>
                             @foreach($kota as $data)
@@ -86,79 +86,79 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat Tidur <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Tempat Tidur </label>
                         <input id="inputText3" type="number" class="form-control" name="tidur" value="{{$properti->tidur}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Kamar Mandi <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Kamar Mandi </label>
                         <input id="inputText3" type="number" class="form-control" name="mandi" value="{{$properti->mandi}}" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Informasi <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Informasi </label>
                     <input id="inputText3" type="text" class="form-control" name="informasi" value="{{$properti->informasi}}" required>
                 </div>
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Pengembang <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Pengembang </label>
                     <input id="inputText3" type="text" class="form-control" name="pengembang" value="{{$properti->pengembang}}" required>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Harga <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Harga </label>
                         <input id="inputText3" type="text" class="form-control" name="harga" value="{{$properti->harga}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Harga Per M <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Harga Per M </label>
                         <input id="inputText3" type="text" class="form-control" name="perm" value="{{$properti->perm}}" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Luas Bangunan <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Luas Bangunan </label>
                         <input id="inputText3" type="number" class="form-control" name="bangunan" value="{{$properti->bangunan}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Luas Tanah <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Luas Tanah </label>
                         <input id="inputText3" type="number" class="form-control" name="tanah" value="{{$properti->tanah}}" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Interior <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Interior </label>
                         <input id="inputText3" type="text" class="form-control" name="interior" value="{{$properti->interior}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Eksterior <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Eksterior </label>
                         <input id="inputText3" type="text" class="form-control" name="eksterior" value="{{$properti->eksterior}}" required>
                     </div>
                 </div>
                 <div class="row">
                 <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Jumlah Lantai <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Jumlah Lantai </label>
                         <input id="inputText3" type="number" class="form-control" name="lantai" value="{{$properti->lantai}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Sertifikat <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Sertifikat </label>
                         <input id="inputText3" type="text" class="form-control" name="sertifikat" value="{{$properti->sertifikat}}" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tahun Dibuat <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Tahun Dibuat </label>
                         <input id="inputText3" type="number" class="form-control" name="dibuat" value="{{$properti->dibuat}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Id Listing <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Id Listing </label>
                         <input id="inputText3" type="text" class="form-control" name="listing" value="{{$properti->listing}}" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Listrik <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Listrik </label>
                         <input id="inputText3" type="number" class="form-control" name="listrik" value="{{$properti->listrik}}" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat Parkir <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Tempat Parkir </label>
                         <input id="inputText3" type="text" class="form-control" name="parkir" value="{{$properti->parkir}}" required>
                     </div>
                 </div>
@@ -167,15 +167,15 @@
                     <textarea id="summernote" name="sarpras" required>{{$properti->sarpras}}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Video <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Video </label>
                     <input id="inputText3" type="text" class="form-control" name="video" value="{{$properti->video}}" required>
                 </div>
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Latitude <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Latitude </label>
                     <input id="inputText3" type="text" class="form-control" name="latitude" value="{{$properti->latitude}}" required>
                 </div>
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Longitude <span class="text-danger">*</span></label>
+                    <label for="inputText3" class="col-form-label">Longitude </label>
                     <input id="inputText3" type="text" class="form-control" name="longitude" value="{{$properti->longitude}}" required>
                 </div>
                 <div class="form-group">
@@ -219,7 +219,7 @@
                     <img src="/images{{$properti->foto5}}" alt="">
                 </div>   
                 <div class="form-group">
-                    <label for="status">Status <span class="text-danger">*</span></label>
+                    <label for="status">Status </label>
                     <select name="status" class="form-control" required>
                         <option value="">--Pilih Status--</option required>
                             <option value="aktif" {{(($properti->status=='aktif')? 'selected' : '')}}>Aktif</option>
