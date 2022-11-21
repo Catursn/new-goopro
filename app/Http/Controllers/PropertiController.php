@@ -20,7 +20,7 @@ class PropertiController extends Controller
      */
     public function index()
     {
-        $author = Auth()->user()->name;
+        $author = Auth()->user()->id;
         $properti = Properti::where('agen',$author)->where('status','aktif')->orderBy('id_properti','DESC')->get();
         return view('back.properti.propertiaktif',compact('properti'));
     }

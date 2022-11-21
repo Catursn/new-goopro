@@ -47,13 +47,13 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Judul </label>
-                    <input id="inputText3" type="text" class="form-control" name="judul" value="{{$properti->judul}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="judul" value="{{$properti->judul}}"  >
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="status">Kategori Hunian </label>
-                        <select name="hunian" class="form-control" required>
-                            <option value="">--Pilih Kategori--</option required>
+                        <select name="hunian" class="form-control"  >
+                            <option value="">--Pilih Kategori--</option  >
                             @foreach($hunian as $data)
                                 <option value='{{$data->hunian}}' {{(($properti->hunian==$data->hunian)? 'selected' : '')}}>{{$data->hunian}}</option>
                             @endforeach
@@ -61,8 +61,8 @@
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="status">Kategori Properti </label>
-                        <select name="kategori" class="form-control" required>
-                            <option value="">--Pilih Kategori--</option required>
+                        <select name="kategori" class="form-control"  >
+                            <option value="">--Pilih Kategori--</option  >
                             @foreach($kategori as $data)
                                 <option value='{{$data->properti}}' {{(($properti->kategori==$data->properti)? 'selected' : '')}}>{{$data->properti}}</option>
                             @endforeach
@@ -72,12 +72,12 @@
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Tempat </label>
-                        <input id="inputText3" type="text" class="form-control" name="tempat" value="{{$properti->tempat}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="tempat" value="{{$properti->tempat}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="status">Kategori Kota </label>
-                        <select name="kota" class="form-control" required>
-                            <option value="">--Pilih Kategori--</option required>
+                        <select name="kota" class="form-control"  >
+                            <option value="">--Pilih Kategori--</option  >
                             @foreach($kota as $data)
                                 <option value='{{$data->kota}}' {{(($properti->kota==$data->kota)? 'selected' : '')}}>{{$data->kota}}</option>
                             @endforeach
@@ -87,96 +87,96 @@
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Tempat Tidur </label>
-                        <input id="inputText3" type="number" class="form-control" name="tidur" value="{{$properti->tidur}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="tidur" value="{{$properti->tidur}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Kamar Mandi </label>
-                        <input id="inputText3" type="number" class="form-control" name="mandi" value="{{$properti->mandi}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="mandi" value="{{$properti->mandi}}"  >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Informasi </label>
-                    <input id="inputText3" type="text" class="form-control" name="informasi" value="{{$properti->informasi}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="informasi" value="{{$properti->informasi}}"  >
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Pengembang </label>
-                    <input id="inputText3" type="text" class="form-control" name="pengembang" value="{{$properti->pengembang}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="pengembang" value="{{$properti->pengembang}}"  >
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Harga </label>
-                        <input id="inputText3" type="text" class="form-control" name="harga" value="{{$properti->harga}}" required>
+                        <input onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" type="text" class="form-control" name="harga" value="{{$properti->harga}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Harga Per M </label>
-                        <input id="inputText3" type="text" class="form-control" name="perm" value="{{$properti->perm}}" required>
+                        <input onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" type="text" class="form-control" name="perm" value="{{$properti->perm}}"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Luas Bangunan </label>
-                        <input id="inputText3" type="number" class="form-control" name="bangunan" value="{{$properti->bangunan}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="bangunan" value="{{$properti->bangunan}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Luas Tanah </label>
-                        <input id="inputText3" type="number" class="form-control" name="tanah" value="{{$properti->tanah}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="tanah" value="{{$properti->tanah}}"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Interior </label>
-                        <input id="inputText3" type="text" class="form-control" name="interior" value="{{$properti->interior}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="interior" value="{{$properti->interior}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Eksterior </label>
-                        <input id="inputText3" type="text" class="form-control" name="eksterior" value="{{$properti->eksterior}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="eksterior" value="{{$properti->eksterior}}"  >
                     </div>
                 </div>
                 <div class="row">
                 <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Jumlah Lantai </label>
-                        <input id="inputText3" type="number" class="form-control" name="lantai" value="{{$properti->lantai}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="lantai" value="{{$properti->lantai}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Sertifikat </label>
-                        <input id="inputText3" type="text" class="form-control" name="sertifikat" value="{{$properti->sertifikat}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="sertifikat" value="{{$properti->sertifikat}}"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Tahun Dibuat </label>
-                        <input id="inputText3" type="number" class="form-control" name="dibuat" value="{{$properti->dibuat}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="dibuat" value="{{$properti->dibuat}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Id Listing </label>
-                        <input id="inputText3" type="text" class="form-control" name="listing" value="{{$properti->listing}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="listing" value="{{$properti->listing}}"  >
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Listrik </label>
-                        <input id="inputText3" type="number" class="form-control" name="listrik" value="{{$properti->listrik}}" required>
+                        <input id="inputText3" type="number" class="form-control" name="listrik" value="{{$properti->listrik}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Tempat Parkir </label>
-                        <input id="inputText3" type="text" class="form-control" name="parkir" value="{{$properti->parkir}}" required>
+                        <input id="inputText3" type="text" class="form-control" name="parkir" value="{{$properti->parkir}}"  >
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Sarana Prasarana</label>
-                    <textarea id="summernote" name="sarpras" required>{{$properti->sarpras}}</textarea>
+                    <textarea id="summernote" name="sarpras"  >{{$properti->sarpras}}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Video </label>
-                    <input id="inputText3" type="text" class="form-control" name="video" value="{{$properti->video}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="video" value="{{$properti->video}}"  >
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Latitude </label>
-                    <input id="inputText3" type="text" class="form-control" name="latitude" value="{{$properti->latitude}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="latitude" value="{{$properti->latitude}}"  >
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Longitude </label>
-                    <input id="inputText3" type="text" class="form-control" name="longitude" value="{{$properti->longitude}}" required>
+                    <input id="inputText3" type="text" class="form-control" name="longitude" value="{{$properti->longitude}}"  >
                 </div>
                 <div class="form-group">
                     <label class="col-form-label">Foto 1</label>
@@ -220,8 +220,8 @@
                 </div>   
                 <div class="form-group">
                     <label for="status">Status </label>
-                    <select name="status" class="form-control" required>
-                        <option value="">--Pilih Status--</option required>
+                    <select name="status" class="form-control"  >
+                        <option value="">--Pilih Status--</option  >
                             <option value="aktif" {{(($properti->status=='aktif')? 'selected' : '')}}>Aktif</option>
                             <option value="nonaktif" {{(($properti->status=='nonaktif')? 'selected' : '')}}>Nonaktif</option>
                     </select>
@@ -263,5 +263,91 @@ $(document).ready(function() {
     )
     }).trigger("change")
 
+</script>
+<script type="text/javascript" src="my.js"></script>
+<script>
+    function tandaPemisahTitik(b){
+        var _minus = false;
+        if (b<0) _minus = true;
+        b = b.toString();
+        b=b.replace(".","");
+        b=b.replace("-","");
+        c = "";
+        panjang = b.length;
+        j = 0;
+        for (i = panjang; i > 0; i--){
+        j = j + 1;
+        if (((j % 3) == 1) && (j != 1)){
+        c = b.substr(i-1,1) + "." + c;
+        } else {
+        c = b.substr(i-1,1) + c;
+        }
+        }
+        if (_minus) c = "-" + c ;
+        return c;
+    }
+
+    function numbersonly(ini, e){
+        if (e.keyCode>=49){
+            if(e.keyCode<=57){
+            a = ini.value.toString().replace(".","");
+            b = a.replace(/[^\d]/g,"");
+            b = (b=="0")?String.fromCharCode(e.keyCode):b + String.fromCharCode(e.keyCode);
+            ini.value = tandaPemisahTitik(b);
+            return false;
+            }
+            else if(e.keyCode<=105){
+                if(e.keyCode>=96){
+                //e.keycode = e.keycode - 47;
+                a = ini.value.toString().replace(".","");
+                b = a.replace(/[^\d]/g,"");
+                b = (b=="0")?String.fromCharCode(e.keyCode-48):b + String.fromCharCode(e.keyCode-48);
+                ini.value = tandaPemisahTitik(b);
+                //alert(e.keycode);
+                return false;
+                }
+                else {return false;}
+            }
+            else {
+            return false; }
+        }else if (e.keyCode==48){
+            a = ini.value.replace(".","") + String.fromCharCode(e.keyCode);
+            b = a.replace(/[^\d]/g,"");
+            if (parseFloat(b)!=0){
+            ini.value = tandaPemisahTitik(b);
+            return false;
+            } else {
+            return false;
+            }
+        }else if (e.keyCode==95){
+            a = ini.value.replace(".","") + String.fromCharCode(e.keyCode-48);
+            b = a.replace(/[^\d]/g,"");
+            if (parseFloat(b)!=0){
+            ini.value = tandaPemisahTitik(b);
+            return false;
+            } else {
+            return false;
+            }
+        }else if (e.keyCode==8 || e.keycode==46){
+            a = ini.value.replace(".","");
+            b = a.replace(/[^\d]/g,"");
+            b = b.substr(0,b.length -1);
+            if (tandaPemisahTitik(b)!=""){
+            ini.value = tandaPemisahTitik(b);
+            } else {
+            ini.value = "";
+            }
+
+        return false;
+        } else if (e.keyCode==9){
+        return true;
+        } else if (e.keyCode==17){
+        return true;
+        } else {
+        //alert (e.keyCode);
+        return false;
+        }
+
+    }
 </script>
 @endpush
