@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Hash;
 use Session;
 use Auth;
 use App\Models\User;
+use App\Models\Profile;
+use App\Mail\ResetMail;
 
 class AuthController extends Controller
 {
@@ -36,7 +40,9 @@ class AuthController extends Controller
             'role'=>'2',
             'password'=>Hash::make($data['password']),
             ]);
-        
+        $profil= Profile::create([
+            'id_profile'=>$check->id,
+            ]);
         if($check){
             Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
             Session::put('user',$data['email']);
@@ -75,7 +81,9 @@ class AuthController extends Controller
             'role'=>'1',
             'password'=>Hash::make($data['password']),
             ]);
-        
+        $profil= Profile::create([
+            'id_profile'=>$check->id,
+            ]);
         if($check){
             Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
             Session::put('user',$data['email']);
@@ -150,5 +158,45 @@ class AuthController extends Controller
             request()->session()->flash('error','Old password false');
             return back();
         }
+    }
+
+    public function resetmail(Request $request){
+        $token = Str::random(50);
+        $data = $request->all();
+        $data['remember_token'] = $token;
+        $user = User::where('email',$data['email'])->first();
+        $status = $user->fill($data)->save();
+        if($status){
+            request()->session()->flash('success','Cek email anda');
+            Mail::to($data['email'])->send(new ResetMail($token));
+        }
+        else{
+            request()->session()->flash('error','Email tidak ada dalam sistem');
+        }
+        return back();
+    }
+
+    public function reset($token){
+        $user = User::where('remember_token',$token)->first();
+        return view('front.reset',compact('user'));
+    }
+
+    public function resetsubmit(Request $request){
+        $this->validate($request,[
+            'password'=>'required|confirmed',
+        ]);
+        $data = $request->all();
+        $user = User::where('email',$data['email'])->first();
+        $data['remember_token'] = "";
+        $pass = $data['password'];
+        $data['password'] = Hash::make($pass);
+        $status = $user->fill($data)->save();
+        if($status){
+            request()->session()->flash('success','Password sudah di ganti');
+        }
+        else{
+            request()->session()->flash('error','Ganti Password gagal');
+        }
+        return redirect()->route('login');
     }
 }

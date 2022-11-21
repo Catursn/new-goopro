@@ -3,6 +3,11 @@
 @include('back.includes.head')
 </html>
     <body>
+    <?php
+    $role = Auth()->user()->role;
+    $id = Auth()->user()->id;
+    $profil = DB::table('profiles')->where('id_profile', $id)->first();
+    ?>
         <!-- ============================================================== -->
         <!-- main wrapper -->
         <!-- ============================================================== -->

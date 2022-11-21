@@ -1,13 +1,13 @@
 @extends('front.includes.master')
 
 @section('title')
-  LUPA PASSWORD | GOOPRO
+  RESET PASSWORD | GOOPRO
 @endsection
 
 @section('main-content')
     <div class="breadcrumb">
         <a href="#">Halaman Utama ></a>
-        <a href="#" class="active">Lupa Kata Sandi</a>
+        <a href="#" class="active">Reset Password</a>
     </div>
     <div class="bannerr">
         <img src="/images/register.png" alt="">
@@ -27,7 +27,7 @@
         </div>
     @endif
     <div class="wadah">
-        <form method="POST" class="register-form" id="register-form" action="/resetpassword">
+        <form method="POST" class="register-form" id="register-form" action="/resetsubmit">
         @csrf
         <div class="register">
             <div class="title">
@@ -41,13 +41,30 @@
                 </div>
                 <div class="col-60">
                     <div class="input">
-                        <input type="email"placeholder="Kirim Email" name="email">
+                        <input type="text" name="email" value="{{$user->email}}" readonly>
                     </div>
-                        <div class="submit">
-                            <input type="submit" >
-                        </div>
-                    <div class="tnc">
-                        <h4>Sudah menjadi member GooPro ?<a href="/login"> Klik masuk</a></h4> 
+                </div>
+                <div class="col-40">
+                    <div class="label">
+                        <h5>Password *</h5>
+                    </div>
+                </div>
+                <div class="col-60">
+                    <div class="input">
+                        <input type="password" name="password">
+                    </div>
+                </div>
+                <div class="col-40">
+                    <div class="label">
+                        <h5>Konfirmasi Password *</h5>
+                    </div>
+                </div>
+                <div class="col-60">
+                    <div class="input">
+                        <input type="password" name="password_confirmation">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Daftar">
                     </div>
                 </div>
             </div>

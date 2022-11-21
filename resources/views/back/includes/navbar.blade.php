@@ -96,7 +96,14 @@
                     </ul>
                 </li> -->
                 <li class="nav-item dropdown nav-user">
-                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/images/user.png" alt="" class="user-avatar-md rounded-circle">&nbsp;&nbsp;&nbsp;{{Auth()->user()->name}}</a>
+                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @if($profil->foto != "")
+                        <img src="/images{{$profil->foto}}" alt="" class="user-avatar-md rounded-circle">
+                        @else                        
+                        <img src="/images/user.png" alt="" class="user-avatar-md rounded-circle">
+                        @endif
+                        &nbsp;&nbsp;&nbsp;{{Auth()->user()->name}}
+                    </a>
                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                         <div class="nav-user-info">
                             <h5 class="mb-0 text-white nav-user-name">{{Auth()->user()->name}}</h5>

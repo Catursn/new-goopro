@@ -1,9 +1,7 @@
 <!-- ============================================================== -->
 <!-- left sidebar -->
 <!-- ============================================================== -->
-<?php
-    $role = Auth()->user()->role;
-?>
+
 <div class="nav-left-sidebar sidebar-dark">
     <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -142,7 +140,7 @@
                         <div id="setting" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Akun Saya</a>
+                                    <a class="nav-link" href="{{route('profile.edit',$id)}}">Akun Saya</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/gantipassword">Ganti Password</a>

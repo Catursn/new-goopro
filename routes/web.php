@@ -20,6 +20,7 @@ use App\Http\Controllers\CaraKerjaController;
 use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\IklanController;
 use App\Http\Controllers\PesanController;
+use App\Http\Controllers\ProfileController;
 
 
 /*
@@ -64,11 +65,16 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/testimoni', TestimoniController::class);
     Route::resource('/iklan', IklanController::class);
     Route::resource('/pesan', PesanController::class);
+    Route::resource('/profile', ProfileController::class);
 });
 
 
 Route::get('/register', [AuthController::class, 'frontregister'])->name('frontregister');
 Route::post('/regstore', [AuthController::class, 'frontregisterSubmit'])->name('frontregstore');
+Route::view('/lupapassword','front.lupapassword');
+Route::post('/resetpassword', [AuthController::class, 'resetmail'])->name('resetmail');
+Route::get('/password/{token}', [AuthController::class, 'reset'])->name('reset');
+Route::post('/resetsubmit', [AuthController::class, 'resetsubmit'])->name('resetsubmit');
 // Route::resource('dijual', DijualController::class);
 Route::get('/berita/{judul}', [HomeController::class, 'berita']);
 Route::get('/dijual/{hunian}', [HomeController::class, 'dijual'])->name('dijual');
@@ -89,7 +95,6 @@ Route::view('/about','front.about');
 // Route::view('/register','front.register');
 // Route::view('/berita','front.berita');
 // Route::view('/login','front.login');
-Route::view('/lupapassword','front.lupapassword');
 Route::view('/layanan','front.layanan');
 Route::view('/kontak','front.kontak')->name('kontak');
 
