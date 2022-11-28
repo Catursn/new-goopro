@@ -45,22 +45,22 @@
             <h5 class="card-header">Add Properti</h5>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Judul </label>
-                    <input id="inputText3" type="text" class="form-control" name="judul"  >
+                    <label for="inputText3" class="col-form-label">Judul <span class="text-danger">*</span></label>
+                    <input id="inputText3" type="text" class="form-control" name="judul" required>
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Hunian </label>
+                        <label for="status">Kategori Hunian <span class="text-danger">*</span></label>
                         <select name="hunian" class="form-control"  >
-                            <option value="">--Pilih Kategori--</option  >
+                            <option value="">--Pilih Kategori--</option required>
                             @foreach($hunian as $data)
                                 <option value='{{$data->hunian}}'>{{$data->hunian}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Properti </label>
-                        <select name="kategori" class="form-control"  >
+                        <label for="status">Kategori Properti <span class="text-danger">*</span></label>
+                        <select name="kategori" class="form-control" required>
                             <option value="">--Pilih Kategori--</option  >
                             @foreach($kategori as $data)
                                 <option value='{{$data->properti}}'>{{$data->properti}}</option>
@@ -70,16 +70,27 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat </label>
-                        <input id="inputText3" type="text" class="form-control" name="tempat"  >
+                        <label for="inputText3" class="col-form-label">Tempat <span class="text-danger">*</span></label>
+                        <input id="inputText3" type="text" class="form-control" name="tempat" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="status">Kategori Kota </label>
-                        <select name="kota" class="form-control"  >
-                            <option value="">--Pilih Kategori--</option  >
-                            @foreach($kota as $data)
-                                <option value='{{$data->kota}}'>{{$data->kota}}</option>
+                        <label for="status">Provinsi <span class="text-danger">*</span></label>
+                        <select name="provinsi" id="provinsi" class="form-control"  required>
+                            <option value="" hidden>--Pilih Provinsi--</option  >
+                            @foreach($provinsi as $list)
+                            <option value="{{$list->id_provinsi}}">{{$list->provinsi}}</option>
                             @endforeach
+                        </select>
+                    </div>
+                </div><div class="row">
+                    <div class="form-group col-lg-6 col-sm-12">
+                        <label for="status">Kabupaten / Kota <span class="text-danger">*</span></label>
+                        <select name="kota" id="kota" class="form-control"  required>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6 col-sm-12">
+                        <label for="status">Kecamatan <span class="text-danger">*</span></label>
+                        <select name="kecamatan" id="kecamatan" class="form-control"  required>
                         </select>
                     </div>
                 </div>
@@ -103,8 +114,8 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Harga </label>
-                        <input id="inputku" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" type="text" class="form-control" name="harga"  >
+                        <label for="inputText3" class="col-form-label">Harga <span class="text-danger">*</span></label>
+                        <input id="inputku" onkeydown="return numbersonly(this, event);" onkeyup="javascript:tandaPemisahTitik(this);" type="text" class="form-control" name="harga" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
                         <label for="inputText3" class="col-form-label">Harga Per M </label>
@@ -146,9 +157,9 @@
                         <label for="inputText3" class="col-form-label">Tahun Dibuat </label>
                         <input id="inputText3" type="number" class="form-control" name="dibuat"  >
                     </div>
-                    <div class="form-group col-lg-6 col-sm-12col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Id Listing </label>
-                        <input id="inputText3" type="text" class="form-control" name="listing"  >
+                    <div class="form-group col-lg-6 col-sm-12">
+                        <label for="inputText3" class="col-form-label">Tempat Parkir </label>
+                        <input id="inputText3" type="text" class="form-control" name="parkir"  >
                     </div>
                 </div>
                 <div class="row">
@@ -156,14 +167,14 @@
                         <label for="inputText3" class="col-form-label">Listrik </label>
                         <input id="inputText3" type="number" class="form-control" name="listrik"  >
                     </div>
-                    <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat Parkir </label>
-                        <input id="inputText3" type="text" class="form-control" name="parkir"  >
-                    </div>
+                    <!-- <div class="form-group col-lg-6 col-sm-12col-lg-6 col-sm-12">
+                        <label for="inputText3" class="col-form-label">Id Listing </label>
+                        <input id="inputText3" type="text" class="form-control" name="listing"  >
+                    </div> -->
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Sarana Prasarana</label>
-                    <textarea id="summernote" name="sarpras"  ></textarea>
+                    <label for="summernote">Deskripsi </label>
+                    <textarea class="form-control" id="summernote" name="sarpras" rows="10" placeholder="Type here....."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Video </label>
@@ -178,9 +189,9 @@
                     <input id="inputText3" type="text" class="form-control" name="longitude"  >
                 </div>
                 <div class="form-group">
-                    <label class="col-form-label">Foto 1</label>
+                    <label class="col-form-label">Foto 1 <span class="text-danger">*</span></label>
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" name="foto1"  >
+                        <input type="file" class="form-control" name="foto1" required>
                     </div>
                 </div>    
                 <div class="form-group">
@@ -225,14 +236,16 @@
 </div>
 @endsection
 @push('styles')
-<link rel="stylesheet" type="text/css" href="/backend/css/summernote.min.css">
-<link rel="stylesheet" type="text/css" href="/backend/css/summernote-lite.min.css">
+<link rel="stylesheet" href="/backend/new/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush
 @push('scripts')
-<script src="/backend/js/moment.min.js"></script>
-<script src="/backend/js/summernote.min.js"></script>
-<script src="/backend/js/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="/backend/js/summernote-lite.min.js"></script>
+<script src="/backend/new/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="/backend/new/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="/backend/new/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="/backend/new/summernote-bs4.min.js"></script>
+<script src="/backend/new/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 <script>
 $(document).ready(function() {
   $('#summernote').summernote({
@@ -327,5 +340,63 @@ $(document).ready(function() {
         }
 
     }
+</script>
+
+<script type="text/javascript" src="my.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#provinsi').on('change', function() {
+        var categoryID = $(this).val();
+        if(categoryID) {
+            $.ajax({
+                url: '/admin/ambil/kota/'+categoryID,
+                type: "GET",
+                data : {"_token":"{{ csrf_token() }}"},
+                dataType: "json",
+                success:function(data)
+                {
+                    if(data){
+                    $('#kota').empty();
+                    $('#kecamatan').empty();
+                    $('#kecamatan').append('<option hidden>-- Pilih Kecamatan --</option>'); 
+                    $('#kota').append('<option hidden>-- Pilih Kota --</option>'); 
+                    $.each(data, function(key, kota){
+                        $('select[name="kota"]').append('<option value="'+ kota.id_kota +'">' + kota.kota+ '</option>');
+                    });
+                }else{
+                    $('#kota').empty();
+                }
+                }
+            });
+        }else{
+            $('#kota').empty();
+        }
+    });
+    $('#kota').on('change', function() {
+        var categoryID = $(this).val();
+        if(categoryID) {
+            $.ajax({
+                url: '/admin/ambil/kecamatan/'+categoryID,
+                type: "GET",
+                data : {"_token":"{{ csrf_token() }}"},
+                dataType: "json",
+                success:function(data)
+                {
+                    if(data){
+                    $('#kecamatan').empty();
+                    $('#kecamatan').append('<option hidden>-- Pilih kecamatan --</option>'); 
+                    $.each(data, function(key, kecamatan){
+                        $('select[name="kecamatan"]').append('<option value="'+ kecamatan.id_kecamatan +'">' + kecamatan.kecamatan+ '</option>');
+                    });
+                }else{
+                    $('#kecamatan').empty();
+                }
+                }
+            });
+        }else{
+            $('#kecamatan').empty();
+        }
+    });
+    });
 </script>
 @endpush

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KategoriKota;
+use App\Models\KategoriProvinsi;
 
 class KategoriKotaController extends Controller
 {
@@ -14,7 +15,8 @@ class KategoriKotaController extends Controller
      */
     public function index()
     {
-        $kota = KategoriKota::orderBy('id_kota','DESC')->get();
+        $kota = KategoriKota::leftJoin('kategori_provinsis', 'kategori_provinsis.id_provinsi', '=', 'kategori_kotas.provinsi_id')
+                ->orderBy('id_kota','DESC')->get();
         return view('back.kategorikota.kota',compact('kota'));
     }
 
@@ -25,7 +27,8 @@ class KategoriKotaController extends Controller
      */
     public function create()
     {
-        return view('back.kategorikota.add');
+        $provinsi = KategoriProvinsi::orderBy('id_provinsi','ASC')->get();
+        return view('back.kategorikota.add',compact('provinsi'));
     }
 
     /**
@@ -38,14 +41,20 @@ class KategoriKotaController extends Controller
     {
         $messages = [
             'required' => ':attribute wajib diisi !!!',
-            'min' => ':attribute harus diisi minimal :min karakter !!!',
         ];
         $this->validate($request,[
-            'kota'=>'required|string|min:5',
-            'status'=>'required',
+            'kota'=>'required|string',
+            'provinsi_id'=>'required',
         ],$messages);
-        $kota = new KategoriKota;
         $data = $request->all();
+        $count = KategoriKota::where('provinsi_id',$data['provinsi_id'])->orderBy('id_kota','DESC')->first();
+        if(!empty($count->id_kota)){
+            $id = $count->id_kota + 1;
+        }else{
+            $id = $data['provinsi_id']."01";
+        }
+        $kota = new KategoriKota;
+        $data['id_kota'] = $id;
         $status=$kota->fill($data)->save();
         if($status){
             request()->session()->flash('success','Kategori kota successfully created');
@@ -75,8 +84,9 @@ class KategoriKotaController extends Controller
      */
     public function edit($id)
     {
+        $provinsi = KategoriProvinsi::orderBy('id_provinsi','ASC')->get();
         $kota=KategoriKota::findOrFail($id);
-        return view('back.kategorikota.edit',compact('kota'));
+        return view('back.kategorikota.edit',compact('kota','provinsi'));
     }
 
     /**
@@ -90,11 +100,10 @@ class KategoriKotaController extends Controller
     {
         $messages = [
             'required' => ':attribute wajib diisi !!!',
-            'min' => ':attribute harus diisi minimal :min karakter !!!',
         ];
         $this->validate($request,[
             'kota'=>'required|string|min:5',
-            'status'=>'required',
+            'provinsi_id'=>'required',
         ],$messages);
         $kota=KategoriKota::findOrFail($id);
         $data = $request->all();

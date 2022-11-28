@@ -66,7 +66,7 @@
                                 <label for="inputText3" class="col-form-label">Handphone / WA</label>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-12">
-                                <input id="inputText3" type="text" class="form-control" name="notelp" value="{{$profil->notelp}}">
+                                <input id="inputText3" type="number" class="form-control" min="1" name="notelp" value="{{$profil->notelp}}">
                             </div>
                         </div>
                         <div class="form-group row">

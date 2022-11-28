@@ -9,14 +9,15 @@
             <h5>+6281-912-071-977</h5>
             <br>
             <h3>Ikuti Kami</h3>
-            <img src="/images/sosmed.png" alt="">
+            <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" target="_blank"><img src="/images/sosmed/twitter.png" alt=""></a>
+            <a href="https://www.youtube.com/@jagadtv4475" target="_blank"><img src="/images/sosmed/facebook.png" alt=""></a>
+            <a href="https://www.youtube.com/@jagadtv4475" target="_blank"><img src="/images/sosmed/instagram.png" alt=""></a>
+            <a href="https://www.youtube.com/@jagadtv4475" target="_blank"><img src="/images/sosmed/youtube.png" alt=""></a>
         </div>
         <div class="col-25">
             <h3>PERUSAHAAN</h3>
             <br>
             <a href="/about">Tentang Kami</a><br>
-            <a href="#">Visi & Misi</a><br>
-            <a href="#">Manajemen</a><br>
             <a href="/layanan">Layanan</a><br>
             <a href="#">Info Properti</a><br>
             <a href="/kontak">Hubungi Kami</a><br>

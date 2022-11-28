@@ -53,11 +53,11 @@
                                                     <td>{{$list->status}}</td>
                                                     <td>
                                                     <div class="btn-group ml-auto">
-                                                        <a href="{{route('slider.edit',$list->id_slider)}}" class="btn btn-sm btn-outline-light" title="Edit"><i class="fas fa-edit"></i></a>
+                                                        <a href="{{route('slider.edit',$list->id_slider)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
                                                         <form method="POST" action="{{route('slider.destroy',$list->id_slider)}}">
                                                         @csrf
                                                         @method('delete')
-                                                        <button class="btn btn-sm btn-outline-light dltBtn" data-id={{$list->id_slider}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                        <button class="btn btn-sm btn-danger" data-id={{$list->id_slider}} data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="far fa-trash-alt"></i></button>
                                                         </form>
                                                     </div>
                                                     </td>

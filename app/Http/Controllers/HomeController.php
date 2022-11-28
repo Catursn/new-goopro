@@ -8,6 +8,8 @@ use App\Models\Properti;
 use App\Models\Berita;
 use App\Models\KategoriBerita;
 use App\Models\KategoriHunian;
+use App\Models\KategoriKota;
+use App\Models\KategoriKecamatan;
 use App\Models\Terms;
 use App\Models\Privacy;
 use App\Models\Syarat;
@@ -16,6 +18,7 @@ use App\Models\HakCipta;
 use App\Models\CaraKerja;
 use App\Models\Kontak;
 use App\Models\User;
+use App\Models\Profile;
 
 class HomeController extends Controller
 {
@@ -106,9 +109,13 @@ class HomeController extends Controller
     }
 
     public function detail($slug){
+        // $properti = Properti::where('slug',$slug)->leftJoin('kategori_kotas', 'kategori_kotas.id_kota', '=', 'propertis.kota')->first();
         $properti = Properti::where('slug',$slug)->first();
-        $user = User::where('id',$properti->agen)->first();
-        return view('front.detail',compact('properti','user'));
+        $kota = KategoriKota::where('id_kota',$properti->kota)->first();
+        $kecamatan = KategoriKecamatan::where('id_kecamatan',$properti->kecamatan)->first();
+        $user = Profile::where('id_profile',$properti->agen)->first();
+        // dd($kota);
+        return view('front.detail',compact('properti','user','kota','kecamatan'));
     }
 
     public function terms(){

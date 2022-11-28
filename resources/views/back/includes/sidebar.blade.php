@@ -36,6 +36,9 @@
                                     <a class="nav-link" href="{{route('properti.index')}}">Listing Aktif</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{route('terjual')}}">Listing Terjual</a>
+                                </li>
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="{{route('nonaktif')}}">Listing TIdak Aktif</a>
                                 </li>
                                 <li class="nav-item">
@@ -43,7 +46,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Favorit</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </li>
@@ -129,7 +132,13 @@
                                     <a class="nav-link" href="{{route('kategorihunian.index')}}">Kategori Hunian</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{route('kategoriprovinsi.index')}}">Kategori Provinsi</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{route('kategorikota.index')}}">Kategori Kota</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('kategorikecamatan.index')}}">Kategori Kecamatan</a>
                                 </li>
                             </ul>
                         </div>

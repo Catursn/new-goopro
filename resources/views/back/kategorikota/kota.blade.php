@@ -41,23 +41,23 @@
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
+                                                <th>Provinsi</th>
                                                 <th>Kota</th>
-                                                <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>   
                                             @foreach($kota as $list)
                                             <tr>
+                                                <td>{{$list->provinsi}}</td>
                                                 <td>{{$list->kota}}</td>
-                                                <td>{{$list->status}}</td>
                                                 <td>
                                                     <div class="btn-group ml-auto">
-                                                        <a href="{{route('kategorikota.edit',$list->id_kota)}}" class="btn btn-sm btn-outline-light" title="Edit"><i class="fas fa-edit"></i></a>
+                                                        <a href="{{route('kategorikota.edit',$list->id_kota)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
                                                         <form method="POST" action="{{route('kategorikota.destroy',$list->id_kota)}}">
                                                         @csrf
                                                         @method('delete')
-                                                        <button class="btn btn-sm btn-outline-light dltBtn" data-id={{$list->id_kota}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                        <button class="btn btn-sm btn-danger" data-id={{$list->id_kota}} data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="far fa-trash-alt"></i></button>
                                                         </form>
                                                     </div>
                                                 </td>
@@ -66,8 +66,8 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
+                                                <th>Provinsi</th>
                                                 <th>Kota</th>
-                                                <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>                                       
                                         </tfoot>

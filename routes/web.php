@@ -9,6 +9,8 @@ use App\Http\Controllers\KategoriBeritaController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\KategoriPropertiController;
 use App\Http\Controllers\KategoriKotaController;
+use App\Http\Controllers\KategoriKecamatanController;
+use App\Http\Controllers\KategoriProvinsiController;
 use App\Http\Controllers\KategoriHunianController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TermsController;
@@ -21,6 +23,7 @@ use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\IklanController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DependantDropdownController;
 
 
 /*
@@ -49,11 +52,17 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::get('/gantipassword', [AuthController::class, 'gantipassword'])->name('gantipassword');
     Route::post('/{id}/resetpassword', [AuthController::class, 'resetpassword'])->name('resetpassword');
     Route::resource('/berita', BeritaController::class);
+    Route::get('/ambil/kota/{id}',[PropertiController::class, 'kota'])->name('kota');
+    Route::get('/ambil/kecamatan/{id}',[PropertiController::class, 'kecamatan'])->name('kecamatan');
+    Route::get('/properti/terjual',[PropertiController::class, 'terjual'])->name('terjual');
     Route::get('/properti/nonaktif',[PropertiController::class, 'nonaktif'])->name('nonaktif');
+    Route::get('/properti/terjual/{id}',[PropertiController::class, 'subterjual'])->name('subterjual');
     Route::resource('/properti', PropertiController::class);
     Route::resource('/kategoriberita', KategoriBeritaController::class);
     Route::resource('/kategoriproperti', KategoriPropertiController::class);
     Route::resource('/kategorikota', KategoriKotaController::class);
+    Route::resource('/kategoriprovinsi', KategoriProvinsiController::class);
+    Route::resource('/kategorikecamatan', KategoriKecamatanController::class);
     Route::resource('/kategorihunian', KategoriHunianController::class);
     Route::resource('/slider', SliderController::class);
     Route::resource('/terms', TermsController::class);

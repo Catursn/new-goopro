@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Properti;
 use App\Models\KategoriProperti;
 use App\Models\KategoriHunian;
+use App\Models\KategoriProvinsi;
 use App\Models\KategoriKota;
+use App\Models\KategoriKecamatan;
 use File;
 use Storage;
 use Illuminate\Support\Str;
@@ -26,9 +28,29 @@ class PropertiController extends Controller
     }
 
     public function nonaktif(){
-        $author = Auth()->user()->name;
+        $author = Auth()->user()->id;
         $properti = Properti::where('agen',$author)->where('status','nonaktif')->orderBy('id_properti','DESC')->get();
         return view('back.properti.propertiaktif',compact('properti'));
+    }
+
+    public function terjual(){
+        $author = Auth()->user()->id;
+        $properti = Properti::where('agen',$author)->where('status','terjual')->orderBy('id_properti','DESC')->get();
+        return view('back.properti.propertiaktif',compact('properti'));
+    }
+
+    public function kota($id){
+        $kota = KategoriKota::where('provinsi_id','=',$id)->get();
+        // $re = json_encode($kota);
+        // dd($re);
+        return response()->json($kota);
+    }
+
+    public function kecamatan($id){
+        $kecamatan = KategoriKecamatan::where('kota_id','=',$id)->get();
+        // $re = json_encode($kecamatan);
+        // dd($re);
+        return response()->json($kecamatan);
     }
 
     /**
@@ -40,8 +62,8 @@ class PropertiController extends Controller
     {
         $kategori = KategoriProperti::where('status','aktif')->orderBy('id_kategori','DESC')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
-        $kota = KategoriKota::where('status','aktif')->orderBy('id_kota','DESC')->get();
-        return view('back.properti.add',compact('kategori','hunian','kota'));
+        $provinsi = KategoriProvinsi::orderBy('id_provinsi','ASC')->get();
+        return view('back.properti.add',compact('kategori','hunian','provinsi'));
     }
 
     /**
@@ -54,6 +76,7 @@ class PropertiController extends Controller
     {
         $properti = new properti;
         $data = $request->all();
+        // dd($data);
         if ($request->hasFile('foto1')) {
             $file = $request->file('foto1');
             $nama_gambar = $data['judul'].'1.'.$file->getClientOriginalExtension();
@@ -97,6 +120,10 @@ class PropertiController extends Controller
         }
         $data['slug']=$slug;
         $status=$properti->fill($data)->save();
+        $id = $properti->id_properti;
+        $properti= Properti::findOrFail($id);
+        $data['listing'] = $id;
+        $status=$properti->fill($data)->save();
         if($status){
             request()->session()->flash('success','properti successfully created');
         }
@@ -128,8 +155,10 @@ class PropertiController extends Controller
         $properti= Properti::findOrFail($id);
         $kategori = KategoriProperti::where('status','aktif')->orderBy('id_kategori','DESC')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
-        $kota = KategoriKota::where('status','aktif')->orderBy('id_kota','DESC')->get();
-        return view('back.properti.edit',compact('properti','kategori', 'hunian','kota'));
+        $provinsi = KategoriProvinsi::orderBy('id_provinsi','ASC')->get();
+        $kota = KategoriKota::orderBy('id_kota','ASC')->get();
+        $kecamatan = KategoriKecamatan::orderBy('id_kecamatan','ASC')->get();
+        return view('back.properti.edit',compact('properti','kategori', 'hunian','provinsi','kota','kecamatan'));
     }
 
     /**
@@ -179,8 +208,7 @@ class PropertiController extends Controller
             $data['foto5'] = '/'.$data['kategori'].'/'.$nama_gambar;
         }
         $slug=Str::slug($request->judul);
-        $count=properti::where('slug',$slug)->count();
-        $data['agen'] = Auth()->user()->name;
+        $count=Properti::where('slug',$slug)->count();
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
@@ -195,6 +223,18 @@ class PropertiController extends Controller
         return redirect()->route('properti.index');
     }
 
+    public function subterjual($id){
+        $properti= Properti::findOrFail($id);
+        $data['status'] = "terjual";
+        $status=$properti->fill($data)->save();
+        if($status){
+            request()->session()->flash('success','Status properti successfully changed');
+        }
+        else{
+            request()->session()->flash('error','Eror while changed properti');
+        }
+        return redirect()->route('properti.index');
+    }
     /**
      * Remove the specified resource from storage.
      *

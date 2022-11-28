@@ -17,7 +17,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">kota Kota</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Kota</a></li>
                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Edit</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{$kota->kota}}</li>
                     </ol>
@@ -46,16 +46,17 @@
             <h5 class="card-header">Edit kategori kota</h5>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Kota</label>
-                    <input id="inputText3" type="text" class="form-control" name="kota" value="{{$kota->kota}}" required>
+                    <label for="provinsi_id">Provinsi <span class="text-danger">*</span></label>
+                    <select name="provinsi_id" class="form-control" required>
+                        <option value="">--Pilih Provinsi--</option required>
+                        @foreach($provinsi as $list)
+                            <option value='{{$list->id_provinsi}}' {{(($kota->provinsi_id==$list->id_provinsi)? 'selected' : '')}}>{{$list->provinsi}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="status">Status <span class="text-danger">*</span></label>
-                    <select name="status" class="form-control" required>
-                        <option value="">--Pilih Status--</option required>
-                        <option value="aktif" {{(($kota->status=='aktif')? 'selected' : '')}}>Aktif</option>
-                        <option value="nonaktif" {{(($kota->status=='nonaktif')? 'selected' : '')}}>Nonaktif</option>
-                    </select>
+                    <label for="inputText3" class="col-form-label">Kota</label>
+                    <input id="inputText3" type="text" class="form-control" name="kota" value="{{$kota->kota}}" required>
                 </div>
                 <div style="float:right">
                     <button type="submit" class="btn btn-primary">Submit</button>

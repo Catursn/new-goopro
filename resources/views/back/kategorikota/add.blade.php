@@ -45,16 +45,17 @@
             <h5 class="card-header">Add Kategori Kota</h5>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Kota</label>
-                    <input id="inputText3" type="text" class="form-control" name="kota" required>
+                    <label for="provinsi_id">Provinsi <span class="text-danger">*</span></label>
+                    <select name="provinsi_id" class="form-control" required>
+                        <option value="">--Pilih Provinsi--</option required>
+                        @foreach($provinsi as $list)
+                            <option value='{{$list->id_provinsi}}'>{{$list->provinsi}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="status">Status <span class="text-danger">*</span></label>
-                    <select name="status" class="form-control" required>
-                        <option value="">--Pilih Status--</option required>
-                            <option value='aktif'>Aktif</option>
-                            <option value='nonaktif'>Nonaktif</option>
-                    </select>
+                    <label for="inputText3" class="col-form-label">Kota</label>
+                    <input id="inputText3" type="text" class="form-control" name="kota" required>
                 </div>
                 <div style="float:right">
                     <button type="submit" class="btn btn-primary">Submit</button>

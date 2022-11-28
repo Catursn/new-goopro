@@ -72,6 +72,14 @@ class ProfileController extends Controller
     {
         $profile = Profile::findOrFail($id);
         $data = $request->all();
+        $nohp = $data['notelp'];
+        if(!preg_match('/[^+0-9]/',trim($nohp))){
+            // cek apakah no hp karakter 1 adalah 0
+            if(substr(trim($nohp), 0, 1)=='0'){
+                $nohp = '62'.substr(trim($nohp), 1);
+            }
+        }
+        $data['notelp'] = $nohp;
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $nama_gambar = $file->getClientOriginalName();

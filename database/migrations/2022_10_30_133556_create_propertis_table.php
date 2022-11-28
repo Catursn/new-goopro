@@ -19,7 +19,9 @@ class CreatePropertisTable extends Migration
             $table->string('slug')->nullable();
             $table->string('kategori')->nullable();
             $table->string('hunian')->nullable();
+            $table->string('provinsi')->nullable();
             $table->string('kota')->nullable();
+            $table->string('kecamatan')->nullable();
             $table->string('tempat')->nullable();
             $table->string('harga')->nullable();
             $table->string('tidur')->nullable();
@@ -47,7 +49,7 @@ class CreatePropertisTable extends Migration
             $table->string('foto4')->nullable();
             $table->string('foto5')->nullable();
             $table->string('agen')->nullable();
-            $table->enum('status', ['aktif', 'nonaktif'])->nullable();
+            $table->enum('status', ['aktif', 'nonaktif','terjual'])->nullable();
             $table->timestamps();
         });
     }

@@ -61,11 +61,11 @@
                                                 <td>{{$ber->status}}</td>
                                                 <td>
                                                 <div class="btn-group ml-auto">
-                                                    <a href="{{route('berita.edit',$ber->id_berita)}}" class="btn btn-sm btn-outline-light" title="Edit"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{route('berita.edit',$ber->id_berita)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
                                                     <form method="POST" action="{{route('berita.destroy',$ber->id_berita)}}">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-sm btn-outline-light dltBtn" data-id={{$ber->id_berita}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                    <button class="btn btn-sm btn-danger" data-id={{$ber->id_berita}} data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="far fa-trash-alt"></i></button>
                                                     </form>
                                                 </div>
                                                 </td>

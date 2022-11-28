@@ -61,11 +61,14 @@
                                                 <td>{{$ber->status}}</td>
                                                 <td>
                                                 <div class="btn-group ml-auto">
-                                                    <a href="{{route('properti.edit',$ber->id_properti)}}" class="btn btn-sm btn-outline-light" title="Edit"><i class="fas fa-edit"></i></a>
+                                                    @if($ber->status != "terjual")
+                                                    <a href="{{route('properti.edit',$ber->id_properti)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
+                                                    <a href="/admin/properti/terjual/{{$ber->id_properti}}" class="btn btn-sm btn-success" title="Terjual"><i class="fas fa-dollar-sign"></i></a>
+                                                    @endif
                                                     <form method="POST" action="{{route('properti.destroy',$ber->id_properti)}}">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-sm btn-outline-light dltBtn" data-id={{$ber->id_properti}} style="height:30px; width:30px;border-radius:50%" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></button>
+                                                    <button class="btn btn-sm btn-danger" data-id={{$ber->id_properti}} data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="far fa-trash-alt"></i></button>
                                                     </form>
                                                 </div>
                                                 </td>

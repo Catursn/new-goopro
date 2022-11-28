@@ -14,9 +14,9 @@ class CreateKategoriKotasTable extends Migration
     public function up()
     {
         Schema::create('kategori_kotas', function (Blueprint $table) {
-            $table->increments('id_kota');
+            $table->string('id_kota');
+            $table->string('provinsi_id');
             $table->string('kota');
-            $table->enum('status', ['aktif', 'nonaktif']);
             $table->timestamps();
         });
     }

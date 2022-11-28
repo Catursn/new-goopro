@@ -9,6 +9,6 @@ class KategoriKota extends Model
 {
     protected $primaryKey = 'id_kota';
     protected $table = "kategori_kotas";
-    protected $fillable = ['id_kota','kota','status'];
+    protected $fillable = ['id_kota','kota','provinsi_id'];
     use HasFactory;
 }
