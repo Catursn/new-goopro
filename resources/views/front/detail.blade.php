@@ -72,7 +72,7 @@
         </div>
         <div class="row">
             <div class="col-60">
-                <h3>{{$properti->judul}}{{$properti->id_properti}}</h3>
+                <h3>{{$properti->judul}}</h3>
                 <div class="sosmed row">
                     <div>
                         <a href="http://www.facebook.com/share.php?u=https://www.goopro.id/properti/detail/{{$properti->slug}}" target="_blank"><img src="/images/sosmed/facebook.png" alt=""></a>
@@ -81,48 +81,54 @@
                         <a href="https://wa.me/?text=https://www.goopro.id/properti/detail/{{$properti->slug}}" target="_blank"><img src="/images/sosmed/whatsapp.png" alt=""></a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-30">
-                        <p><img src="images/point.png" alt=""> {{$properti->tempat}}</p>
-                        <h4>Rp {{$properti->harga}}</h4>
-                    </div>
-                    <div class="col-70">
-                        <button>{{$properti->hunian}}</button>
-                        <br>
-                        @if($properti->hunian != "Tanah")
-                        <h5>Tempat Tidur : <b><strong>{{$properti->tidur}}</strong></b>, Kamar Mandi : <b><strong>{{$properti->mandi}}</strong></b>, Bangunan : <b><strong>{{$properti->bangunan}}</strong></b> m <sup>2</sup></h5>
-                        @endif
-                    </div>
+                <div class="point">
+                    <!-- <p><img src="/images/point.png" alt=""> {{$properti->tempat}}</p> -->
+                    <h4>Rp {{$properti->harga}}</h4>
+                    <p>{{$properti->informasi}}</p>
                 </div>
-                <h6>Deskripsi :</h6>
-                <p>{{$properti->informasi}}</p>
                 <div class="spesifikasi">
-                    <h6>Detail Spesifikasi :</h6>
+                    <h6>Detail Spesifikasi</h6>
                     <div class="row">
                         @if($properti->hunian == "Rumah")
                         <div class="col-50">
+                            <h5>Tipe Properti</h5>
+                            <h4>{{$properti->hunian}}</h4>
                             <h5>Lantai</h5>
                             <h4>{{$properti->lantai}}</h4>
                             <h5>Listrik</h5>
                             <h4>{{$properti->listrik}} watt</h4>
+                            <h5>ID Listing</h5>
+                            <h4>{{$properti->listing}}</h4>
+                            <h5>Kamar Tidur</h5>
+                            <h4>{{$properti->tidur}}</h4>
+                            <h5>Tempat Parkir</h5>
+                            <h4>{{$properti->bangunan}}m <sup>2</sup></h4>
                         </div><div class="col-50">
+                            <h5>Kamar Mandi</h5>
+                            <h4>{{$properti->mandi}}</h4>
                             <h5>Luas Bangunan</h5>
-                            <h4>{{$properti->bangunan}} M</h4>
+                            <h4>{{$properti->bangunan}} m <sup>2</sup></h4>
                             <h5>Luas Tanah</h5>
-                            <h4>{{$properti->tanah}} M</h4>
+                            <h4>{{$properti->tanah}} m <sup>2</sup></h4>
                             <h5>Sertifikat</h5>
                             <h4>{{$properti->sertifikat}}</h4>
                         </div>
                         @elseif($properti->hunian == "Tanah")
                         <div class="col-50">
+                            <h5>Tipe Properti</h5>
+                            <h4>{{$properti->hunian}}</h4>
                             <h5>Luas Tanah</h5>
-                            <h4>{{$properti->tanah}} M</h4>
+                            <h4>{{$properti->tanah}} m <sup>2</sup></h4>
                         </div><div class="col-50">
                             <h5>Sertifikat</h5>
                             <h4>{{$properti->sertifikat}}</h4>
+                            <h5>ID Listing</h5>
+                            <h4>{{$properti->listing}}</h4>
                         </div>
                         @else
                         <div class="col-50">
+                            <h5>Tipe Properti</h5>
+                            <h4>{{$properti->hunian}}</h4>
                             <h5>Tipe Properti</h5>
                             <h4>{{$properti->hunian}} {{$properti->kategori}}</h4>
                             <h5>Pengembang</h5>
@@ -137,11 +143,19 @@
                             <h4>{{$properti->listrik}} watt</h4>
                             <h5>Tempat Parkir</h5>
                             <h4>{{$properti->parkir}}</h4>
+                            <h5>Kamar Tidur</h5>
+                            <h4>{{$properti->tidur}}</h4>
+                            <h5>Tempat Parkir</h5>
+                            <h4>{{$properti->bangunan}}m <sup>2</sup></h4>
                         </div><div class="col-50">
+                            <h5>Kamar Mandi</h5>
+                            <h4>{{$properti->mandi}}</h4>
+                            <h5>ID Listing</h5>
+                            <h4>{{$properti->listing}}</h4>
                             <h5>Luas Bangunan</h5>
-                            <h4>{{$properti->bangunan}} M</h4>
+                            <h4>{{$properti->bangunan}} m <sup>2</sup></h4>
                             <h5>Luas Tanah</h5>
-                            <h4>{{$properti->tanah}} M</h4>
+                            <h4>{{$properti->tanah}} m <sup>2</sup></h4>
                             <h5>Interior</h5>
                             <h4>{{$properti->interior}}</h4>
                             <h5>Sertifikat</h5>
@@ -157,7 +171,7 @@
                     </div>
                     <br>
                     <br>
-                    <h6>Fasilitas :</h6>
+                    <h6>Deskripsi</h6>
                     <?php echo $properti->sarpras; ?>
                     <br>
                     <br>
@@ -220,7 +234,8 @@
                     <div class="pic">
                         <img src="/images/{{$user->foto}}" alt="">
                         <h4>{{$user->namadepan}} {{$user->namabelakang}}</h4>
-                        <h4>{{$user->email}}</h4>
+                        <h5>{{$user->agensi}}</h5>
+                        <!-- <h4>{{$user->email}}</h4> -->
                         <!-- <h5>PT. GRIYA PROPERI LARIS MANIS</h5> -->
                         <br>
                         <a href="https://wa.me/{{$user->notelp}}" target="_blank" class="wa">Whatsapp</a>

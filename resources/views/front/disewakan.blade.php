@@ -150,14 +150,18 @@
                     <h4>Tipe Properti : {{$prop->hunian}}</h4>
                     <h5>{{$prop->informasi}}</h5>
                     <br>
-                    <h5>Tempat Tidur : <b><strong>{{$prop->tidur}}</strong></b>, Kamar Mandi : <b><strong>{{$prop->mandi}}</strong></b>, Bangunan : <b><strong>{{$prop->bangunan}}</strong></b> m <sup>2</sup></h5>
+                    @if($prop->hunian != "Tanah")
+                    <h5>Kamar Tidur : <b><strong>{{$prop->tidur}}</strong></b>, Kamar Mandi : <b><strong>{{$prop->mandi}}</strong></b>, Bangunan : <b><strong>{{$prop->bangunan}}</strong></b> m <sup>2</sup></h5>
+                    @else
+                    <h5>Luas Tanah : <b><strong>{{$prop->tanah}}m <sup>2</sup></strong></b>, Sertifikat : <b><strong>{{$prop->sertifikat}}</strong></b></h5>
+                    @endif
                     <h3>Rp. {{$prop->harga}}</h3>
                     <div class="row">
                         <div class="col-20">
-                            <a href="https://wa.me/6281912071977">Kontak Agent</a>
+                            <a href="https://wa.me/{{$prop->notelp}}">Kontak Agent</a>
                         </div>
                         <div class="col-80">
-                            <p>Didaftarkan oleh {{$prop->name}} <br>
+                            <p>Didaftarkan oleh {{$prop->namadepan}} {{$prop->namabelakang}} <br>
                             Tayang sejak {{ tanggal_indonesia($prop->created_at, false) }}</p>
                         </div>
                     </div>

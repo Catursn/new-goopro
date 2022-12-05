@@ -20,44 +20,7 @@
                 <img class="d-block w-100" src="images{{$ban->slider}}">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="wadah">
-                        <div >
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dijual</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Disewakan</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
-                                        {{ csrf_field() }} {{ method_field('POST') }}
-                                        <input type="text" name="prop" value="Dijual" hidden>
-                                        <select name="hunian" id="hunian">
-                                            @foreach($hunian as $hun)
-                                            <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
-                                            @endforeach
-                                        </select>
-                                        <input type="text" name="cari" placeholder="input text here">
-                                        <button type="submit" class="subb">Search</button>
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
-                                        {{ csrf_field() }} {{ method_field('POST') }}
-                                        <input type="text" name="prop" value="Disewakan" hidden>
-                                        <select name="hunian" id="hunian">
-                                            @foreach($hunian as $hun)
-                                            <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
-                                            @endforeach
-                                        </select>
-                                        <input type="text" name="cari" placeholder="input text here">
-                                        <button type="submit" class="subb">Search</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -190,6 +153,44 @@
         </a>
     </div>
     <div class="wadah">
+        <div >
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dijual</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Disewakan</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
+                        {{ csrf_field() }} {{ method_field('POST') }}
+                        <input type="text" name="prop" value="Dijual" hidden>
+                        <select name="hunian" id="hunian">
+                            @foreach($hunian as $hun)
+                            <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
+                            @endforeach
+                        </select>
+                        <input type="text" name="cari" placeholder="input text here">
+                        <button type="submit" class="subb">Search</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
+                        {{ csrf_field() }} {{ method_field('POST') }}
+                        <input type="text" name="prop" value="Disewakan" hidden>
+                        <select name="hunian" id="hunian">
+                            @foreach($hunian as $hun)
+                            <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
+                            @endforeach
+                        </select>
+                        <input type="text" name="cari" placeholder="input text here">
+                        <button type="submit" class="subb">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="properti">
             <div class="title">
                 <h3>Kategori Properti</h3>

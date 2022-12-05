@@ -47,7 +47,7 @@ class AuthController extends Controller
             Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
             Session::put('user',$data['email']);
             request()->session()->flash('success','Successfully registered');
-            return redirect()->route('admin');
+            return redirect()->route('properti.index');
         }
         else{
             request()->session()->flash('error','Please try again!');

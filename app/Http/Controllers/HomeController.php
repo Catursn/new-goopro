@@ -41,13 +41,13 @@ class HomeController extends Controller
     
     public function dijual($hunian){
         if($hunian == "all"){
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                    ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                    ->select('profiles.*', 'propertis.*')
                                     ->where('kategori','Dijual')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('hunian',$hunian)->where('kategori','Dijual')
                                 ->orderBy('id_properti','DESC')->paginate(10);
         }
@@ -57,13 +57,13 @@ class HomeController extends Controller
 
     public function disewakan($hunian){
         if($hunian == "all"){
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('hunian',$hunian)->where('kategori','Disewakan')->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
@@ -72,13 +72,13 @@ class HomeController extends Controller
 
     public function properti($hunian){
         if($hunian == "all"){
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('hunian',$hunian)->where('kategori','Properti Baru')->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
@@ -87,13 +87,13 @@ class HomeController extends Controller
 
     public function list($hunian){
         if($hunian == "all"){
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->orderBy('id_properti','DESC')->paginate(10);
             $hunian = " ";
         }else{
-            $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                                ->select('users.*', 'propertis.*')
+            $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                                ->select('profiles.*', 'propertis.*')
                                 ->where('hunian',$hunian)->orderBy('id_properti','DESC')->paginate(10);
         }
         $count = $properti->count();
@@ -101,8 +101,8 @@ class HomeController extends Controller
     }
     public function cari(Request $request){
         $data = $request->all();
-        $properti = Properti::leftJoin('users', 'users.id', '=', 'propertis.agen')
-                            ->select('users.*', 'propertis.*')
+        $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
+                            ->select('profiles.*', 'propertis.*')
                             ->where('kategori',$data['prop'])->where('hunian',$data['hunian'])->where('judul','LIKE',"%".$data['cari']."%")->paginate(10);
         $hunian = $data['hunian'];
         return view('front.cari',compact('properti','hunian'));
