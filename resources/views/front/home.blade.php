@@ -164,8 +164,8 @@
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
-                        {{ csrf_field() }} {{ method_field('POST') }}
+                    <form method="GEt"action="/properti/cari" enctype="multipart/form-data">
+                        {{ csrf_field() }} {{ method_field('GET') }}
                         <input type="text" name="prop" value="Dijual" hidden>
                         <select name="hunian" id="hunian">
                             @foreach($hunian as $hun)
@@ -177,8 +177,8 @@
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <form method="POST"action="/properti/cari" enctype="multipart/form-data">
-                        {{ csrf_field() }} {{ method_field('POST') }}
+                    <form method="GEt"action="/properti/cari" enctype="multipart/form-data">
+                        {{ csrf_field() }} {{ method_field('GET') }}
                         <input type="text" name="prop" value="Disewakan" hidden>
                         <select name="hunian" id="hunian">
                             @foreach($hunian as $hun)
@@ -202,75 +202,54 @@
                     <p>{{$hun->hunian}}</p>
                 </div>
                 @endforeach
-                <!-- <div class="col-12">
-                    <img src="images/pabrik.png" alt="">
-                    <p>Pabrik</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/rumah.png" alt="">
-                    <p>Rumah</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/tanah.png" alt="">
-                    <p>Tanah</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/gedung.png" alt="">
-                    <p>Gedung Perkantoran</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/ruko.png" alt="">
-                    <p>Ruko</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/gudang.png" alt="">
-                    <p>Gudang</p>
-                </div>
-                <div class="col-12">
-                    <img src="images/rukan.png" alt="">
-                    <p>Rukan</p>
-                </div> -->
             </div>
+        </div> 
+    </div>
+    <div class="hunian">
+        <div class="title">
+            <h3>PROPERTI HUNIAN ASRI</h3>
         </div>
+        <div class="row">
+            @foreach($properti as $pro)
+            <div class="col-30">
+                <a href="/properti/detail/{{$pro->slug}}"><img src="images{{$pro->foto1}}" alt=""></a>
+                <div class="caption">
+                    <h5>Tipe Properti : {{$pro->hunian}}</h5>
+                    <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
+                    <h6>Rp {{$pro->harga}}</h6>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="wadah">
         <div class="place">
             <div class="title">
                 <h3>Properti Perwilayah</h3>
             </div>
             <div class="row">
-                <!-- <div class="col-25" style="background-image: url('images/bandung.png')">
-                    <a href="#">Kota Bandung <br>>Properti Detail</a>
-                </div>
-                <div class="col-25" style="background-image: url('images/kabbandung.png')">
-                    <a href="#">Kabupaten Bandung <br>>Properti Detail</a>
-                </div>
-                <div class="col-25" style="background-image: url('images/cimahi.png')">
-                    <a href="#">Cimahi <br>>Properti Detail</a>
-                </div>
-                <div class="col-25" style="background-image: url('images/jakarta.png')">
-                    <a href="#">Jakarta <br>>Properti Detail</a>
-                </div> -->
                 <div class="col-25">
                     <img src="images/bandung.png" alt="">
                     <div class="caption">
-                        <a href="#">Kota Bandung <br>>Properti Detail</a>
+                        <a href="/properti/wilayah/3273">Kota Bandung <br>>Properti Detail</a>
                     </div>
                 </div>
                 <div class="col-25">
                     <img src="images/kabbandung.png" alt="">
                     <div class="caption">
-                        <a href="#">Kabupaten Bandung <br>>Properti Detail</a>
+                        <a href="/properti/wilayah/3204">Kabupaten Bandung <br>>Properti Detail</a>
                     </div>
                 </div>
                 <div class="col-25">
                     <img src="images/cimahi.png" alt="">
                     <div class="caption">
-                        <a href="#">Cimahi <br>>Properti Detail</a>
+                        <a href="/properti/wilayah/3277">Cimahi <br>>Properti Detail</a>
                     </div>
                 </div>
                 <div class="col-25">
                     <img src="images/jakarta.png" alt="">
                     <div class="caption">
-                        <a href="#">Jakarta <br>>Properti Detail</a>
+                        <a href="/properti/wilayah/3173">Jakarta Pusat<br>>Properti Detail</a>
                     </div>
                 </div>
             </div>
@@ -308,26 +287,26 @@
         </div>
         <div class="cari">
             <div class="title">
-                <h3>Cari Properti Berdasarkan Harta</h3>
+                <h3>Cari Properti Berdasarkan Harga</h3>
             </div>
             <div class="row">
                 <div class="col-15">
-                    <button><= 500 juta</button>
+                    <a href="/properti/harga/0/sampai/500.000.000"><button><= 500 juta</button></a>
                 </div>
                 <div class="col-15">
-                    <button class="active">500 juta - 1 miliar</button>
+                    <a href="/properti/harga/500.000.000/sampai/1.000.000.000"><button>500 juta - 1 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <button>1 miliar - 1.5 miliar</button>
+                    <a href="/properti/harga/1.000.000.000/sampai/1.500.000.000"><button>1 miliar - 1.5 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <button>1.5 miliar - 2 miliar`</button>
+                    <a href="/properti/harga/1.500.000.000/sampai/2.000.000.000"><button>1.5 miliar - 2 miliar`</button></a>
                 </div>
                 <div class="col-15">
-                    <button>2 miliar - 3 miliar</button>
+                    <a href="/properti/harga/2.000.000.000/sampai/3.000.000.000"><button>2 miliar - 3 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <button>>= 3 miliar</button>
+                    <a href="/properti/harga/3.000.000.000/sampai/9.999.000.000.000"><button>>= 3 miliar</button></a>
                 </div>
             </div>
         </div>
@@ -343,39 +322,6 @@
                     <a href="#">Ajukan Pertanyaan</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="hunian">
-        <div class="title">
-            <h3>PROPERTI HUNIAN ASRI</h3>
-        </div>
-        <div class="row">
-            @foreach($properti as $pro)
-            <div class="col-30">
-                <img src="images{{$pro->foto1}}" alt="">
-                <div class="caption">
-                    <h5>Tipe Properti : {{$pro->hunian}}</h5>
-                    <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
-                    <h6>Rp {{$pro->harga}}</h6>
-                </div>
-            </div>
-            @endforeach
-            <!-- <div class="col-30">
-                <img src="images/hunian2.png" alt="">
-                <div class="caption">
-                    <h5>Tipe Properti : Rumah</h5>
-                    <h6>Tempat Tidur : 2, Kamar Mandi : 1, Lantai : 2, Bangunan : 50, Lahan : 100</h6>
-                    <h6>Rp 350.000.000,00</h6>
-                </div>
-            </div>
-            <div class="col-30">
-                <img src="images/hunian3.png" alt="">
-                <div class="caption">
-                    <h5>Tipe Properti : Apartemen</h5>
-                    <h6>Tempat Tidur : 1, Kamar Mandi : 1, Lantai : 2, Bangunan : 50</h6>
-                    <h6>Rp 550.000.000,00</h6>
-                </div>
-            </div> -->
         </div>
     </div>
     <div class="wadah">

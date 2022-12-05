@@ -1,149 +1,165 @@
 @extends('front.includes.master')
 
 @section('title')
-  DAFTAR PROPERTI | GOOPRO
+Daftar {{$hunian}} {{$kategori}} | GOOPRO
 @endsection
 
 @section('main-content')
 <div class="titleproperti">
-    <h3>DAFTAR PROPERTI</h3>
+    <h3>Daftar {{$hunian}} {{$kategori}}</h3>
 </div>
 <div class="wadah">
     <div class="properti">
         <div class="row">
         <div class="col-12">
-                <a href="/properti/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/kategoriproperti/apartemen.png" alt=""></a>
+                <a href="{{$url}}/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/kategoriproperti/apartemen.png" alt=""></a>
                 <p>Apartemen</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/kategoriproperti/pabrik.png" alt=""></a>
+                <a href="{{$url}}/list/Pabrik" class="{{(($hunian=='Pabrik')? 'active' : '')}}"><img src="/images/kategoriproperti/pabrik.png" alt=""></a>
                 <p>Pabrik</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/kategoriproperti/rumah.png" alt=""></a>
+                <a href="{{$url}}/list/Rumah" class="{{(($hunian=='Rumah')? 'active' : '')}}"><img src="/images/kategoriproperti/rumah.png" alt=""></a>
                 <p>Rumah</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/kategoriproperti/tanah.png" alt=""></a>
+                <a href="{{$url}}/list/Tanah" class="{{(($hunian=='Tanah')? 'active' : '')}}"><img src="/images/kategoriproperti/tanah.png" alt=""></a>
                 <p>Tanah</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/kategoriproperti/gedung.png" alt=""></a>
+                <a href="{{$url}}/list/Gedung Perkantoran" class="{{(($hunian=='Gedung Perkantoran')? 'active' : '')}}"><img src="/images/kategoriproperti/gedung.png" alt=""></a>
                 <p>Gedung Perkantoran</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/kategoriproperti/ruko.png" alt=""></a>
+                <a href="{{$url}}/list/Ruko" class="{{(($hunian=='Ruko')? 'active' : '')}}"><img src="/images/kategoriproperti/ruko.png" alt=""></a>
                 <p>Ruko</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/kategoriproperti/gudang.png" alt=""></a>
+                <a href="{{$url}}/list/Gudang" class="{{(($hunian=='Gudang')? 'active' : '')}}"><img src="/images/kategoriproperti/gudang.png" alt=""></a>
                 <p>Gudang</p>
             </div>
             <div class="col-12">
-                <a href="/properti/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/kategoriproperti/rukan.png" alt=""></a>
+                <a href="{{$url}}/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/kategoriproperti/rukan.png" alt=""></a>
                 <p>Rukan</p>
             </div>
         </div>
     </div>
 </div>
 <div class="contentt">
+    <form method="GEt"action="/properti/filtered" enctype="multipart/form-data">
+        {{ csrf_field() }} {{ method_field('GET') }}
+        <input type="text" name="hunian" value="{{$hunian}}" hidden>
+        <input type="text" name="kategori" value="{{$kategori}}" hidden>
     <div class="row">
         <div class="leftbar">
             <h3>Harga :</h3>
-            <div class="row">
-                <div class="col-50">
-                    <button><= 500 juta</button>
-                </div>
-                <div class="col-50">
-                    <button class="active">500 juta - 1 miliar</button>
-                </div>
-                <div class="col-50">
-                    <button>1 miliar - 1,5 miliar</button>
-                </div>
-                <div class="col-50">
-                    <button>1,5 miliar - 2 miliar</button>
-                </div>
-                <div class="col-50">
-                    <button>2 miliar - 3 miliar</button>
-                </div>
-                <div class="col-50">
-                    <button>>= 3 miliar</button>
-                </div>
-            </div>
-            <br>
-            <br>
+                <ul class="donate-now" style="height:150px">
+                    <li>
+                        <input type="checkbox" id="h1" value="1" name="harga" {{(($harga =='1')? 'checked' : '')}}/>
+                        <label for="h1"><= 500 juta</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h2" value="2" name="harga" {{(($harga =='2')? 'checked' : '')}}/>
+                        <label for="h2">500 juta - 1 miliar</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h3" value="3" name="harga" {{(($harga =='3')? 'checked' : '')}}/>
+                        <label for="h3">1 miliar - 1,5 miliar</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h4" value="4" name="harga" {{(($harga =='4')? 'checked' : '')}}/>
+                        <label for="h4">1,5 miliar - 2 miliar</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h5" value="5" name="harga" {{(($harga =='5')? 'checked' : '')}}/>
+                        <label for="h5">2 miliar - 3 miliar</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h6" value="6" name="harga" {{(($harga =='6')? 'checked' : '')}}/>
+                        <label for="h6">>= 3 miliar</label>
+                    </li>
+                </ul>
             <h3>Kamar Tidur :</h3>
-            <div class="row">
-                <div class="col-20">
-                    <button>1</button>
-                </div>
-                <div class="col-20">
-                    <button>2</button>
-                </div>
-                <div class="col-20">
-                    <button>3</button>
-                </div>
-                <div class="col-20">
-                    <button>4</button>
-                </div>
-                <div class="col-20">
-                    <button>5+</button>
-                </div>
-            </div>
-            <br>
-            <br>
+                <ul class="donate-now" style="height:150px">
+                    <li>
+                        <input type="checkbox" id="t1" value="1" name="tidur" {{(($tidur =='1')? 'checked' : '')}}/>
+                        <label for="t1">1</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="t2" value="2" name="tidur" {{(($tidur =='2')? 'checked' : '')}}/>
+                        <label for="t2">2</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="t3" value="3" name="tidur" {{(($tidur =='3')? 'checked' : '')}}/>
+                        <label for="t3">3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="t4" value="4" name="tidur" {{(($tidur =='4')? 'checked' : '')}}/>
+                        <label for="t4">4</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="t5" value="5" name="tidur" {{(($tidur =='5')? 'checked' : '')}}/>
+                        <label for="t5">5</label>
+                    </li>
+                </ul>
             <h3>Daerah :</h3>
-            <div class="row">
-                <div class="col-50">
-                    <button>Bandung</button>
-                </div>
-                <div class="col-50">
-                    <button class="active">Cimahi</button>
-                </div>
-                <div class="col-50">
-                    <button>Kab. Bandung</button>
-                </div>
-                <div class="col-50">
-                    <button>Kab. Bandung Barat</button>
-                </div>
-                <div class="col-50">
-                    <button>Sumedang</button>
-                </div>
-                <div class="col-50">
-                    <button>Subang</button>
-                </div>
-                <div class="col-50">
-                    <button>Jakarta</button>
-                </div>
-                <div class="col-50">
-                    <button>Bogor</button>
-                </div>
-                <div class="col-50">
-                    <button>Depok</button>
-                </div>
-                <div class="col-50">
-                    <button>Tangerang</button>
-                </div>
-                <div class="col-50">
-                    <button>Bekasi</button>
-                </div>
-                <div class="col-50">
-                    <button>Sukabumi</button>
-                </div>
-            </div>
-            <br><br>
-            <h3>Tanggal siap huni</h3>
-            <input type="text">
-            <h3>Luas bangunan</h3>
-            <input type="text">
-            <h3>Luas tanah</h3>
-            <input type="text">
+                <ul class="donate-now" style="height:300px">
+                <li>
+                    <input type="checkbox" id="d1" value="3273" name="daerah" {{(($daerah =='3273')? 'checked' : '')}}/>
+                    <label for="d1">Kota Bandung</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d2" value="3277" name="daerah" {{(($daerah =='3277')? 'checked' : '')}}/>
+                    <label for="d2">Kota Cimahi</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d3" value="3204" name="daerah" {{(($daerah =='3204')? 'checked' : '')}}/>
+                    <label for="d3">Kab. Bandung</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d4" value="3217" name="daerah" {{(($daerah =='3217')? 'checked' : '')}}/>
+                    <label for="d4">Kab. Bandung Barat</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d5" value="3211" name="daerah" {{(($daerah =='3211')? 'checked' : '')}}/>
+                    <label for="d5">Kabupaten Sumedang</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3213" name="daerah" {{(($daerah =='3213')? 'checked' : '')}}/>
+                    <label for="d6">Kabupaten Subang</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3173" name="daerah" {{(($daerah =='3173')? 'checked' : '')}}/>
+                    <label for="d6">Jakarta Pusat</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3272" name="daerah" {{(($daerah =='3272')? 'checked' : '')}}/>
+                    <label for="d6">Kota Sukabumi</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3271" name="daerah" {{(($daerah =='3271')? 'checked' : '')}}/>
+                    <label for="d6">Kota Bogor</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3276" name="daerah" {{(($daerah =='3276')? 'checked' : '')}}/>
+                    <label for="d6">Kota Depok</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3671" name="daerah" {{(($daerah =='3671')? 'checked' : '')}}/>
+                    <label for="d6">Kota Tangerang</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="d6" value="3275" name="daerah" {{(($daerah =='3275')? 'checked' : '')}}/>
+                    <label for="d6">Bekasi</label>
+                </li>
+            </ul>
             <div class="terapkan">
-                <a href="#">Terapkan Filter</a>
+                <button class="active">Terapkan Filter</button>
             </div>
         </div>
         <div class="rightbar">
-            <h3>{{ $properti->total() }} {{$hunian}} Dijual</h3>
+            <h3>{{ $properti->total() }} {{$hunian}} {{$kategori}}</h3>
             @foreach($properti as $prop)
             <div class="row">
                 <div class="col-40">
@@ -484,9 +500,27 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 @endsection
 @push('styles')
 @endpush
 @push('scripts')
+<script>
+    $("input:checkbox").on('click', function() {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            // the name of the box is retrieved using the .attr() method
+            // as it is assumed and expected to be immutable
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            // the checked state of the group/box on the other hand will change
+            // and the current value is retrieved using .prop() method
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+        } else {
+            $box.prop("checked", false);
+        }
+        });
+</script>
 @endpush
