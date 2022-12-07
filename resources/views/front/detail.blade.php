@@ -83,7 +83,7 @@
                 </div>
                 <div class="point">
                     <!-- <p><img src="/images/point.png" alt=""> {{$properti->tempat}}</p> -->
-                    <h4>Rp {{$properti->harga}}</h4>
+                    <h4>Rp {{ format_uang($properti->harga) }}</h4>
                     <p>{{$properti->informasi}}</p>
                 </div>
                 <div class="spesifikasi">
@@ -134,7 +134,7 @@
                             <h5>Pengembang</h5>
                             <h4 class="grey">{{$properti->pengembang}}</h4>
                             <h5>Per M</h5>
-                            <h4>Rp {{$properti->perm}} per M</h4>
+                            <h4>Rp {{ format_uang($properti->perm) }}per m <sup>2</sup></h4>
                             <h5>Lantai</h5>
                             <h4>{{$properti->lantai}}</h4>
                             <h5>Tahun Dibuat</h5>

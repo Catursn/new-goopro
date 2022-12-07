@@ -41,6 +41,7 @@
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
+                                                <th>Id</th>
                                                 <th>Provinsi</th>
                                                 <th>Kota</th>
                                                 <th>Aksi</th>
@@ -49,6 +50,7 @@
                                         <tbody>   
                                             @foreach($kota as $list)
                                             <tr>
+                                                <td>{{$list->id_kota}}</td>
                                                 <td>{{$list->provinsi}}</td>
                                                 <td>{{$list->kota}}</td>
                                                 <td>
@@ -66,6 +68,7 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
+                                                <th>Id</th>
                                                 <th>Provinsi</th>
                                                 <th>Kota</th>
                                                 <th>Aksi</th>

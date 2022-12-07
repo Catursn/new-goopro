@@ -76,6 +76,8 @@ class PropertiController extends Controller
     {
         $properti = new properti;
         $data = $request->all();
+        $data['harga'] = str_replace(".","",$data['harga']);
+        $data['perm'] = str_replace(".","",$data['perm']);
         // dd($data);
         if ($request->hasFile('foto1')) {
             $file = $request->file('foto1');
@@ -172,6 +174,8 @@ class PropertiController extends Controller
     {
         $properti= Properti::findOrFail($id);
         $data = $request->all();
+        $data['harga'] = str_replace(".","",$data['harga']);
+        $data['perm'] = str_replace(".","",$data['perm']);
         if ($request->hasFile('foto1')) {
             $file = $request->file('foto1');
             $nama_gambar = $data['judul'].'1.'.$file->getClientOriginalExtension();

@@ -120,14 +120,26 @@ class HomeController extends Controller
         return view('front.properti',compact('properti','hunian','count','kategori','url','harga','daerah','tidur'));
     }
     public function harga($awal,$akhir){
+        if($awal == "0"){
+            $harga = "1";
+        }elseif($awal == "500000000"){
+            $harga = "2";
+        }elseif($awal == "1000000000"){
+            $harga = "3";
+        }elseif($awal == "1500000000"){
+            $harga = "4";
+        }elseif($awal == "2000000000"){
+            $harga = "5";
+        }elseif($awal == "3000000000"){
+            $harga = "6";
+        }
         $properti = Properti::leftJoin('profiles', 'profiles.id_profile', '=', 'propertis.agen')
                             ->select('profiles.*', 'propertis.*')
-                            ->whereBetween('harga', [$awal, $akhir])->orderBy('id_properti','DESC')->paginate(10);
+                            ->whereBetween('harga', [intval($awal), intval($akhir)])->orderBy('id_properti','DESC')->paginate(10);
         $hunian = "Properti";
         $kategori = " ";
         $url = "/properti";
         $count = $properti->count();
-        $harga = " ";
         $daerah = " ";
         $tidur = " ";
         return view('front.properti',compact('properti','hunian','count','kategori','url','harga','daerah','tidur'));
@@ -172,22 +184,22 @@ class HomeController extends Controller
             $harga = $data['harga'];
             if($data['harga'] == "1"){
                 $data['awal'] = "0";
-                $data['akhir'] = "500.000.000";
+                $data['akhir'] = "500000000";
             }elseif($data['harga'] == "2"){
-                $data['awal']= "500.000.000";
-                $data['akhir'] = "1.000.000.000";
+                $data['awal']= "500000000";
+                $data['akhir'] = "1000000000";
             }elseif($data['harga'] == "3"){
-                $data['awal']= "1.000.000.000";
-                $data['akhir'] = "1.500.000.000";
+                $data['awal']= "1000000000";
+                $data['akhir'] = "1500000000";
             }elseif($data['harga'] == "4"){
-                $data['awal']= "1.500.000.000";
-                $data['akhir'] = "2.000.000.000";
+                $data['awal']= "1500000000";
+                $data['akhir'] = "2000000000";
             }elseif($data['harga'] == "5"){
-                $data['awal']= "2.000.000.000";
-                $data['akhir'] = "3.000.000.000";
+                $data['awal']= "2000000000";
+                $data['akhir'] = "3000000000";
             }elseif($data['harga'] == "6"){
-                $data['awal']= "3.000.000.000";
-                $data['akhir'] = "9.999.000.000.000";
+                $data['awal']= "3000000000";
+                $data['akhir'] = "9999000000000";
             }
         }
         if(empty($data['tidur'])){

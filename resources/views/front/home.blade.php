@@ -216,7 +216,7 @@
                 <div class="caption">
                     <h5>Tipe Properti : {{$pro->hunian}}</h5>
                     <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
-                    <h6>Rp {{$pro->harga}}</h6>
+                    <h6>Rp {{ format_uang($pro->harga) }}</h6>
                 </div>
             </div>
             @endforeach
@@ -291,22 +291,22 @@
             </div>
             <div class="row">
                 <div class="col-15">
-                    <a href="/properti/harga/0/sampai/500.000.000"><button><= 500 juta</button></a>
+                    <a href="/properti/harga/0/sampai/500000000"><button><= 500 juta</button></a>
                 </div>
                 <div class="col-15">
-                    <a href="/properti/harga/500.000.000/sampai/1.000.000.000"><button>500 juta - 1 miliar</button></a>
+                    <a href="/properti/harga/500000000/sampai/1000000000"><button>500 juta - 1 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <a href="/properti/harga/1.000.000.000/sampai/1.500.000.000"><button>1 miliar - 1.5 miliar</button></a>
+                    <a href="/properti/harga/1000000000/sampai/1500000000"><button>1 miliar - 1.5 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <a href="/properti/harga/1.500.000.000/sampai/2.000.000.000"><button>1.5 miliar - 2 miliar`</button></a>
+                    <a href="/properti/harga/1500000000/sampai/2000000000"><button>1.5 miliar - 2 miliar`</button></a>
                 </div>
                 <div class="col-15">
-                    <a href="/properti/harga/2.000.000.000/sampai/3.000.000.000"><button>2 miliar - 3 miliar</button></a>
+                    <a href="/properti/harga/2000000000/sampai/3000000000"><button>2 miliar - 3 miliar</button></a>
                 </div>
                 <div class="col-15">
-                    <a href="/properti/harga/3.000.000.000/sampai/9.999.000.000.000"><button>>= 3 miliar</button></a>
+                    <a href="/properti/harga/3000000000/sampai/9999000000000"><button>>= 3 miliar</button></a>
                 </div>
             </div>
         </div>

@@ -26,15 +26,15 @@
         <div class="col-25">
             <h3>RUMAH IMPIAN</h3>
             <br>
-            <h5>Express Sell</h5>
-            <h5>Booster Sell</h5>
-            <h5>Rumah Dijual di Bandung</h5>
-            <h5>Rumah Dijual di Cimahi</h5>
-            <h5>Rumah Dijual di KBB</h5>
-            <h5>Rumah Dijual di Kab. Bandung</h5>
-            <h5>Rumah Dijual di Subang</h5>
-            <h5>Rumah Dijual di Sumedang</h5>
-            <h5>Rumah Dijual di Jabodetabek</h5>
+            <a href="#">Express Sell</a><br>
+            <a href="#">Booster Sell</a><br>
+            <a href="/properti/wilayah/3273">Rumah Dijual di Bandung</a><br>
+            <a href="/properti/wilayah/3277">Rumah Dijual di Cimahi</a><br>
+            <a href="/properti/wilayah/3217">Rumah Dijual di KBB</a><br>
+            <a href="/properti/wilayah/3204">Rumah Dijual di Kab. Bandung</a><br>
+            <a href="/properti/wilayah/3213">Rumah Dijual di Subang</a><br>
+            <a href="/properti/wilayah/3211">Rumah Dijual di Sumedang</a><br>
+            <a href="/properti/wilayah/3173">Rumah Dijual di Jakarta Pusat</a><br>
         </div>
         <div class="col-25">
             <h3>KATEGORI PROPERTI</h3>

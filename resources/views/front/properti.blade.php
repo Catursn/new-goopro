@@ -11,7 +11,16 @@ Daftar {{$hunian}} {{$kategori}} | GOOPRO
 <div class="wadah">
     <div class="properti">
         <div class="row">
-        <div class="col-12">
+        @php
+        $kathunian = DB::table('kategori_hunians')->where('status','aktif')->orderBy('id_hunian','DESC')->get();
+        @endphp
+        @foreach($kathunian as $kat)
+            <div class="col-12">
+                <a href="{{$url}}/list/{{$kat->hunian}}" class="{{(($hunian==$kat->hunian)? 'active' : '')}}"><img src="/images{{$kat->icon}}" alt=""></a>
+                <p>{{$kat->hunian}}</p>
+            </div>
+        @endforeach
+            <!-- <div class="col-12">
                 <a href="{{$url}}/list/Apartemen" class="{{(($hunian=='Apartemen')? 'active' : '')}}"><img src="/images/kategoriproperti/apartemen.png" alt=""></a>
                 <p>Apartemen</p>
             </div>
@@ -42,7 +51,7 @@ Daftar {{$hunian}} {{$kategori}} | GOOPRO
             <div class="col-12">
                 <a href="{{$url}}/list/Rukan" class="{{(($hunian=='Rukan')? 'active' : '')}}"><img src="/images/kategoriproperti/rukan.png" alt=""></a>
                 <p>Rukan</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -181,7 +190,7 @@ Daftar {{$hunian}} {{$kategori}} | GOOPRO
                     @else
                     <h5>Luas Tanah : <b><strong>{{$prop->tanah}}m <sup>2</sup></strong></b>, Sertifikat : <b><strong>{{$prop->sertifikat}}</strong></b></h5>
                     @endif
-                    <h3>Rp. {{$prop->harga}}</h3>
+                    <h3>Rp. {{ format_uang($prop->harga) }}</h3>
                     <div class="row">
                         <div class="col-20">
                             <a href="https://wa.me/{{$prop->notelp}}">Kontak Agent</a>

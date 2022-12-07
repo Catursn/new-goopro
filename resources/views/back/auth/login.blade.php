@@ -56,7 +56,8 @@
                     </div>
                     <div class="col-60">
                         <div class="input">
-                            <input type="password" name="password">
+                            <input type="password" name="password" id="myInput"><br>
+                            <input type="checkbox" onclick="myFunction()">Show Password
                         </div>
                         <div class="submit">
                             <input type="submit" name="signup" value="Masuk">
@@ -75,4 +76,14 @@
 @push('styles')
 @endpush
 @push('scripts')
+<script>
+    function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 @endpush
