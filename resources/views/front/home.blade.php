@@ -153,13 +153,16 @@
         </a>
     </div>
     <div class="wadah">
-        <div >
+        <div class="searchbar">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Dijual</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Disewakan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="properti-tab" data-toggle="tab" href="#properti" role="tab" aria-controls="properti" aria-selected="false">Properti Baru</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -180,6 +183,19 @@
                     <form method="GEt"action="/properti/cari" enctype="multipart/form-data">
                         {{ csrf_field() }} {{ method_field('GET') }}
                         <input type="text" name="prop" value="Disewakan" hidden>
+                        <select name="hunian" id="hunian">
+                            @foreach($hunian as $hun)
+                            <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
+                            @endforeach
+                        </select>
+                        <input type="text" name="cari" placeholder="input text here">
+                        <button type="submit" class="subb">Search</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="properti" role="tabpanel" aria-labelledby="properti-tab">
+                    <form method="GEt"action="/properti/cari" enctype="multipart/form-data">
+                        {{ csrf_field() }} {{ method_field('GET') }}
+                        <input type="text" name="prop" value="Properti Baru" hidden>
                         <select name="hunian" id="hunian">
                             @foreach($hunian as $hun)
                             <option value="{{$hun->hunian}}">{{$hun->hunian}}</option>
@@ -210,16 +226,26 @@
             <h3>PROPERTI HUNIAN ASRI</h3>
         </div>
         <div class="row">
-            @foreach($properti as $pro)
-            <div class="col-30">
-                <a href="/properti/detail/{{$pro->slug}}"><img src="images{{$pro->foto1}}" alt=""></a>
-                <div class="caption">
-                    <h5>Tipe Properti : {{$pro->hunian}}</h5>
-                    <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
-                    <h6>Rp {{ format_uang($pro->harga) }}</h6>
+            <div class="col-md-12">
+                <div class="carousel slide multi-item-carousel" id="theCarousel">
+                    <div class="carousel-inner">
+                    @foreach($properti as $key=>$pro)
+                        <div class="item {{(($key==0)? 'active' : '')}}">
+                            <div class="col-xs-4">
+                                <a href="/properti/detail/{{$pro->slug}}"><img src="images{{$pro->foto1}}" alt=""></a>
+                                <div class="caption">
+                                    <h5>Tipe Properti : {{$pro->hunian}}</h5>
+                                    <h6>Tempat Tidur : {{$pro->tidur}}, Kamar Mandi : {{$pro->mandi}}, Lantai : {{$pro->lantai}}, Bangunan : {{$pro->bangunan}}, Lahan : {{$pro->tanah}}</h6>
+                                    <h6>Rp {{ format_uang($pro->harga) }}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                    <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                    <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
                 </div>
             </div>
-            @endforeach
         </div>
     </div>
     <div class="wadah">
@@ -463,4 +489,26 @@
 @push('styles')
 @endpush
 @push('scripts')
+<script>
+    // Instantiate the Bootstrap carousel
+$('.multi-item-carousel').carousel({
+  interval: false
+});
+
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+</script>
 @endpush

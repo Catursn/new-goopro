@@ -62,7 +62,7 @@
                         <div class="row list">
                             <img src="/images{{$ter->foto}}" alt="">
                             <div class="text">
-                                <h4>{{$ter->judul}}</h4>
+                                <h4><a href="{{$ter->slug}}">{{$ter->judul}}</a></h4>
                                 <p>{{ tanggal_indonesia($ter->tanggal, false) }}</p>
                             </div>
                         </div>
@@ -111,7 +111,7 @@
                     <div class="isi">
                         @foreach($populer as $pop)
                         <div class="list">
-                            <h4>{{$pop->judul}}</h4>
+                            <h4><a href="{{$pop->slug}}">{{$pop->judul}}</a></h4>
                             <p>{{ tanggal_indonesia($pop->tanggal, false) }}</p>
                         </div>
                         @endforeach
@@ -160,7 +160,7 @@
                     <div class="isi">
                         @foreach($kategori as $kat)
                         <div class="row list">
-                            <h4>{{$kat->kategori}}</h4>
+                            <h4><a href="/berita/kategori/{{$kat->kategori}}">{{$kat->kategori}}</a></h4>
                         </div>
                         @endforeach
                         <!-- <div class="row list">

@@ -24,6 +24,7 @@ use App\Http\Controllers\IklanController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DependantDropdownController;
+use App\Http\Controllers\FAQController;
 
 
 /*
@@ -66,6 +67,7 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/kategorihunian', KategoriHunianController::class);
     Route::resource('/slider', SliderController::class);
     Route::resource('/terms', TermsController::class);
+    Route::resource('/faq', FAQController::class);
     Route::resource('/privacy', PrivacyController::class);
     Route::resource('/syarat', SyaratController::class);
     Route::resource('/keuntungan', KeuntunganController::class);
@@ -85,7 +87,8 @@ Route::post('/resetpassword', [AuthController::class, 'resetmail'])->name('reset
 Route::get('/password/{token}', [AuthController::class, 'reset'])->name('reset');
 Route::post('/resetsubmit', [AuthController::class, 'resetsubmit'])->name('resetsubmit');
 // Route::resource('dijual', DijualController::class);
-Route::get('/berita/{judul}', [HomeController::class, 'berita']);
+Route::get('/berita/kategori/{kategori}',[HomeController::class, 'kategori']);
+Route::get('/berita/detail/{judul}', [HomeController::class, 'berita']);
 Route::get('/dijual/list/{hunian}', [HomeController::class, 'dijual'])->name('dijual');
 Route::get('/disewakan/list/{hunian}', [HomeController::class, 'disewakan'])->name('disewakan');
 Route::get('/propertibaru/list/{hunian}', [HomeController::class, 'properti'])->name('propertibaru');
@@ -96,6 +99,7 @@ Route::get('/properti/filtered', [HomeController::class, 'filtered']);
 Route::get('/properti/cari', [HomeController::class, 'cari']);
 Route::get('/properti/wilayah/{wilayah}', [HomeController::class, 'wilayah']);
 Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/syarat', [HomeController::class, 'syarat'])->name('syarat');
 Route::get('/keuntungan', [HomeController::class, 'keuntungan'])->name('keuntungan');

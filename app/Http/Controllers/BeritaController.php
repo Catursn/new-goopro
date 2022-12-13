@@ -74,7 +74,7 @@ class BeritaController extends Controller
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
-        $data['slug']="/berita/".$data['kategori'].$slug;
+        $data['slug']="/berita/detail/".$data['kategori'].$slug;
         $status=$berita->fill($data)->save();
         if($status){
             request()->session()->flash('success','Berita successfully created');
@@ -143,7 +143,7 @@ class BeritaController extends Controller
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
-        $data['slug']="/berita/".$data['kategori'].$slug;
+        $data['slug']="/berita/detail/".$data['kategori'].$slug;
         $status=$berita->fill($data)->save();
         if($status){
             request()->session()->flash('success','Berita successfully created');

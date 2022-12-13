@@ -96,6 +96,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('carakerja.index')}}">Cara Kerja</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('faq.index')}}">FAQ</a>
+                                </li>
                             </ul>
                         </div>
                     </li>

@@ -11,6 +11,7 @@ use App\Models\KategoriHunian;
 use App\Models\KategoriKota;
 use App\Models\KategoriKecamatan;
 use App\Models\Terms;
+use App\Models\FAQ;
 use App\Models\Privacy;
 use App\Models\Syarat;
 use App\Models\Keuntungan;
@@ -25,13 +26,22 @@ class HomeController extends Controller
     public function index(){
         $slider = Slider::where('status','aktif')->orderBy('id_slider','DESC')->get();
         $berita = Berita::where('status','aktif')->orderBy('id_berita','DESC')->limit('3')->get();
-        $properti = Properti::orderBy('id_properti','DESC')->limit('3')->get();
+        $properti = Properti::orderBy('id_properti','DESC')->limit('6')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
         return view('front.home',compact('slider','hunian','properti','berita'));
     }
 
+    public function kategori($kategorii){
+        $berita = Berita::where('kategori','LIKE',$kategorii)->paginate(9);
+        $terkini = Berita::orderBy('id_berita','DESC')->limit('6')->get();
+        $populer = Berita::orderBy('id_berita','ASC')->limit('10')->get();
+        $kategori = KategoriBerita::orderBy('id_kategori','DESC')->get();
+        $kat = $kategorii;
+        return view('front.kategori',compact('berita','terkini','populer','kategori','kat'));
+    }
+
     public function berita($judul){
-        $berita = Berita::where('slug','/berita/'.$judul)->first();
+        $berita = Berita::where('slug','/berita/detail/'.$judul)->first();
         $terkait = Berita::where('kategori',$berita->kategori)->limit('4')->get();
         $terkini = Berita::orderBy('id_berita','DESC')->limit('6')->get();
         $populer = Berita::orderBy('id_berita','ASC')->limit('10')->get();
@@ -208,10 +218,11 @@ class HomeController extends Controller
             $tidur = $data['tidur'];
         }
         if(empty($data['kategori'])){
-            $kategori = " ";
+            $kategori = "Properti";
             $url = "/properti";
         }elseif($data['kategori'] == "Properti"){
-            $kategori = " ";
+            $data['kategori'] = NULL;
+            $kategori = "Properti";
             $url = "/properti";
         }elseif($data['kategori'] == "Dijual"){
             $kategori = $data['kategori'];
@@ -225,9 +236,13 @@ class HomeController extends Controller
         }
         if(empty($data['hunian'])){
             $hunian = " ";
+        }elseif($data['hunian'] == "Properti"){
+            $data['hunian'] = NULL;
+            $hunian = " ";
         }else{
             $hunian = $data['hunian'];
         }
+        // dd($hunian);
         // dd($url);
         $properti = Properti::join('profiles', 'profiles.id_profile', '=', 'propertis.agen')
                             ->select('profiles.*', 'propertis.*')
@@ -264,6 +279,11 @@ class HomeController extends Controller
     public function terms(){
         $terms = Terms::findorFail('1');
         return view('front.terms',compact('terms'));
+    }
+
+    public function faq(){
+        $faq = FAQ::findorFail('1');
+        return view('front.faq',compact('faq'));
     }
 
     public function privacy(){

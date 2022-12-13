@@ -2,6 +2,9 @@
 <html>
     @include('front.includes.head')
     <body>
+        <?php
+        $kategoriberita = DB::table('kategori_beritas')->orderBy('id_kategori','ASC')->get();
+        ?>
         <div class="content">
             <!-------------------------------
             ------------NAVBAR START---------

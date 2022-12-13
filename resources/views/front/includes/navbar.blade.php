@@ -65,7 +65,10 @@
           Berita Property
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarinformasi">
-          <a class="dropdown-item" href="/berita">Property News</a>
+          @foreach($kategoriberita as $kat)
+          <a class="dropdown-item" href="/berita/kategori/{{$kat->kategori}}">{{$kat->kategori}}</a>
+          @endforeach
+          <!-- <a class="dropdown-item" href="/berita">Property News</a>
           <a class="dropdown-item" href="#">Isue Article</a>
           <a class="dropdown-item" href="#">Event</a>
           <a class="dropdown-item" href="#">Property Trend</a>
@@ -73,8 +76,8 @@
           <a class="dropdown-item" href="#">Investment</a>
           <a class="dropdown-item" href="#">Property Dictionary</a>
           <a class="dropdown-item" href="#">Write for Us</a>
-          <a class="dropdown-item" href="#">Guide</a>
-          <a class="dropdown-item" href="#">FAQ</a>
+          <a class="dropdown-item" href="#">Guide</a> -->
+          <a class="dropdown-item" href="/faq">FAQ</a>
         </div>
       </li>
       <li class="nav-item dropdown">
