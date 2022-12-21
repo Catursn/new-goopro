@@ -22,6 +22,7 @@ class CreateBeritasTable extends Migration
             $table->longText('deskripsi');
             $table->string('kategori');
             $table->string('author');
+            $table->string('views');
             $table->enum('status', ['aktif', 'nonaktif']);
             $table->timestamps();
         });

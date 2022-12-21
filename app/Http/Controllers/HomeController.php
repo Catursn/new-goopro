@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function kategori($kategorii){
         $berita = Berita::where('kategori','LIKE',$kategorii)->paginate(9);
         $terkini = Berita::orderBy('id_berita','DESC')->limit('6')->get();
-        $populer = Berita::orderBy('id_berita','ASC')->limit('10')->get();
+        $populer = Berita::orderBy('views','DESC')->limit('10')->get();
         $kategori = KategoriBerita::orderBy('id_kategori','DESC')->get();
         $kat = $kategorii;
         return view('front.kategori',compact('berita','terkini','populer','kategori','kat'));
@@ -42,9 +42,11 @@ class HomeController extends Controller
 
     public function berita($judul){
         $berita = Berita::where('slug','/berita/detail/'.$judul)->first();
+        $data['views'] = $berita->views + 1;
+        $status=$berita->fill($data)->save();
         $terkait = Berita::where('kategori',$berita->kategori)->limit('4')->get();
         $terkini = Berita::orderBy('id_berita','DESC')->limit('6')->get();
-        $populer = Berita::orderBy('id_berita','ASC')->limit('10')->get();
+        $populer = Berita::orderBy('views','DESC')->limit('10')->get();
         $kategori = KategoriBerita::orderBy('id_kategori','DESC')->get();
         return view('front.berita',compact('berita','terkait','terkini','populer','kategori'));
     }

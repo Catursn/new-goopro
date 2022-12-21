@@ -69,6 +69,7 @@ class BeritaController extends Controller
             $file->move($lokasi, $nama_gambar);
             $data['foto'] = '/'.$data['kategori'].'/'.$nama_gambar;
         }
+        $data['views'] = "0";
         $slug=Str::slug($request->judul);
         $count=Berita::where('slug',$slug)->count();
         if($count>0){
