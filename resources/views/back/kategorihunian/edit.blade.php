@@ -17,7 +17,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Kategori Hunian</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Kategori Properti</a></li>
                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Edit</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{$hunian->hunian}}</li>
                     </ol>
@@ -41,12 +41,12 @@
                 </ul>
             </div>
             @endif
-        <form class="form-horizontal" data-toggle="validator" method="POST" action="{{route('kategorihunian.update',$hunian->id_hunian)}}" enctype="multipart/form-data" >
+        <form class="form-horizontal" data-toggle="validator" method="POST" action="{{route('kategoriproperti.update',$hunian->id_hunian)}}" enctype="multipart/form-data" >
             {{ csrf_field() }} {{ method_field('PATCH') }}
-            <h5 class="card-header">Edit Kategori Hunian</h5>
+            <h5 class="card-header">Edit Kategori Properti</h5>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="inputText3" class="col-form-label">Kategori</label>
+                    <label for="inputText3" class="col-form-label">Properti</label>
                     <input id="inputText3" type="text" class="form-control" name="hunian" value="{{$hunian->hunian}}" required>
                 </div>
                 <div class="form-group">

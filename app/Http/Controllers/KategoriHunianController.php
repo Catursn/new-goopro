@@ -61,7 +61,7 @@ class KategoriHunianController extends Controller
         else{
             request()->session()->flash('error','Eror while created hunian');
         }
-        return redirect()->route('kategorihunian.index');
+        return redirect()->route('kategoriproperti.index');
     }
 
     /**
@@ -120,7 +120,7 @@ class KategoriHunianController extends Controller
         else{
             request()->session()->flash('error','Eror while updated hunian');
         }
-        return redirect()->route('kategorihunian.index');
+        return redirect()->route('kategoriproperti.index');
     }
 
     /**
@@ -141,6 +141,6 @@ class KategoriHunianController extends Controller
         else{
             request()->session()->flash('error','Error while deleting kategori hunian ');
         }
-        return redirect()->route('kategorihunian.index');
+        return redirect()->route('kategoriproperti.index');
     }
 }

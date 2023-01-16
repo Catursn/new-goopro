@@ -70,7 +70,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat <span class="text-danger">*</span></label>
+                        <label for="inputText3" class="col-form-label">Alamat Properti <span class="text-danger">*</span></label>
                         <input id="inputText3" type="text" class="form-control" name="tempat" required>
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat Tidur </label>
+                        <label for="inputText3" class="col-form-label">Kamar Tidur </label>
                         <input id="inputText3" type="number" class="form-control" name="tidur"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
@@ -174,7 +174,7 @@
                 </div>
                 <div class="form-group">
                     <label for="summernote">Deskripsi </label>
-                    <textarea class="form-control" id="summernote" name="sarpras" rows="10" placeholder="Type here....."></textarea>
+                    <textarea class="form-control" id="summernote" name="sarpras" rows="5" placeholder="Type here....."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Video </label>
@@ -251,7 +251,7 @@ $(document).ready(function() {
   $('#summernote').summernote({
     placeholder: 'Type here.....',
     tabsize: 2,
-    height: 200,
+    height: 100,
   });
 });
 </script>

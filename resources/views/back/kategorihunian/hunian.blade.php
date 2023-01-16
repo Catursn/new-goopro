@@ -1,7 +1,7 @@
 @extends('back.includes.master')
 
 @section('title')
-  KATEGORI HUNIAN | DASHBOARD GOOPRO
+  KATEGORI PROPERTI | DASHBOARD GOOPRO
 @endsection
 
 @section('main-content')
@@ -11,13 +11,13 @@
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
         <div class="page-header">
-            <h2 class="pageheader-title">KATEGORI HUNIAN </h2>
+            <h2 class="pageheader-title">KATEGORI PROPERTI </h2>
             <!-- <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p> -->
             <div class="page-breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Kategori Hunian</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Kategori Properti</a></li>
                     </ol>
                 </nav>
             </div>
@@ -35,13 +35,13 @@
                     <!-- ============================================================== -->
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Kategori Hunian Table <span class="cardright" style="float:right"><a href="{{route('kategorihunian.create')}}">New</a></span></h5>
+                            <h5 class="card-header">Kategori Properti Table <span class="cardright" style="float:right"><a href="{{route('kategoriproperti.create')}}">New</a></span></h5>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first">
                                         <thead>
                                             <tr>
-                                                <th>Hunian</th>
+                                                <th>Properti</th>
                                                 <th>Icon</th>
                                                 <th>Status</th>
                                                 <th>Aksi</th>
@@ -55,8 +55,8 @@
                                                 <td>{{$list->status}}</td>
                                                 <td>
                                                     <div class="btn-group ml-auto">
-                                                        <a href="{{route('kategorihunian.edit',$list->id_hunian)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
-                                                        <form method="POST" action="{{route('kategorihunian.destroy',$list->id_hunian)}}">
+                                                        <a href="{{route('kategoriproperti.edit',$list->id_hunian)}}" class="btn btn-sm btn-info" title="Edit"><i class="fas fa-edit"></i></a>
+                                                        <form method="POST" action="{{route('kategoriproperti.destroy',$list->id_hunian)}}">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="btn btn-sm btn-dangers" data-id={{$list->id_hunian}} data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="return confirm('Anda yakin mau menghapus item ini ?')"><i class="far fa-trash-alt"></i></button>
@@ -68,7 +68,7 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Kategori</th>
+                                                <th>Properti</th>
                                                 <th>Icon</th>
                                                 <th>Status</th>
                                                 <th>Aksi</th>

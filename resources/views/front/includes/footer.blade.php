@@ -3,7 +3,7 @@
         <div class="col-25">
             <h3>PT GOOPRO MEDIA INDOLAND</h3>
             <br>
-            <h5>Kawasan Perkantoran & Usaha Artha Parahyangan Business Park kav.f5</h5>
+            <h5>Kawasan Perkantoran dan Usaha Artha Parahyangan Business Park, Metro Suite Blok F 5 Bandung Jawa Barat</h5>
             <h5>Bandung, Indonesia</h5>
             <h5>cs@goopro.id</h5>
             <h5>+6281-912-071-977</h5>

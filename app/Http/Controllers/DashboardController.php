@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Properti;
+use App\Models\KategoriHunian;
 
 class DashboardController extends Controller
 {
@@ -13,9 +15,45 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $author = Auth()->user()->name;
-        $berita = Berita::where('author',$author)->orderBy('id_berita','DESC')->get();
-        return view('back.dashboard',compact('berita'));
+        $author = Auth()->user()->id;
+        $role = Auth()->user()->role;
+        if ($role == "1"){
+            $dijual = Properti::where('kategori','Dijual')->orderBy('views','DESC')->limit(5)->get();
+            $disewakan = Properti::where('kategori','Disewakan')->orderBy('views','DESC')->limit(5)->get();
+            $baru = Properti::where('kategori','Properti Baru')->orderBy('views','DESC')->limit(5)->get();
+            $prop = Properti::get();
+            $hunian = KategoriHunian::where('status','aktif')->get();
+            $name = array();
+            foreach($hunian as $key => $list){
+                $count = Properti::where('hunian',$list->hunian)->count();
+                $i = 0;
+                while( $i<=1 ){
+                    $name['hunian'] = $list->hunian;
+                    $name['count'] = $count;
+                    $i++;
+                }
+                $coba[++$key] = $name;
+            }
+        }else{
+            $dijual = Properti::where('agen',$author)->where('kategori','Dijual')->orderBy('views','DESC')->limit(5)->get();
+            $disewakan = Properti::where('agen',$author)->where('kategori','Disewakan')->orderBy('views','DESC')->limit(5)->get();
+            $baru = Properti::where('agen',$author)->where('kategori','Properti Baru')->orderBy('views','DESC')->limit(5)->get();
+            $prop = Properti::where('agen',$author)->get();
+            $hunian = KategoriHunian::where('status','aktif')->get();
+            $name = array();
+            foreach($hunian as $key => $list){
+                $count = Properti::where('agen',$author)->where('hunian',$list->hunian)->count();
+                $i = 0;
+                while( $i<=1 ){
+                    $name['hunian'] = $list->hunian;
+                    $name['count'] = $count;
+                    $i++;
+                }
+                $coba[++$key] = $name;
+            }
+        }
+        // dd($dijual);
+        return view('back.dashboard',compact('dijual','disewakan','baru','hunian','coba'));
     }
 
     /**

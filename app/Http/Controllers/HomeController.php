@@ -274,6 +274,8 @@ class HomeController extends Controller
         $kota = KategoriKota::where('id_kota',$properti->kota)->first();
         $kecamatan = KategoriKecamatan::where('id_kecamatan',$properti->kecamatan)->first();
         $user = Profile::where('id_profile',$properti->agen)->first();
+        $data['views'] = $properti->views + 1;
+        $status=$properti->fill($data)->save();
         // dd($kota);
         return view('front.detail',compact('properti','user','kota','kecamatan'));
     }

@@ -53,7 +53,7 @@ class KategoriPropertiController extends Controller
         else{
             request()->session()->flash('error','Eror while created kategori');
         }
-        return redirect()->route('kategoriproperti.index');
+        return redirect()->route('statusproperti.index');
     }
 
     /**
@@ -105,7 +105,7 @@ class KategoriPropertiController extends Controller
         else{
             request()->session()->flash('error','Eror while updated kategori');
         }
-        return redirect()->route('kategoriproperti.index');
+        return redirect()->route('statusproperti.index');
     }
 
     /**
@@ -125,6 +125,6 @@ class KategoriPropertiController extends Controller
         else{
             request()->session()->flash('error','Error while deleting kategori properti ');
         }
-        return redirect()->route('kategoriproperti.index');
+        return redirect()->route('statusproperti.index');
     }
 }

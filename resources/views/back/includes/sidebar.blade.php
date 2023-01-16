@@ -58,13 +58,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('pesan.index')}}">Pesan</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="#">Kontak</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#prospek" aria-controls="prospek"><i class="fas fa-fw fa-file"></i>PROSPEK</a>
                         <div id="prospek" class="collapse submenu" style="">
                             <ul class="nav flex-column">
@@ -73,7 +73,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#pages" aria-controls="pages"><i class="fas fa-fw fa-file"></i>PAGES LAINNYA</a>
                         <div id="pages" class="collapse submenu" style="">
@@ -129,10 +129,10 @@
                                     <a class="nav-link" href="{{route('kategoriberita.index')}}">Kategori Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('kategoriproperti.index')}}">Kategori Properti</a>
+                                    <a class="nav-link" href="{{route('statusproperti.index')}}">Status Properti</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('kategorihunian.index')}}">Kategori Hunian</a>
+                                    <a class="nav-link" href="{{route('kategoriproperti.index')}}">Kategori Properti</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('kategoriprovinsi.index')}}">Kategori Provinsi</a>

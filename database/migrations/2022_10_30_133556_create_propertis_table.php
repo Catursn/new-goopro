@@ -49,6 +49,7 @@ class CreatePropertisTable extends Migration
             $table->string('foto4')->nullable();
             $table->string('foto5')->nullable();
             $table->string('agen')->nullable();
+            $table->string('views');
             $table->enum('status', ['aktif', 'nonaktif','terjual'])->nullable();
             $table->timestamps();
         });

@@ -121,6 +121,7 @@ class PropertiController extends Controller
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
         $data['slug']=$slug;
+        $data['views'] = "0";
         $status=$properti->fill($data)->save();
         $id = $properti->id_properti;
         $properti= Properti::findOrFail($id);

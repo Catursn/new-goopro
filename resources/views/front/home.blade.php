@@ -231,7 +231,7 @@
                     <div class="carousel-inner">
                     @foreach($properti as $key=>$pro)
                         <div class="item {{(($key==0)? 'active' : '')}}">
-                            <div class="col-xs-4">
+                            <div class="col-xs-12 col-md-4 col-lg-4">
                                 <a href="/properti/detail/{{$pro->slug}}"><img src="images{{$pro->foto1}}" alt=""></a>
                                 <div class="caption">
                                     <h5>Tipe Properti : {{$pro->hunian}}</h5>
@@ -339,13 +339,22 @@
         <div class="fitur">
             <div class="row">
                 <div class="col-30" style="background-image:url('images/kpr.png')">
-                    <a href="#">Hitung Sekarang</a>
+                    <div class="captext">
+                        <h1>Coba kalkulator KPR Anda</h1>
+                        <a href="/about">Hitung Sekarang</a>
+                    </div>
                 </div>
                 <div class="col-30" style="background-image:url('images/jual.png')">
-                    <a href="#">Jual Sekarang</a>
+                    <div class="captext">
+                        <h1 style="color:#fff;">Mau Jual Rumah?</h1>
+                        <a href="/login">Jual Sekarang</a>
+                    </div>
                 </div>
                 <div class="col-30" style="background-image:url('images/properti.png')">
-                    <a href="#">Ajukan Pertanyaan</a>
+                    <div class="captext">
+                        <h1>Tanyakan Properti</h1>
+                        <a href="/kontak">Ajukan Pertanyaan</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,6 +368,7 @@
                     <img src="images{{$ber->foto}}" alt="">
                     <h4>{{$ber->judul}}</h4>
                     <h5>{{ tanggal_indonesia($ber->tanggal, false) }}</h5>
+                    <p><?php echo \Illuminate\Support\Str::limit(strip_tags($ber->deskripsi), 200, $end='...') ?></p>
                     <a href="{{$ber->slug}}">>Baca Selengkapnya</a>
                 </div>
                 @endforeach

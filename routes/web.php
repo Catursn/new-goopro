@@ -25,6 +25,7 @@ use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DependantDropdownController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\DashboardController;
 
 
 /*
@@ -48,7 +49,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/admin/register', [AuthController::class, 'register'])->name('register');
     Route::post('/admin/regstore', [AuthController::class, 'registerSubmit'])->name('regstore');
 Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
-    Route::view('/','back.dashboard')->name('admin');
+    Route::get('/',[DashboardController::class, 'index'])->name('admin');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('/gantipassword', [AuthController::class, 'gantipassword'])->name('gantipassword');
     Route::post('/{id}/resetpassword', [AuthController::class, 'resetpassword'])->name('resetpassword');
@@ -60,11 +61,11 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::get('/properti/terjual/{id}',[PropertiController::class, 'subterjual'])->name('subterjual');
     Route::resource('/properti', PropertiController::class);
     Route::resource('/kategoriberita', KategoriBeritaController::class);
-    Route::resource('/kategoriproperti', KategoriPropertiController::class);
+    Route::resource('/statusproperti', KategoriPropertiController::class);
     Route::resource('/kategorikota', KategoriKotaController::class);
     Route::resource('/kategoriprovinsi', KategoriProvinsiController::class);
     Route::resource('/kategorikecamatan', KategoriKecamatanController::class);
-    Route::resource('/kategorihunian', KategoriHunianController::class);
+    Route::resource('/kategoriproperti', KategoriHunianController::class);
     Route::resource('/slider', SliderController::class);
     Route::resource('/terms', TermsController::class);
     Route::resource('/faq', FAQController::class);

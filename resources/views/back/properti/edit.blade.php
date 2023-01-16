@@ -71,7 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat </label>
+                        <label for="inputText3" class="col-form-label">Alamat Properti </label>
                         <input id="inputText3" type="text" class="form-control" name="tempat" value="{{$properti->tempat}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">
@@ -103,7 +103,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-lg-6 col-sm-12">
-                        <label for="inputText3" class="col-form-label">Tempat Tidur </label>
+                        <label for="inputText3" class="col-form-label">Kamar Tidur </label>
                         <input id="inputText3" type="number" class="form-control" name="tidur" value="{{$properti->tidur}}"  >
                     </div>
                     <div class="form-group col-lg-6 col-sm-12">

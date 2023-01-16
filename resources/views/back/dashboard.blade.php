@@ -44,7 +44,7 @@
                                     <!-- ============================================================== -->
                                     <div class="col-12">
                                         <div class="card">
-                                            <h5 class="card-header">Performasi Leads Anda <br><span style="font-size:12px; font-weight:300;">Menampilkan jumlah semua leads anda menurut status</span></h5>
+                                            <h5 class="card-header">Jumlah properti berdasarkan kategori hunian <br><span style="font-size:12px; font-weight:300;">Menampilkan jumlah semua properti anda menurut kategori hunian</span></h5>
                                             <div class="card-body">
                                                 <div id="piechart"></div>
                                             </div>
@@ -59,7 +59,7 @@
                                     <!-- ============================================================== -->
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="card">
-                                            <h5 class="card-header">Performasi Listing Properti <br><span style="font-size:12px; font-weight:300;">Menampilkan top 5 listing Anda berdasarkan sumber leads yang dihasilkan.</span></h5>
+                                            <h5 class="card-header">Performasi Listing Properti Dijual <br><span style="font-size:12px; font-weight:300;">Menampilkan top 5 listing Anda berdasarkan jumlah views.</span></h5>
                                             <div class="card-body">
                                                 <div class="table-responsive">
                                                     <table class="table table-striped table-bordered first">
@@ -67,61 +67,111 @@
                                                             <tr>
                                                                 <th>No</th>
                                                                 <th>Nama Properti</th>
-                                                                <th>Via Website</th>
-                                                                <th>Via Whatsapp</th>
-                                                                <th>Leads</th>
                                                                 <th>Dilihat</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>   
+                                                            <?php
+                                                                $no = 1; 
+                                                            ?>
+                                                            @foreach($dijual as $list)
                                                             <tr>
-                                                                <td>1</td>
-                                                                <td>Dijual Rumah Tipe 36/150 Murah Antapani</td>
-                                                                <td>7</td>
-                                                                <td>3</td>
-                                                                <td>5</td>
-                                                                <td>123</td>
+                                                                <td>{{$no++}}</td>
+                                                                <td>{{$list->judul}}</td>
+                                                                <td>{{$list->views}}</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>Dijual Apartemen Tipe 21/150 Panoramic</td>
-                                                                <td>3</td>
-                                                                <td>3</td>
-                                                                <td>3</td>
-                                                                <td>103</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>Dijual Rumah Tipe 36/150 Murah Antapani</td>
-                                                                <td>5</td>
-                                                                <td>3</td>
-                                                                <td>2</td>
-                                                                <td>90</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>Dijual Rumah Tipe 36/150 Murah Antapani</td>
-                                                                <td>2</td>
-                                                                <td>7</td>
-                                                                <td>2</td>
-                                                                <td>13</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>5</td>
-                                                                <td>Dijual Rumah Tipe 36/150 Murah Antapani</td>
-                                                                <td>2</td>
-                                                                <td>3</td>
-                                                                <td>2</td>
-                                                                <td>4</td>
-                                                            </tr>
+                                                            @endforeach
                                                         </tbody>
                                                         <tfoot>
                                                             <tr>
                                                                 <th>No</th>
                                                                 <th>Nama Properti</th>
-                                                                <th>Via Website</th>
-                                                                <th>Via Whatsapp</th>
-                                                                <th>Leads</th>
+                                                                <th>Dilihat</th>
+                                                            </tr>                              
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ============================================================== -->
+                                    <!-- end basic table  -->
+                                    <!-- ============================================================== -->
+                                    <!-- ============================================================== -->
+                                    <!-- basic table  -->
+                                    <!-- ============================================================== -->
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="card">
+                                            <h5 class="card-header">Performasi Listing Properti Disewakan<br><span style="font-size:12px; font-weight:300;">Menampilkan top 5 listing Anda berdasarkan jumlah views.</span></h5>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered first">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Nama Properti</th>
+                                                                <th>Dilihat</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>   
+                                                            <?php
+                                                                $no = 1; 
+                                                            ?>
+                                                            @foreach($disewakan as $list)
+                                                            <tr>
+                                                                <td>{{$no++}}</td>
+                                                                <td>{{$list->judul}}</td>
+                                                                <td>{{$list->views}}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Nama Properti</th>
+                                                                <th>Dilihat</th>
+                                                            </tr>                              
+                                                        </tfoot>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ============================================================== -->
+                                    <!-- end basic table  -->
+                                    <!-- ============================================================== -->
+                                    <!-- ============================================================== -->
+                                    <!-- basic table  -->
+                                    <!-- ============================================================== -->
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <div class="card">
+                                            <h5 class="card-header">Performasi Listing Properti Properti Baru<br><span style="font-size:12px; font-weight:300;">Menampilkan top 5 listing Anda berdasarkan jumlah views.</span></h5>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered first">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Nama Properti</th>
+                                                                <th>Dilihat</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>   
+                                                            <?php
+                                                                $no = 1; 
+                                                            ?>
+                                                            @foreach($baru as $list)
+                                                            <tr>
+                                                                <td>{{$no++}}</td>
+                                                                <td>{{$list->judul}}</td>
+                                                                <td>{{$list->views}}</td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th>No</th>
+                                                                <th>Nama Properti</th>
                                                                 <th>Dilihat</th>
                                                             </tr>                              
                                                         </tfoot>
@@ -198,11 +248,11 @@
                 bindto: "#piechart",
                 data: {
                     columns: [
-                        ['Client Baru', 30],
-                        ['Hot Prospek', 50],
-                        ['Closing', 50],
-                        ['Close Prospek',70],
-                        ['Tidak Tertarik',80]
+                        @php
+                        foreach($coba as $list){
+                            echo "['".$list['hunian']."', ".$list['count']."], ";
+                        }
+                        @endphp 
                     ],
                     type: 'pie',
 
@@ -216,7 +266,7 @@
                 pie: {
                     label: {
                         format: function(value, ratio, id) {
-                            return d3.format('$')(value);
+                            return d3.format('')(value);
                         }
                     }
                 }
