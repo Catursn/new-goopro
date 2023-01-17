@@ -62,6 +62,9 @@ nav .right a:link{
 .wadah{
   margin: 0px 150px !important;
 }
+.carousel-control-prev, .carousel-control-next{
+  width: 5% !important;
+}
 .carousel-control-prev:hover, .carousel-control-next:hover{
   background-color: rgba(255, 255, 255, 0.4) !important;
 }
@@ -136,6 +139,7 @@ nav .right a:link{
 }
 .place .title{
   margin-bottom: 25px;
+  text-align: center;
 }
 .place .col-25{
   width: 24%;
@@ -211,8 +215,10 @@ nav .right a:link{
   margin: 25px 0pxs;
 }
 .berita h3{
-  font-size: 25px;
+  /* font-size: 25px; */
+  text-align: center;
   font-weight: 600;
+  padding: 5px 0px;
 }
 .berita .col-30{
   width: 31%;
@@ -220,11 +226,14 @@ nav .right a:link{
   margin: 5px 12px;
 }
 .berita img{
-  width: 95%;
+  width: auto;
+  height: 250px;
+  margin-bottom: 10px;
 }
 .berita h4{
   font-size: 16px;
   font-weight: 700;
+  color: #14A807;
 }
 .berita h5{
   font-size: 14px;
@@ -235,6 +244,7 @@ nav .right a:link{
   text-decoration: none;
   font-size: 12px;
   font-weight: 300;
+  color: #14A807;
 }
 .berita a:link{
   text-decoration: none;
@@ -289,7 +299,8 @@ nav .right a:link{
   background-color: #FDFFE1;
 }
 .cara h3{
-  font-size: 26px;
+  /* font-size: 26px; */
+  padding: 5px 0px;
   font-weight: 700;
   text-align: center;
 }
@@ -412,7 +423,7 @@ nav .right a:link{
 }
 .properti .col-12{
   max-width: 10%;
-  margin: 15px 15px;
+  margin: 15px 0px;
   text-align: center;
 }
 .properti img{
@@ -547,8 +558,9 @@ nav .right a:link{
   border-color: #fff #fff #fff !important;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
-  color: #495057 !important;
+  color: #ffffff !important;
   border-color: #fff #fff #fff !important;
+  background-color: #14A807 !important;
 }
 /*--------------------------------
 -------  FITUR SEARCH END --------
@@ -741,8 +753,16 @@ nav .right a:link{
 }
 .rightbar .icon{
   position: relative;
-  top: 30px;
+  top: 50px;
   left: 10px;
+}
+.rightbar .icon .ribbon{
+  width: 20%;
+  font-size: 12px;
+  background-color: #aa0505;
+  text-align: center;
+  padding: 5px 0px;
+  color: #fff;
 }
 .rightbar .icon img{
   width: 20px;
@@ -1758,6 +1778,7 @@ nav .right a:link{
   }
   .berita img{
     width: 100%;
+    height: 150px;
   }
   /*--------------------------------
   ----------  BERITA END -----------
@@ -2071,8 +2092,9 @@ nav .right a:link{
   ------------  FITUR -------------- 500
   --------------------------------*/
   .fitur .col-30{
-    width: 90%;
+    width: 100%;
     height: 250px;
+    margin: 5px 25px;
   }
   .fitur a{
     left: 25%;
@@ -2121,6 +2143,7 @@ nav .right a:link{
   }
   .berita img{
     width: 100%;
+    height: 150px;
   }
   /*--------------------------------
   ----------  BERITA END -----------

@@ -173,8 +173,11 @@ Daftar {{$hunian}} {{$kategori}} | GOOPRO
             <div class="row">
                 <div class="col-40">
                     <div class="icon">
-                        <a href="#"><img src="/images/gallery.png" alt=""> 2 </a>
-                        <a href="#"><img src="/images/play.png" alt=""> 2</a>
+                        @if($prop->status == "terjual")
+                        <div class="ribbon">SOLD OUT</div>
+                        @endif
+                        <!-- <a href="#"><img src="/images/gallery.png" alt=""> 2 </a>
+                        <a href="#"><img src="/images/play.png" alt=""> 2</a> -->
                     </div>
                     <img src="/images{{$prop->foto1}}" alt="">
                 </div>

@@ -223,7 +223,7 @@
     </div>
     <div class="hunian">
         <div class="title">
-            <h3>PROPERTI HUNIAN ASRI</h3>
+            <h3>Properti Hunian Asri</h3>
         </div>
         <div class="row">
             <div class="col-md-12">

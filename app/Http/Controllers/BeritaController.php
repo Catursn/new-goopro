@@ -21,7 +21,7 @@ class BeritaController extends Controller
         $role = Auth()->user()->role;
         if($role == '1'){
             $author = Auth()->user()->name;
-            $berita = Berita::where('author',$author)->orderBy('id_berita','DESC')->get();
+            $berita = Berita::orderBy('id_berita','DESC')->get();
             return view('back.berita.berita',compact('berita'));
         }else{
             request()->session()->flash('error','Anda tidak memiliki akses tersebut');

@@ -58,10 +58,10 @@
             <a href="{{route('keuntungan')}}">Keuntungan Agen</a><br>
             <a href="{{route('hakcipta')}}">Hak Cipta</a><br>
             <a href="{{route('carakerja')}}">Cara Kerja</a>
-            <h5>Syarat Penggunaan Agen</h5>
-            <h5>Pusat Bantuan</h5>
+            <!-- <h5>Syarat Penggunaan Agen</h5> -->
+            <!-- <h5>Pusat Bantuan</h5> -->
             <h5>Tanya Jawab (FAQ)</h5>
-            <h5>Masukan</h5>
+            <!-- <h5>Masukan</h5> -->
             <h5>Peta Situs</h5>
         </div>
     </div>

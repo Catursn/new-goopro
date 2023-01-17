@@ -26,6 +26,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DependantDropdownController;
 use App\Http\Controllers\FAQController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AgenController;
 
 
 /*
@@ -78,6 +79,7 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth']],function(){
     Route::resource('/iklan', IklanController::class);
     Route::resource('/pesan', PesanController::class);
     Route::resource('/profile', ProfileController::class);
+    Route::resource('/agen', AgenController::class);
 });
 
 

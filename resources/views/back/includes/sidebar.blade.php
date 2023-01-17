@@ -157,6 +157,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin/gantipassword">Ganti Password</a>
                                 </li>
+                                @if($role == '1')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/admin/agen">Agen</a>
+                                </li>
+                                @endif
                             </ul>
                         </div>
                     </li>
