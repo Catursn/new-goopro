@@ -244,10 +244,13 @@ class HomeController extends Controller
         }else{
             $hunian = $data['hunian'];
         }
-        // dd($hunian);
+        // dd($data);
         // dd($url);
         $properti = Properti::join('profiles', 'profiles.id_profile', '=', 'propertis.agen')
                             ->select('profiles.*', 'propertis.*')
+                            ->when(!empty($data['harga']) , function ($query) use($data){
+                                return $query->whereBetween('propertis.harga', [intval($data['awal']), intval($data['akhir'])]);
+                                })
                             ->when(!empty($data['kategori']) , function ($query) use($data){
                                 return $query->where('propertis.kategori',$data['kategori']);
                                 })
@@ -259,9 +262,6 @@ class HomeController extends Controller
                                 })
                             ->when(!empty($data['tidur']) , function ($query) use($data){
                                 return $query->where('tidur',$data['tidur']);
-                                })
-                            ->when(!empty($data['harga']) , function ($query) use($data){
-                                return $query->whereBetween('propertis.harga', [$data['awal'], $data['akhir']]);
                                 })
                             ->paginate(10);
         $count = $properti->count();

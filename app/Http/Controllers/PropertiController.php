@@ -40,14 +40,14 @@ class PropertiController extends Controller
     }
 
     public function kota($id){
-        $kota = KategoriKota::where('provinsi_id','=',$id)->get();
+        $kota = KategoriKota::where('provinsi_id','=',$id)->orderBy('kota','ASC')->get();
         // $re = json_encode($kota);
         // dd($re);
         return response()->json($kota);
     }
 
     public function kecamatan($id){
-        $kecamatan = KategoriKecamatan::where('kota_id','=',$id)->get();
+        $kecamatan = KategoriKecamatan::where('kota_id','=',$id)->orderBy('kecamatan','ASC')->get();
         // $re = json_encode($kecamatan);
         // dd($re);
         return response()->json($kecamatan);
@@ -62,7 +62,7 @@ class PropertiController extends Controller
     {
         $kategori = KategoriProperti::where('status','aktif')->orderBy('id_kategori','DESC')->get();
         $hunian = KategoriHunian::where('status','aktif')->orderBy('id_hunian','DESC')->get();
-        $provinsi = KategoriProvinsi::orderBy('id_provinsi','ASC')->get();
+        $provinsi = KategoriProvinsi::orderBy('provinsi','ASC')->get();
         return view('back.properti.add',compact('kategori','hunian','provinsi'));
     }
 
@@ -120,6 +120,7 @@ class PropertiController extends Controller
         if($count>0){
             $slug=$slug.'-'.date('ymdis').'-'.rand(0,999);
         }
+        $data['status'] = "aktif";
         $data['slug']=$slug;
         $data['views'] = "0";
         $status=$properti->fill($data)->save();

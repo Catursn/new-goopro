@@ -46,7 +46,8 @@
                                                 <th>Tempat</th>
                                                 <th>Kategori Hunian</th>
                                                 <th>Kategori Properti</th>
-                                                <th>Status</th>
+                                                <!-- <th>Status</th> -->
+                                                <th>Views</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -58,7 +59,8 @@
                                                 <td>{{$ber->tempat}}</td>
                                                 <td>{{$ber->hunian}}</td>
                                                 <td>{{$ber->kategori}}</td>
-                                                <td>{{$ber->status}}</td>
+                                                <!-- <td>{{$ber->status}}</td> -->
+                                                <td>{{$ber->views}}</td>
                                                 <td>
                                                 <div class="btn-group ml-auto">
                                                     @if($ber->status != "terjual")
@@ -82,7 +84,8 @@
                                                 <th>Tempat</th>
                                                 <th>Kategori Hunian</th>
                                                 <th>Kategori Properti</th>
-                                                <th>Status</th>
+                                                <!-- <th>Status</th> -->
+                                                <th>Views</th>
                                                 <th>Aksi</th>
                                             </tr>                              
                                         </tfoot>
